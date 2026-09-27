@@ -258,7 +258,7 @@ response = client.get("https://api.example/items")
 
 ### 3 · Blogger post: prose separated by `<br>` tags, not paragraphs
 
-No `<p>` in the post body at all, the pattern that emptied two AEB dev pages in the first run.
+No `<p>` in the post body at all, the pattern that emptied AEB dev pages in the first run.
 `<br><br>` becomes a paragraph break; the sidebar, labels, share buttons and comments are gone.
 
 ```markdown
@@ -395,32 +395,34 @@ with `WEB2MD_DATA` pointed at an empty directory.
   render was empty: some pages carry `<noscript><body class="nojs">`, and others have a
   `<meta content="` quote that never closes and swallows `</head><body>`, leaving the page
   parsed as head content. Following the HTML5 rules (only the first document-level `<body>`
-  counts; body content closes `<head>`) fixed 59 of them and moved WCEB F1 from 0.873 to 0.883.
+  counts; body content closes `<head>`) cut the whole-page render's empty outputs there from 63 to 5 and moved web2md's WCEB F1 from
+  0.873 to 0.883.
   The pre-fix scores are kept in
   [`results/history/`](results/history/extraction_before_parser_fix.json). This fix was made
   after seeing WCEB, but it is spec behaviour, not a tuned heuristic.
 - **The markdownify baseline inherited that bug.** It was first fed HTML re-serialised by
   web2md's parser, so it lost the same pages. It now parses with its own BeautifulSoup.
-- **Three AEB pages scored zero in the first run.** The two on the dev split (a Blogger post and
+- **Some AEB pages scored zero in the first run.** The ones on the dev split (a Blogger post and
   a Korean news CMS) hold their prose as `<br>`-separated text beside a block child, an image
   `<div>` or a table, so no element held "paragraphs" and cleaning then removed the image-heavy
   container. Text runs between block children now count as paragraphs of their parent, and
   cleaning counts them too.
 - **Articles split into chunks.** Wired cuts its body into several same-class containers
-  between ad rails, and the best candidate was one chunk (recall 0.53). A second strong candidate
+  between ad rails, and the best candidate was one chunk, so about half the article was lost. A second strong candidate
   with the same class now promotes the choice to their common ancestor.
 - **Alt text looked like extraction error.** Most of the "boilerplate" on several AEB pages
   was image alt text, which the ground truth never contains. The scoring view drops images for
   every system, and `sensitivity.json` reports the score with alt text kept.
-- **Dragnet's comment marker was typed by hand.** 399 truth files use `!@#$%^&*()  COMMENTS`,
-  21 more use a variant (`!@ $%^&*()`, one space instead of two). Matching the exact string
-  missed them.
-- **Reading 3,800 small files took an hour** on a disk shared with a training job (and every
-  `.html` file is an antivirus scan on Windows). WCEB is now packed into one gzip file once.
+- **Dragnet's comment marker was typed by hand.** Most truth files use
+  `!@#$%^&*()  COMMENTS`, but some carry a variant (`!@ $%^&*()`, one space instead of two).
+  Matching the exact string missed them; a pattern finds all 420.
+- **Reading 3,800 small files took about an hour** on a disk shared with a training job
+  (antivirus scanning of `.html` files probably made it worse). WCEB is now packed into one
+  gzip file once, and later runs load it in minutes.
 - **The network is throttled for GitHub LFS.** The 50 MB WCEB archive arrived as 48 one-megabyte
   range requests, checked against its SHA-256.
 - **Tuning discipline.** AEB is split by site into dev (80 pages) and held-out (101). One
-  whole-benchmark run (F1 0.941, before any tuning) listed worst pages from both splits; after
+  whole-benchmark run, before any tuning, listed worst pages from both splits; after
   that, only dev pages were inspected. WCEB was never used for tuning.
 
 ## Keywords

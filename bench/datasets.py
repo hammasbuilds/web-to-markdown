@@ -96,8 +96,8 @@ PACKED = "pages.jsonl.gz"
 def pack_wceb(root: Path | None = None) -> Path:
     """Write every usable WCEB page into one gzip file.
 
-    Reading 3,800 loose HTML files is slow on a busy disk (and every one is an
-    antivirus scan on Windows); one sequential 60 MB read is not.
+    Reading 3,800 loose HTML files is slow on a busy disk; one sequential 80 MB
+    read is not.
     """
     target = (root or DATA) / "wceb" / PACKED
     tmp = target.with_suffix(".tmp")
