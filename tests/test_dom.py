@@ -54,3 +54,45 @@ def test_remove_detaches_node():
     drop.remove()
     assert drop.parent is None
     assert root.text() == "keep"
+
+
+def test_body_inside_noscript_does_not_become_the_body():
+    html = (
+        "<html><head><title>t</title></head><script>x</script>"
+        "<noscript><body class='nojs'></noscript><div><p>The real article.</p></div></html>"
+    )
+    root = parse(html)
+    bodies = list(root.iter("body"))
+    assert bodies == [] or "The real article." in bodies[0].text()
+    assert "The real article." in root.text()
+
+
+def test_second_body_and_html_tags_are_ignored():
+    root = parse("<html><body><p>a</p><body><html><p>b</p></body></html>")
+    assert len(list(root.iter("body"))) == 1 and len(list(root.iter("html"))) == 1
+    assert root.find("body").text() == "ab"
+
+
+def test_body_start_tag_closes_an_open_head():
+    root = parse("<html><head><title>t</title><body><p>x</p>")
+    assert root.find("head").find("p") is None
+    assert root.find("body").text() == "x"
+
+
+def test_self_closing_syntax_on_normal_elements():
+    root = parse("<div/><p>after</p>")
+    assert root.find("div").children == []
+    assert root.find("p").parent is root
+
+
+def test_body_content_closes_head_even_when_a_broken_quote_ate_the_body_tag():
+    html = '<html><head><title>t</title><meta content="broken></head><body x="y">\n<div>Story</div>'
+    root = parse(html)
+    head = root.find("head")
+    assert "Story" not in head.text()
+    assert "Story" in root.text()
+
+
+def test_stray_text_in_head_moves_out_of_it():
+    root = parse("<html><head><title>t</title>Visible</head><body></body></html>")
+    assert "Visible" not in root.find("head").text()

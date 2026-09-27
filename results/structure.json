@@ -1,0 +1,833 @@
+{
+  "definition": "bench/structure.py",
+  "groups": {
+    "aeb": {
+      "n_pages": 181,
+      "gold_structures": {
+        "list": 60,
+        "table": 6,
+        "code": 0,
+        "heading": 337
+      },
+      "pages_with_structure": {
+        "list": 21,
+        "table": 3,
+        "code": 0,
+        "heading": 48
+      },
+      "survival": {
+        "web2md": {
+          "list": {
+            "kept": 40,
+            "total": 60,
+            "rate": 0.6667,
+            "ci95": [
+              0.4103,
+              0.8312
+            ]
+          },
+          "table": {
+            "kept": 6,
+            "total": 6,
+            "rate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "code": {
+            "kept": 0,
+            "total": 0,
+            "rate": null,
+            "ci95": null
+          },
+          "heading": {
+            "kept": 283,
+            "total": 337,
+            "rate": 0.8398,
+            "ci95": [
+              0.6732,
+              0.9477
+            ]
+          }
+        },
+        "all-text": {
+          "list": {
+            "kept": 50,
+            "total": 60,
+            "rate": 0.8333,
+            "ci95": [
+              0.6757,
+              0.9268
+            ]
+          },
+          "table": {
+            "kept": 6,
+            "total": 6,
+            "rate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "code": {
+            "kept": 0,
+            "total": 0,
+            "rate": null,
+            "ci95": null
+          },
+          "heading": {
+            "kept": 329,
+            "total": 337,
+            "rate": 0.9763,
+            "ci95": [
+              0.9235,
+              1.0
+            ]
+          }
+        },
+        "largest-block": {
+          "list": {
+            "kept": 48,
+            "total": 60,
+            "rate": 0.8,
+            "ci95": [
+              0.625,
+              0.8961
+            ]
+          },
+          "table": {
+            "kept": 2,
+            "total": 6,
+            "rate": 0.3333,
+            "ci95": [
+              0.1111,
+              1.0
+            ]
+          },
+          "code": {
+            "kept": 0,
+            "total": 0,
+            "rate": null,
+            "ci95": null
+          },
+          "heading": {
+            "kept": 265,
+            "total": 337,
+            "rate": 0.7864,
+            "ci95": [
+              0.58,
+              0.9297
+            ]
+          }
+        },
+        "html2text": {
+          "list": {
+            "kept": 47,
+            "total": 60,
+            "rate": 0.7833,
+            "ci95": [
+              0.6286,
+              0.8958
+            ]
+          },
+          "table": {
+            "kept": 6,
+            "total": 6,
+            "rate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "code": {
+            "kept": 0,
+            "total": 0,
+            "rate": null,
+            "ci95": null
+          },
+          "heading": {
+            "kept": 316,
+            "total": 337,
+            "rate": 0.9377,
+            "ci95": [
+              0.8717,
+              0.9903
+            ]
+          }
+        },
+        "markdownify": {
+          "list": {
+            "kept": 50,
+            "total": 60,
+            "rate": 0.8333,
+            "ci95": [
+              0.6757,
+              0.9268
+            ]
+          },
+          "table": {
+            "kept": 6,
+            "total": 6,
+            "rate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "code": {
+            "kept": 0,
+            "total": 0,
+            "rate": null,
+            "ci95": null
+          },
+          "heading": {
+            "kept": 329,
+            "total": 337,
+            "rate": 0.9763,
+            "ci95": [
+              0.9235,
+              1.0
+            ]
+          }
+        },
+        "readability-lxml": {
+          "list": {
+            "kept": 40,
+            "total": 60,
+            "rate": 0.6667,
+            "ci95": [
+              0.4103,
+              0.8312
+            ]
+          },
+          "table": {
+            "kept": 6,
+            "total": 6,
+            "rate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "code": {
+            "kept": 0,
+            "total": 0,
+            "rate": null,
+            "ci95": null
+          },
+          "heading": {
+            "kept": 283,
+            "total": 337,
+            "rate": 0.8398,
+            "ci95": [
+              0.6645,
+              0.9509
+            ]
+          }
+        },
+        "trafilatura-md": {
+          "list": {
+            "kept": 41,
+            "total": 60,
+            "rate": 0.6833,
+            "ci95": [
+              0.425,
+              0.8462
+            ]
+          },
+          "table": {
+            "kept": 4,
+            "total": 6,
+            "rate": 0.6667,
+            "ci95": [
+              0.5556,
+              1.0
+            ]
+          },
+          "code": {
+            "kept": 0,
+            "total": 0,
+            "rate": null,
+            "ci95": null
+          },
+          "heading": {
+            "kept": 294,
+            "total": 337,
+            "rate": 0.8724,
+            "ci95": [
+              0.7344,
+              0.9607
+            ]
+          }
+        }
+      }
+    },
+    "all": {
+      "n_pages": 3975,
+      "gold_structures": {
+        "list": 2006,
+        "table": 639,
+        "code": 231,
+        "heading": 9061
+      },
+      "pages_with_structure": {
+        "list": 670,
+        "table": 210,
+        "code": 32,
+        "heading": 1907
+      },
+      "survival": {
+        "web2md": {
+          "list": {
+            "kept": 592,
+            "total": 2006,
+            "rate": 0.2951,
+            "ci95": [
+              0.2505,
+              0.3426
+            ]
+          },
+          "table": {
+            "kept": 275,
+            "total": 639,
+            "rate": 0.4304,
+            "ci95": [
+              0.3108,
+              0.5625
+            ]
+          },
+          "code": {
+            "kept": 199,
+            "total": 231,
+            "rate": 0.8615,
+            "ci95": [
+              0.6708,
+              0.9863
+            ]
+          },
+          "heading": {
+            "kept": 2716,
+            "total": 9061,
+            "rate": 0.2997,
+            "ci95": [
+              0.259,
+              0.3455
+            ]
+          }
+        },
+        "all-text": {
+          "list": {
+            "kept": 1188,
+            "total": 2006,
+            "rate": 0.5922,
+            "ci95": [
+              0.5489,
+              0.6369
+            ]
+          },
+          "table": {
+            "kept": 356,
+            "total": 639,
+            "rate": 0.5571,
+            "ci95": [
+              0.4406,
+              0.6659
+            ]
+          },
+          "code": {
+            "kept": 226,
+            "total": 231,
+            "rate": 0.9784,
+            "ci95": [
+              0.9279,
+              1.0
+            ]
+          },
+          "heading": {
+            "kept": 6973,
+            "total": 9061,
+            "rate": 0.7696,
+            "ci95": [
+              0.7284,
+              0.8129
+            ]
+          }
+        },
+        "largest-block": {
+          "list": {
+            "kept": 926,
+            "total": 2006,
+            "rate": 0.4616,
+            "ci95": [
+              0.4074,
+              0.5194
+            ]
+          },
+          "table": {
+            "kept": 276,
+            "total": 639,
+            "rate": 0.4319,
+            "ci95": [
+              0.3147,
+              0.5612
+            ]
+          },
+          "code": {
+            "kept": 187,
+            "total": 231,
+            "rate": 0.8095,
+            "ci95": [
+              0.525,
+              0.9857
+            ]
+          },
+          "heading": {
+            "kept": 2754,
+            "total": 9061,
+            "rate": 0.3039,
+            "ci95": [
+              0.2614,
+              0.349
+            ]
+          }
+        },
+        "html2text": {
+          "list": {
+            "kept": 1129,
+            "total": 2006,
+            "rate": 0.5628,
+            "ci95": [
+              0.518,
+              0.6085
+            ]
+          },
+          "table": {
+            "kept": 252,
+            "total": 639,
+            "rate": 0.3944,
+            "ci95": [
+              0.299,
+              0.4953
+            ]
+          },
+          "code": {
+            "kept": 225,
+            "total": 231,
+            "rate": 0.974,
+            "ci95": [
+              0.9294,
+              0.9963
+            ]
+          },
+          "heading": {
+            "kept": 6671,
+            "total": 9061,
+            "rate": 0.7362,
+            "ci95": [
+              0.6931,
+              0.7808
+            ]
+          }
+        },
+        "markdownify": {
+          "list": {
+            "kept": 1036,
+            "total": 2006,
+            "rate": 0.5165,
+            "ci95": [
+              0.4611,
+              0.5654
+            ]
+          },
+          "table": {
+            "kept": 373,
+            "total": 639,
+            "rate": 0.5837,
+            "ci95": [
+              0.4764,
+              0.6855
+            ]
+          },
+          "code": {
+            "kept": 227,
+            "total": 231,
+            "rate": 0.9827,
+            "ci95": [
+              0.9432,
+              1.0
+            ]
+          },
+          "heading": {
+            "kept": 6987,
+            "total": 9061,
+            "rate": 0.7711,
+            "ci95": [
+              0.7284,
+              0.8137
+            ]
+          }
+        },
+        "readability-lxml": {
+          "list": {
+            "kept": 643,
+            "total": 2006,
+            "rate": 0.3205,
+            "ci95": [
+              0.2763,
+              0.3695
+            ]
+          },
+          "table": {
+            "kept": 221,
+            "total": 639,
+            "rate": 0.3459,
+            "ci95": [
+              0.2222,
+              0.4902
+            ]
+          },
+          "code": {
+            "kept": 227,
+            "total": 231,
+            "rate": 0.9827,
+            "ci95": [
+              0.9622,
+              0.996
+            ]
+          },
+          "heading": {
+            "kept": 2718,
+            "total": 9061,
+            "rate": 0.3,
+            "ci95": [
+              0.2588,
+              0.3451
+            ]
+          }
+        },
+        "trafilatura-md": {
+          "list": {
+            "kept": 588,
+            "total": 2006,
+            "rate": 0.2931,
+            "ci95": [
+              0.2468,
+              0.3404
+            ]
+          },
+          "table": {
+            "kept": 257,
+            "total": 639,
+            "rate": 0.4022,
+            "ci95": [
+              0.3259,
+              0.4736
+            ]
+          },
+          "code": {
+            "kept": 105,
+            "total": 231,
+            "rate": 0.4545,
+            "ci95": [
+              0.1756,
+              0.7563
+            ]
+          },
+          "heading": {
+            "kept": 2995,
+            "total": 9061,
+            "rate": 0.3305,
+            "ci95": [
+              0.2829,
+              0.3781
+            ]
+          }
+        }
+      }
+    },
+    "wceb (all)": {
+      "n_pages": 3794,
+      "gold_structures": {
+        "list": 1946,
+        "table": 633,
+        "code": 231,
+        "heading": 8724
+      },
+      "pages_with_structure": {
+        "list": 649,
+        "table": 207,
+        "code": 32,
+        "heading": 1859
+      },
+      "survival": {
+        "web2md": {
+          "list": {
+            "kept": 552,
+            "total": 1946,
+            "rate": 0.2837,
+            "ci95": [
+              0.2405,
+              0.3274
+            ]
+          },
+          "table": {
+            "kept": 269,
+            "total": 633,
+            "rate": 0.425,
+            "ci95": [
+              0.306,
+              0.5483
+            ]
+          },
+          "code": {
+            "kept": 199,
+            "total": 231,
+            "rate": 0.8615,
+            "ci95": [
+              0.6708,
+              0.9863
+            ]
+          },
+          "heading": {
+            "kept": 2433,
+            "total": 8724,
+            "rate": 0.2789,
+            "ci95": [
+              0.234,
+              0.3239
+            ]
+          }
+        },
+        "all-text": {
+          "list": {
+            "kept": 1138,
+            "total": 1946,
+            "rate": 0.5848,
+            "ci95": [
+              0.5397,
+              0.6316
+            ]
+          },
+          "table": {
+            "kept": 350,
+            "total": 633,
+            "rate": 0.5529,
+            "ci95": [
+              0.4398,
+              0.6525
+            ]
+          },
+          "code": {
+            "kept": 226,
+            "total": 231,
+            "rate": 0.9784,
+            "ci95": [
+              0.9279,
+              1.0
+            ]
+          },
+          "heading": {
+            "kept": 6644,
+            "total": 8724,
+            "rate": 0.7616,
+            "ci95": [
+              0.7175,
+              0.8024
+            ]
+          }
+        },
+        "largest-block": {
+          "list": {
+            "kept": 878,
+            "total": 1946,
+            "rate": 0.4512,
+            "ci95": [
+              0.3981,
+              0.5098
+            ]
+          },
+          "table": {
+            "kept": 274,
+            "total": 633,
+            "rate": 0.4329,
+            "ci95": [
+              0.313,
+              0.5507
+            ]
+          },
+          "code": {
+            "kept": 187,
+            "total": 231,
+            "rate": 0.8095,
+            "ci95": [
+              0.525,
+              0.9857
+            ]
+          },
+          "heading": {
+            "kept": 2489,
+            "total": 8724,
+            "rate": 0.2853,
+            "ci95": [
+              0.2422,
+              0.3328
+            ]
+          }
+        },
+        "html2text": {
+          "list": {
+            "kept": 1082,
+            "total": 1946,
+            "rate": 0.556,
+            "ci95": [
+              0.5096,
+              0.6063
+            ]
+          },
+          "table": {
+            "kept": 246,
+            "total": 633,
+            "rate": 0.3886,
+            "ci95": [
+              0.2873,
+              0.4943
+            ]
+          },
+          "code": {
+            "kept": 225,
+            "total": 231,
+            "rate": 0.974,
+            "ci95": [
+              0.9294,
+              0.9963
+            ]
+          },
+          "heading": {
+            "kept": 6355,
+            "total": 8724,
+            "rate": 0.7285,
+            "ci95": [
+              0.6861,
+              0.7738
+            ]
+          }
+        },
+        "markdownify": {
+          "list": {
+            "kept": 986,
+            "total": 1946,
+            "rate": 0.5067,
+            "ci95": [
+              0.4468,
+              0.5562
+            ]
+          },
+          "table": {
+            "kept": 367,
+            "total": 633,
+            "rate": 0.5798,
+            "ci95": [
+              0.4722,
+              0.673
+            ]
+          },
+          "code": {
+            "kept": 227,
+            "total": 231,
+            "rate": 0.9827,
+            "ci95": [
+              0.9432,
+              1.0
+            ]
+          },
+          "heading": {
+            "kept": 6658,
+            "total": 8724,
+            "rate": 0.7632,
+            "ci95": [
+              0.7181,
+              0.8021
+            ]
+          }
+        },
+        "readability-lxml": {
+          "list": {
+            "kept": 603,
+            "total": 1946,
+            "rate": 0.3099,
+            "ci95": [
+              0.267,
+              0.3519
+            ]
+          },
+          "table": {
+            "kept": 215,
+            "total": 633,
+            "rate": 0.3397,
+            "ci95": [
+              0.2161,
+              0.4748
+            ]
+          },
+          "code": {
+            "kept": 227,
+            "total": 231,
+            "rate": 0.9827,
+            "ci95": [
+              0.9622,
+              0.996
+            ]
+          },
+          "heading": {
+            "kept": 2435,
+            "total": 8724,
+            "rate": 0.2791,
+            "ci95": [
+              0.235,
+              0.3267
+            ]
+          }
+        },
+        "trafilatura-md": {
+          "list": {
+            "kept": 547,
+            "total": 1946,
+            "rate": 0.2811,
+            "ci95": [
+              0.2345,
+              0.3268
+            ]
+          },
+          "table": {
+            "kept": 253,
+            "total": 633,
+            "rate": 0.3997,
+            "ci95": [
+              0.3182,
+              0.4664
+            ]
+          },
+          "code": {
+            "kept": 105,
+            "total": 231,
+            "rate": 0.4545,
+            "ci95": [
+              0.1756,
+              0.7563
+            ]
+          },
+          "heading": {
+            "kept": 2701,
+            "total": 8724,
+            "rate": 0.3096,
+            "ci95": [
+              0.2644,
+              0.3572
+            ]
+          }
+        }
+      }
+    }
+  }
+}

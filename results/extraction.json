@@ -1,0 +1,1876 @@
+{
+  "metric": "shingle (4-gram) P/R/F1 as in scrapinghub/article-extraction-benchmark",
+  "scoring_view": "images dropped, link targets and fence info removed (bench/textview.py)",
+  "systems": {
+    "web2md": {
+      "version": "0.1.0",
+      "note": ""
+    },
+    "all-text": {
+      "version": "0.1.0",
+      "note": "whole page rendered by web2md, no extraction"
+    },
+    "largest-block": {
+      "version": "0.1.0",
+      "note": "parent of the most <p> text, rendered by web2md"
+    },
+    "web2md[no-hints]": {
+      "version": "0.1.0",
+      "note": "ablation: hints off"
+    },
+    "web2md[no-link-density]": {
+      "version": "0.1.0",
+      "note": "ablation: link_density off"
+    },
+    "web2md[no-siblings]": {
+      "version": "0.1.0",
+      "note": "ablation: siblings off"
+    },
+    "web2md[no-clean]": {
+      "version": "0.1.0",
+      "note": "ablation: clean off"
+    },
+    "web2md[no-fallback]": {
+      "version": "0.1.0",
+      "note": "ablation: fallback off"
+    },
+    "html2text": {
+      "version": "2025.4.15",
+      "note": "whole page, no extraction"
+    },
+    "markdownify": {
+      "version": "1.2.3",
+      "note": "whole page, no extraction"
+    },
+    "readability-lxml": {
+      "version": "0.9",
+      "note": "extraction by readability-lxml, rendered by web2md"
+    },
+    "trafilatura": {
+      "version": "2.2.0",
+      "note": "default settings, plain text (as in the published benchmark)"
+    },
+    "trafilatura-md": {
+      "version": "2.2.0",
+      "note": "markdown output with tables, formatting, links, images"
+    }
+  },
+  "unavailable": {},
+  "groups": {
+    "aeb": {
+      "n_pages": 181,
+      "systems": {
+        "web2md": {
+          "precision": 0.9609,
+          "recall": 0.9844,
+          "f1": 0.9725,
+          "f1_ci95": [
+            0.9665,
+            0.9781
+          ],
+          "precision_ci95": [
+            0.9521,
+            0.9698
+          ],
+          "recall_ci95": [
+            0.9773,
+            0.9905
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 136.9943
+        },
+        "all-text": {
+          "precision": 0.5056,
+          "recall": 0.9926,
+          "f1": 0.6699,
+          "f1_ci95": [
+            0.6411,
+            0.6993
+          ],
+          "precision_ci95": [
+            0.4734,
+            0.5395
+          ],
+          "recall_ci95": [
+            0.9899,
+            0.9947
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 104.1555
+        },
+        "largest-block": {
+          "precision": 0.8873,
+          "recall": 0.9073,
+          "f1": 0.8972,
+          "f1_ci95": [
+            0.87,
+            0.9223
+          ],
+          "precision_ci95": [
+            0.8594,
+            0.9128
+          ],
+          "recall_ci95": [
+            0.8723,
+            0.9425
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 25.4459
+        },
+        "html2text": {
+          "precision": 0.4941,
+          "recall": 0.9826,
+          "f1": 0.6576,
+          "f1_ci95": [
+            0.6285,
+            0.6869
+          ],
+          "precision_ci95": [
+            0.4627,
+            0.5276
+          ],
+          "recall_ci95": [
+            0.9777,
+            0.987
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 51.3768
+        },
+        "markdownify": {
+          "precision": 0.5037,
+          "recall": 0.9929,
+          "f1": 0.6684,
+          "f1_ci95": [
+            0.6388,
+            0.6977
+          ],
+          "precision_ci95": [
+            0.4708,
+            0.5375
+          ],
+          "recall_ci95": [
+            0.9902,
+            0.9949
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 104.1784
+        },
+        "readability-lxml": {
+          "precision": 0.9319,
+          "recall": 0.9732,
+          "f1": 0.9521,
+          "f1_ci95": [
+            0.9378,
+            0.9638
+          ],
+          "precision_ci95": [
+            0.9157,
+            0.9471
+          ],
+          "recall_ci95": [
+            0.9584,
+            0.9842
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 56.532
+        },
+        "trafilatura": {
+          "precision": 0.9428,
+          "recall": 0.9779,
+          "f1": 0.96,
+          "f1_ci95": [
+            0.9499,
+            0.9694
+          ],
+          "precision_ci95": [
+            0.9262,
+            0.9576
+          ],
+          "recall_ci95": [
+            0.966,
+            0.9876
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 76.7528
+        },
+        "trafilatura-md": {
+          "precision": 0.9279,
+          "recall": 0.9756,
+          "f1": 0.9512,
+          "f1_ci95": [
+            0.9405,
+            0.9611
+          ],
+          "precision_ci95": [
+            0.9107,
+            0.944
+          ],
+          "recall_ci95": [
+            0.9637,
+            0.9863
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 56.2332
+        }
+      }
+    },
+    "aeb/dev": {
+      "n_pages": 80,
+      "systems": {
+        "web2md": {
+          "precision": 0.9589,
+          "recall": 0.9848,
+          "f1": 0.9717,
+          "f1_ci95": [
+            0.9625,
+            0.9801
+          ],
+          "precision_ci95": [
+            0.943,
+            0.9725
+          ],
+          "recall_ci95": [
+            0.9749,
+            0.9928
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 131.6468
+        },
+        "all-text": {
+          "precision": 0.5191,
+          "recall": 0.9931,
+          "f1": 0.6818,
+          "f1_ci95": [
+            0.6388,
+            0.7242
+          ],
+          "precision_ci95": [
+            0.4709,
+            0.5695
+          ],
+          "recall_ci95": [
+            0.9908,
+            0.9953
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 97.075
+        },
+        "largest-block": {
+          "precision": 0.9054,
+          "recall": 0.9132,
+          "f1": 0.9093,
+          "f1_ci95": [
+            0.8806,
+            0.9352
+          ],
+          "precision_ci95": [
+            0.876,
+            0.9322
+          ],
+          "recall_ci95": [
+            0.8616,
+            0.9566
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 23.3781
+        },
+        "html2text": {
+          "precision": 0.5083,
+          "recall": 0.9846,
+          "f1": 0.6705,
+          "f1_ci95": [
+            0.6271,
+            0.7137
+          ],
+          "precision_ci95": [
+            0.4604,
+            0.559
+          ],
+          "recall_ci95": [
+            0.9773,
+            0.9898
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 46.2984
+        },
+        "markdownify": {
+          "precision": 0.5161,
+          "recall": 0.9931,
+          "f1": 0.6793,
+          "f1_ci95": [
+            0.6358,
+            0.7226
+          ],
+          "precision_ci95": [
+            0.4675,
+            0.5679
+          ],
+          "recall_ci95": [
+            0.991,
+            0.9953
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 96.9943
+        },
+        "readability-lxml": {
+          "precision": 0.9319,
+          "recall": 0.964,
+          "f1": 0.9477,
+          "f1_ci95": [
+            0.9187,
+            0.9687
+          ],
+          "precision_ci95": [
+            0.902,
+            0.9561
+          ],
+          "recall_ci95": [
+            0.9338,
+            0.9869
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 52.4306
+        },
+        "trafilatura": {
+          "precision": 0.9325,
+          "recall": 0.9727,
+          "f1": 0.9522,
+          "f1_ci95": [
+            0.9353,
+            0.9679
+          ],
+          "precision_ci95": [
+            0.9052,
+            0.9568
+          ],
+          "recall_ci95": [
+            0.9471,
+            0.9909
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 82.6714
+        },
+        "trafilatura-md": {
+          "precision": 0.9233,
+          "recall": 0.9703,
+          "f1": 0.9462,
+          "f1_ci95": [
+            0.9291,
+            0.9622
+          ],
+          "precision_ci95": [
+            0.8963,
+            0.9485
+          ],
+          "recall_ci95": [
+            0.9455,
+            0.9894
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 54.9767
+        }
+      }
+    },
+    "aeb/heldout": {
+      "n_pages": 101,
+      "systems": {
+        "web2md": {
+          "precision": 0.9625,
+          "recall": 0.9841,
+          "f1": 0.9732,
+          "f1_ci95": [
+            0.9645,
+            0.9806
+          ],
+          "precision_ci95": [
+            0.9496,
+            0.9735
+          ],
+          "recall_ci95": [
+            0.9733,
+            0.9921
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 141.23
+        },
+        "all-text": {
+          "precision": 0.4948,
+          "recall": 0.9923,
+          "f1": 0.6604,
+          "f1_ci95": [
+            0.6187,
+            0.7007
+          ],
+          "precision_ci95": [
+            0.4497,
+            0.5411
+          ],
+          "recall_ci95": [
+            0.9881,
+            0.9954
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 109.7638
+        },
+        "largest-block": {
+          "precision": 0.8729,
+          "recall": 0.9025,
+          "f1": 0.8875,
+          "f1_ci95": [
+            0.8399,
+            0.929
+          ],
+          "precision_ci95": [
+            0.8268,
+            0.9146
+          ],
+          "recall_ci95": [
+            0.8442,
+            0.9534
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 27.0838
+        },
+        "html2text": {
+          "precision": 0.4828,
+          "recall": 0.9811,
+          "f1": 0.6472,
+          "f1_ci95": [
+            0.6067,
+            0.6863
+          ],
+          "precision_ci95": [
+            0.4388,
+            0.5277
+          ],
+          "recall_ci95": [
+            0.9734,
+            0.9869
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 55.3993
+        },
+        "markdownify": {
+          "precision": 0.4939,
+          "recall": 0.9927,
+          "f1": 0.6596,
+          "f1_ci95": [
+            0.6176,
+            0.6999
+          ],
+          "precision_ci95": [
+            0.4488,
+            0.5404
+          ],
+          "recall_ci95": [
+            0.9885,
+            0.9956
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 109.8687
+        },
+        "readability-lxml": {
+          "precision": 0.9318,
+          "recall": 0.9804,
+          "f1": 0.9555,
+          "f1_ci95": [
+            0.944,
+            0.9665
+          ],
+          "precision_ci95": [
+            0.9136,
+            0.9485
+          ],
+          "recall_ci95": [
+            0.9697,
+            0.9888
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 59.7806
+        },
+        "trafilatura": {
+          "precision": 0.9509,
+          "recall": 0.982,
+          "f1": 0.9662,
+          "f1_ci95": [
+            0.9542,
+            0.9774
+          ],
+          "precision_ci95": [
+            0.9313,
+            0.9677
+          ],
+          "recall_ci95": [
+            0.9698,
+            0.9917
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 72.0649
+        },
+        "trafilatura-md": {
+          "precision": 0.9316,
+          "recall": 0.9798,
+          "f1": 0.9551,
+          "f1_ci95": [
+            0.9406,
+            0.9675
+          ],
+          "precision_ci95": [
+            0.9098,
+            0.9522
+          ],
+          "recall_ci95": [
+            0.9674,
+            0.9893
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 57.2284
+        }
+      }
+    },
+    "wceb/cetd": {
+      "n_pages": 700,
+      "systems": {
+        "web2md": {
+          "precision": 0.9864,
+          "recall": 0.8476,
+          "f1": 0.9117,
+          "f1_ci95": [
+            0.904,
+            0.9191
+          ],
+          "precision_ci95": [
+            0.9822,
+            0.989
+          ],
+          "recall_ci95": [
+            0.8348,
+            0.8601
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 115.5437
+        },
+        "all-text": {
+          "precision": 0.6573,
+          "recall": 0.9812,
+          "f1": 0.7872,
+          "f1_ci95": [
+            0.778,
+            0.797
+          ],
+          "precision_ci95": [
+            0.6447,
+            0.6707
+          ],
+          "recall_ci95": [
+            0.978,
+            0.9839
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 88.9215
+        },
+        "largest-block": {
+          "precision": 0.9439,
+          "recall": 0.8356,
+          "f1": 0.8865,
+          "f1_ci95": [
+            0.8719,
+            0.9008
+          ],
+          "precision_ci95": [
+            0.93,
+            0.9577
+          ],
+          "recall_ci95": [
+            0.8172,
+            0.8538
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 34.1568
+        },
+        "html2text": {
+          "precision": 0.6246,
+          "recall": 0.9601,
+          "f1": 0.7569,
+          "f1_ci95": [
+            0.7486,
+            0.7658
+          ],
+          "precision_ci95": [
+            0.6134,
+            0.6374
+          ],
+          "recall_ci95": [
+            0.9558,
+            0.9637
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 58.4334
+        },
+        "markdownify": {
+          "precision": 0.6362,
+          "recall": 0.9751,
+          "f1": 0.77,
+          "f1_ci95": [
+            0.7614,
+            0.7794
+          ],
+          "precision_ci95": [
+            0.6244,
+            0.649
+          ],
+          "recall_ci95": [
+            0.9717,
+            0.9779
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 139.3387
+        },
+        "readability-lxml": {
+          "precision": 0.9855,
+          "recall": 0.8476,
+          "f1": 0.9114,
+          "f1_ci95": [
+            0.902,
+            0.9197
+          ],
+          "precision_ci95": [
+            0.9801,
+            0.99
+          ],
+          "recall_ci95": [
+            0.8333,
+            0.8606
+          ],
+          "errors": 0,
+          "empty_outputs": 1,
+          "ms_per_page": 66.3804
+        },
+        "trafilatura": {
+          "precision": 0.9749,
+          "recall": 0.8544,
+          "f1": 0.9107,
+          "f1_ci95": [
+            0.9027,
+            0.9177
+          ],
+          "precision_ci95": [
+            0.9689,
+            0.9802
+          ],
+          "recall_ci95": [
+            0.8414,
+            0.8663
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 80.7849
+        },
+        "trafilatura-md": {
+          "precision": 0.9596,
+          "recall": 0.8499,
+          "f1": 0.9014,
+          "f1_ci95": [
+            0.8931,
+            0.9088
+          ],
+          "precision_ci95": [
+            0.9532,
+            0.9653
+          ],
+          "recall_ci95": [
+            0.8365,
+            0.8617
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 85.7162
+        }
+      }
+    },
+    "wceb (all)": {
+      "n_pages": 3794,
+      "systems": {
+        "web2md": {
+          "precision": 0.9365,
+          "recall": 0.8179,
+          "f1": 0.8732,
+          "f1_ci95": [
+            0.8672,
+            0.8795
+          ],
+          "precision_ci95": [
+            0.9308,
+            0.9419
+          ],
+          "recall_ci95": [
+            0.8099,
+            0.8268
+          ],
+          "errors": 0,
+          "empty_outputs": 80,
+          "ms_per_page": 97.7459
+        },
+        "all-text": {
+          "precision": 0.5977,
+          "recall": 0.9524,
+          "f1": 0.7345,
+          "f1_ci95": [
+            0.7276,
+            0.7407
+          ],
+          "precision_ci95": [
+            0.5891,
+            0.6057
+          ],
+          "recall_ci95": [
+            0.9471,
+            0.9572
+          ],
+          "errors": 0,
+          "empty_outputs": 65,
+          "ms_per_page": 96.8395
+        },
+        "largest-block": {
+          "precision": 0.8637,
+          "recall": 0.7677,
+          "f1": 0.8129,
+          "f1_ci95": [
+            0.8042,
+            0.8222
+          ],
+          "precision_ci95": [
+            0.8549,
+            0.8729
+          ],
+          "recall_ci95": [
+            0.7571,
+            0.7786
+          ],
+          "errors": 0,
+          "empty_outputs": 4,
+          "ms_per_page": 24.493
+        },
+        "html2text": {
+          "precision": 0.5683,
+          "recall": 0.9427,
+          "f1": 0.7091,
+          "f1_ci95": [
+            0.7021,
+            0.7155
+          ],
+          "precision_ci95": [
+            0.5594,
+            0.5761
+          ],
+          "recall_ci95": [
+            0.938,
+            0.9469
+          ],
+          "errors": 0,
+          "empty_outputs": 43,
+          "ms_per_page": 46.7547
+        },
+        "markdownify": {
+          "precision": 0.5784,
+          "recall": 0.9538,
+          "f1": 0.7201,
+          "f1_ci95": [
+            0.7131,
+            0.7262
+          ],
+          "precision_ci95": [
+            0.5701,
+            0.5862
+          ],
+          "recall_ci95": [
+            0.9492,
+            0.9585
+          ],
+          "errors": 0,
+          "empty_outputs": 73,
+          "ms_per_page": 107.6349
+        },
+        "readability-lxml": {
+          "precision": 0.9379,
+          "recall": 0.836,
+          "f1": 0.884,
+          "f1_ci95": [
+            0.8783,
+            0.8897
+          ],
+          "precision_ci95": [
+            0.9325,
+            0.943
+          ],
+          "recall_ci95": [
+            0.8283,
+            0.8443
+          ],
+          "errors": 0,
+          "empty_outputs": 35,
+          "ms_per_page": 53.8563
+        },
+        "trafilatura": {
+          "precision": 0.9044,
+          "recall": 0.8442,
+          "f1": 0.8733,
+          "f1_ci95": [
+            0.8678,
+            0.8786
+          ],
+          "precision_ci95": [
+            0.8986,
+            0.9107
+          ],
+          "recall_ci95": [
+            0.8371,
+            0.8512
+          ],
+          "errors": 0,
+          "empty_outputs": 17,
+          "ms_per_page": 65.1687
+        },
+        "trafilatura-md": {
+          "precision": 0.8935,
+          "recall": 0.8406,
+          "f1": 0.8663,
+          "f1_ci95": [
+            0.8612,
+            0.8719
+          ],
+          "precision_ci95": [
+            0.8869,
+            0.9001
+          ],
+          "recall_ci95": [
+            0.8335,
+            0.8479
+          ],
+          "errors": 0,
+          "empty_outputs": 17,
+          "ms_per_page": 67.3005
+        }
+      }
+    },
+    "wceb/cleaneval": {
+      "n_pages": 731,
+      "systems": {
+        "web2md": {
+          "precision": 0.9112,
+          "recall": 0.8685,
+          "f1": 0.8893,
+          "f1_ci95": [
+            0.8758,
+            0.9017
+          ],
+          "precision_ci95": [
+            0.8983,
+            0.9233
+          ],
+          "recall_ci95": [
+            0.8495,
+            0.8859
+          ],
+          "errors": 0,
+          "empty_outputs": 10,
+          "ms_per_page": 65.1099
+        },
+        "all-text": {
+          "precision": 0.8172,
+          "recall": 0.9428,
+          "f1": 0.8755,
+          "f1_ci95": [
+            0.8624,
+            0.8874
+          ],
+          "precision_ci95": [
+            0.801,
+            0.8325
+          ],
+          "recall_ci95": [
+            0.9312,
+            0.9543
+          ],
+          "errors": 0,
+          "empty_outputs": 2,
+          "ms_per_page": 67.5034
+        },
+        "largest-block": {
+          "precision": 0.8762,
+          "recall": 0.7743,
+          "f1": 0.8221,
+          "f1_ci95": [
+            0.8032,
+            0.8395
+          ],
+          "precision_ci95": [
+            0.8581,
+            0.8927
+          ],
+          "recall_ci95": [
+            0.749,
+            0.7987
+          ],
+          "errors": 0,
+          "empty_outputs": 2,
+          "ms_per_page": 21.7252
+        },
+        "html2text": {
+          "precision": 0.7953,
+          "recall": 0.9401,
+          "f1": 0.8617,
+          "f1_ci95": [
+            0.8499,
+            0.8724
+          ],
+          "precision_ci95": [
+            0.7791,
+            0.8095
+          ],
+          "recall_ci95": [
+            0.9316,
+            0.9482
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 30.1116
+        },
+        "markdownify": {
+          "precision": 0.8071,
+          "recall": 0.9574,
+          "f1": 0.8758,
+          "f1_ci95": [
+            0.8651,
+            0.8854
+          ],
+          "precision_ci95": [
+            0.792,
+            0.8211
+          ],
+          "recall_ci95": [
+            0.9494,
+            0.9647
+          ],
+          "errors": 0,
+          "empty_outputs": 5,
+          "ms_per_page": 68.7557
+        },
+        "readability-lxml": {
+          "precision": 0.9132,
+          "recall": 0.8619,
+          "f1": 0.8868,
+          "f1_ci95": [
+            0.8729,
+            0.9
+          ],
+          "precision_ci95": [
+            0.8993,
+            0.9258
+          ],
+          "recall_ci95": [
+            0.8416,
+            0.8801
+          ],
+          "errors": 0,
+          "empty_outputs": 15,
+          "ms_per_page": 49.5803
+        },
+        "trafilatura": {
+          "precision": 0.8738,
+          "recall": 0.8668,
+          "f1": 0.8703,
+          "f1_ci95": [
+            0.8574,
+            0.8817
+          ],
+          "precision_ci95": [
+            0.8601,
+            0.8865
+          ],
+          "recall_ci95": [
+            0.8506,
+            0.8818
+          ],
+          "errors": 0,
+          "empty_outputs": 15,
+          "ms_per_page": 52.0142
+        },
+        "trafilatura-md": {
+          "precision": 0.8675,
+          "recall": 0.8574,
+          "f1": 0.8624,
+          "f1_ci95": [
+            0.8493,
+            0.8743
+          ],
+          "precision_ci95": [
+            0.8533,
+            0.8809
+          ],
+          "recall_ci95": [
+            0.8407,
+            0.8729
+          ],
+          "errors": 0,
+          "empty_outputs": 15,
+          "ms_per_page": 57.7073
+        }
+      }
+    },
+    "wceb/cleanportaleval": {
+      "n_pages": 69,
+      "systems": {
+        "web2md": {
+          "precision": 0.9714,
+          "recall": 0.9249,
+          "f1": 0.9476,
+          "f1_ci95": [
+            0.9318,
+            0.9599
+          ],
+          "precision_ci95": [
+            0.9557,
+            0.9829
+          ],
+          "recall_ci95": [
+            0.898,
+            0.9465
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 96.1923
+        },
+        "all-text": {
+          "precision": 0.433,
+          "recall": 0.9624,
+          "f1": 0.5973,
+          "f1_ci95": [
+            0.5564,
+            0.6346
+          ],
+          "precision_ci95": [
+            0.3921,
+            0.4724
+          ],
+          "recall_ci95": [
+            0.9469,
+            0.9753
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 78.568
+        },
+        "largest-block": {
+          "precision": 0.9496,
+          "recall": 0.9414,
+          "f1": 0.9455,
+          "f1_ci95": [
+            0.9301,
+            0.9571
+          ],
+          "precision_ci95": [
+            0.9289,
+            0.9649
+          ],
+          "recall_ci95": [
+            0.9197,
+            0.9593
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 23.7769
+        },
+        "html2text": {
+          "precision": 0.4277,
+          "recall": 0.9749,
+          "f1": 0.5945,
+          "f1_ci95": [
+            0.5541,
+            0.6309
+          ],
+          "precision_ci95": [
+            0.3873,
+            0.466
+          ],
+          "recall_ci95": [
+            0.9669,
+            0.9818
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 51.1978
+        },
+        "markdownify": {
+          "precision": 0.4319,
+          "recall": 0.989,
+          "f1": 0.6013,
+          "f1_ci95": [
+            0.5607,
+            0.6373
+          ],
+          "precision_ci95": [
+            0.3915,
+            0.47
+          ],
+          "recall_ci95": [
+            0.9867,
+            0.991
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 112.3
+        },
+        "readability-lxml": {
+          "precision": 0.9681,
+          "recall": 0.949,
+          "f1": 0.9585,
+          "f1_ci95": [
+            0.9476,
+            0.9674
+          ],
+          "precision_ci95": [
+            0.9539,
+            0.9797
+          ],
+          "recall_ci95": [
+            0.9297,
+            0.965
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 37.4243
+        },
+        "trafilatura": {
+          "precision": 0.9722,
+          "recall": 0.9253,
+          "f1": 0.9481,
+          "f1_ci95": [
+            0.9329,
+            0.9608
+          ],
+          "precision_ci95": [
+            0.9549,
+            0.9852
+          ],
+          "recall_ci95": [
+            0.8985,
+            0.9463
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 66.8087
+        },
+        "trafilatura-md": {
+          "precision": 0.9686,
+          "recall": 0.9513,
+          "f1": 0.9599,
+          "f1_ci95": [
+            0.9475,
+            0.9695
+          ],
+          "precision_ci95": [
+            0.9509,
+            0.9824
+          ],
+          "recall_ci95": [
+            0.9356,
+            0.9649
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 63.0783
+        }
+      }
+    },
+    "wceb/dragnet": {
+      "n_pages": 1379,
+      "systems": {
+        "web2md": {
+          "precision": 0.9277,
+          "recall": 0.7606,
+          "f1": 0.8359,
+          "f1_ci95": [
+            0.8237,
+            0.8471
+          ],
+          "precision_ci95": [
+            0.9168,
+            0.9379
+          ],
+          "recall_ci95": [
+            0.7449,
+            0.7756
+          ],
+          "errors": 0,
+          "empty_outputs": 4,
+          "ms_per_page": 95.9445
+        },
+        "all-text": {
+          "precision": 0.4912,
+          "recall": 0.9776,
+          "f1": 0.6539,
+          "f1_ci95": [
+            0.6419,
+            0.665
+          ],
+          "precision_ci95": [
+            0.4777,
+            0.5037
+          ],
+          "recall_ci95": [
+            0.9753,
+            0.9797
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 65.6128
+        },
+        "largest-block": {
+          "precision": 0.8438,
+          "recall": 0.6996,
+          "f1": 0.765,
+          "f1_ci95": [
+            0.7497,
+            0.7806
+          ],
+          "precision_ci95": [
+            0.8265,
+            0.8594
+          ],
+          "recall_ci95": [
+            0.6813,
+            0.7175
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 19.4491
+        },
+        "html2text": {
+          "precision": 0.4589,
+          "recall": 0.9574,
+          "f1": 0.6204,
+          "f1_ci95": [
+            0.6082,
+            0.6322
+          ],
+          "precision_ci95": [
+            0.446,
+            0.4714
+          ],
+          "recall_ci95": [
+            0.9523,
+            0.9621
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 47.1359
+        },
+        "markdownify": {
+          "precision": 0.468,
+          "recall": 0.9743,
+          "f1": 0.6323,
+          "f1_ci95": [
+            0.6204,
+            0.6434
+          ],
+          "precision_ci95": [
+            0.455,
+            0.4803
+          ],
+          "recall_ci95": [
+            0.9707,
+            0.9775
+          ],
+          "errors": 0,
+          "empty_outputs": 4,
+          "ms_per_page": 113.5593
+        },
+        "readability-lxml": {
+          "precision": 0.9358,
+          "recall": 0.7736,
+          "f1": 0.847,
+          "f1_ci95": [
+            0.8358,
+            0.8578
+          ],
+          "precision_ci95": [
+            0.928,
+            0.9437
+          ],
+          "recall_ci95": [
+            0.7575,
+            0.7887
+          ],
+          "errors": 0,
+          "empty_outputs": 11,
+          "ms_per_page": 41.6752
+        },
+        "trafilatura": {
+          "precision": 0.9012,
+          "recall": 0.7767,
+          "f1": 0.8343,
+          "f1_ci95": [
+            0.8234,
+            0.8455
+          ],
+          "precision_ci95": [
+            0.8893,
+            0.9128
+          ],
+          "recall_ci95": [
+            0.7609,
+            0.7911
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 56.6362
+        },
+        "trafilatura-md": {
+          "precision": 0.89,
+          "recall": 0.7758,
+          "f1": 0.829,
+          "f1_ci95": [
+            0.8176,
+            0.8404
+          ],
+          "precision_ci95": [
+            0.8779,
+            0.9024
+          ],
+          "recall_ci95": [
+            0.7599,
+            0.7901
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 56.8548
+        }
+      }
+    },
+    "wceb/google-trends-2017": {
+      "n_pages": 179,
+      "systems": {
+        "web2md": {
+          "precision": 0.8465,
+          "recall": 0.7565,
+          "f1": 0.799,
+          "f1_ci95": [
+            0.7582,
+            0.8377
+          ],
+          "precision_ci95": [
+            0.8037,
+            0.8846
+          ],
+          "recall_ci95": [
+            0.7113,
+            0.8013
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 275.8928
+        },
+        "all-text": {
+          "precision": 0.4821,
+          "recall": 0.9598,
+          "f1": 0.6418,
+          "f1_ci95": [
+            0.6076,
+            0.6731
+          ],
+          "precision_ci95": [
+            0.446,
+            0.5162
+          ],
+          "recall_ci95": [
+            0.9461,
+            0.9713
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 211.2401
+        },
+        "largest-block": {
+          "precision": 0.7475,
+          "recall": 0.6466,
+          "f1": 0.6934,
+          "f1_ci95": [
+            0.6432,
+            0.7408
+          ],
+          "precision_ci95": [
+            0.6934,
+            0.7983
+          ],
+          "recall_ci95": [
+            0.5879,
+            0.7038
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 45.3207
+        },
+        "html2text": {
+          "precision": 0.4587,
+          "recall": 0.9319,
+          "f1": 0.6148,
+          "f1_ci95": [
+            0.5816,
+            0.6474
+          ],
+          "precision_ci95": [
+            0.4236,
+            0.494
+          ],
+          "recall_ci95": [
+            0.9146,
+            0.9466
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 103.904
+        },
+        "markdownify": {
+          "precision": 0.4708,
+          "recall": 0.9508,
+          "f1": 0.6298,
+          "f1_ci95": [
+            0.5963,
+            0.663
+          ],
+          "precision_ci95": [
+            0.4351,
+            0.5061
+          ],
+          "recall_ci95": [
+            0.9352,
+            0.9644
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 224.3334
+        },
+        "readability-lxml": {
+          "precision": 0.8651,
+          "recall": 0.7427,
+          "f1": 0.7992,
+          "f1_ci95": [
+            0.7583,
+            0.837
+          ],
+          "precision_ci95": [
+            0.8263,
+            0.9006
+          ],
+          "recall_ci95": [
+            0.6936,
+            0.7907
+          ],
+          "errors": 0,
+          "empty_outputs": 4,
+          "ms_per_page": 128.1424
+        },
+        "trafilatura": {
+          "precision": 0.8719,
+          "recall": 0.8318,
+          "f1": 0.8514,
+          "f1_ci95": [
+            0.8208,
+            0.879
+          ],
+          "precision_ci95": [
+            0.8377,
+            0.9039
+          ],
+          "recall_ci95": [
+            0.7962,
+            0.8655
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 157.9583
+        },
+        "trafilatura-md": {
+          "precision": 0.8461,
+          "recall": 0.8212,
+          "f1": 0.8334,
+          "f1_ci95": [
+            0.7993,
+            0.8614
+          ],
+          "precision_ci95": [
+            0.8124,
+            0.8776
+          ],
+          "recall_ci95": [
+            0.7842,
+            0.8548
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 155.949
+        }
+      }
+    },
+    "wceb/l3s-gn1": {
+      "n_pages": 621,
+      "systems": {
+        "web2md": {
+          "precision": 0.9427,
+          "recall": 0.837,
+          "f1": 0.8867,
+          "f1_ci95": [
+            0.8703,
+            0.9011
+          ],
+          "precision_ci95": [
+            0.9291,
+            0.9539
+          ],
+          "recall_ci95": [
+            0.8116,
+            0.8603
+          ],
+          "errors": 0,
+          "empty_outputs": 65,
+          "ms_per_page": 58.247
+        },
+        "all-text": {
+          "precision": 0.5358,
+          "recall": 0.8654,
+          "f1": 0.6618,
+          "f1_ci95": [
+            0.6454,
+            0.6774
+          ],
+          "precision_ci95": [
+            0.5172,
+            0.5546
+          ],
+          "recall_ci95": [
+            0.839,
+            0.8902
+          ],
+          "errors": 0,
+          "empty_outputs": 63,
+          "ms_per_page": 172.4248
+        },
+        "largest-block": {
+          "precision": 0.812,
+          "recall": 0.8417,
+          "f1": 0.8266,
+          "f1_ci95": [
+            0.8029,
+            0.8491
+          ],
+          "precision_ci95": [
+            0.786,
+            0.8371
+          ],
+          "recall_ci95": [
+            0.8172,
+            0.8644
+          ],
+          "errors": 0,
+          "empty_outputs": 2,
+          "ms_per_page": 20.1781
+        },
+        "html2text": {
+          "precision": 0.502,
+          "recall": 0.8892,
+          "f1": 0.6417,
+          "f1_ci95": [
+            0.6246,
+            0.6576
+          ],
+          "precision_ci95": [
+            0.4844,
+            0.5193
+          ],
+          "recall_ci95": [
+            0.8671,
+            0.9089
+          ],
+          "errors": 0,
+          "empty_outputs": 43,
+          "ms_per_page": 32.999
+        },
+        "markdownify": {
+          "precision": 0.5082,
+          "recall": 0.8716,
+          "f1": 0.642,
+          "f1_ci95": [
+            0.6252,
+            0.6571
+          ],
+          "precision_ci95": [
+            0.4903,
+            0.526
+          ],
+          "recall_ci95": [
+            0.8466,
+            0.8937
+          ],
+          "errors": 0,
+          "empty_outputs": 64,
+          "ms_per_page": 67.1317
+        },
+        "readability-lxml": {
+          "precision": 0.9281,
+          "recall": 0.9232,
+          "f1": 0.9256,
+          "f1_ci95": [
+            0.9134,
+            0.9374
+          ],
+          "precision_ci95": [
+            0.9137,
+            0.9422
+          ],
+          "recall_ci95": [
+            0.9103,
+            0.9355
+          ],
+          "errors": 0,
+          "empty_outputs": 4,
+          "ms_per_page": 38.2524
+        },
+        "trafilatura": {
+          "precision": 0.8627,
+          "recall": 0.9346,
+          "f1": 0.8972,
+          "f1_ci95": [
+            0.8863,
+            0.9067
+          ],
+          "precision_ci95": [
+            0.8468,
+            0.8776
+          ],
+          "recall_ci95": [
+            0.9247,
+            0.9434
+          ],
+          "errors": 0,
+          "empty_outputs": 2,
+          "ms_per_page": 50.9882
+        },
+        "trafilatura-md": {
+          "precision": 0.8563,
+          "recall": 0.9316,
+          "f1": 0.8923,
+          "f1_ci95": [
+            0.8818,
+            0.9017
+          ],
+          "precision_ci95": [
+            0.8406,
+            0.8704
+          ],
+          "recall_ci95": [
+            0.9218,
+            0.9397
+          ],
+          "errors": 0,
+          "empty_outputs": 2,
+          "ms_per_page": 52.07
+        }
+      }
+    },
+    "wceb/readability": {
+      "n_pages": 115,
+      "systems": {
+        "web2md": {
+          "precision": 0.9854,
+          "recall": 0.9309,
+          "f1": 0.9574,
+          "f1_ci95": [
+            0.9389,
+            0.9714
+          ],
+          "precision_ci95": [
+            0.9801,
+            0.9898
+          ],
+          "recall_ci95": [
+            0.8972,
+            0.9564
+          ],
+          "errors": 0,
+          "empty_outputs": 1,
+          "ms_per_page": 155.4013
+        },
+        "all-text": {
+          "precision": 0.7088,
+          "recall": 0.988,
+          "f1": 0.8254,
+          "f1_ci95": [
+            0.7876,
+            0.8612
+          ],
+          "precision_ci95": [
+            0.6546,
+            0.7618
+          ],
+          "recall_ci95": [
+            0.9811,
+            0.9932
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 130.6965
+        },
+        "largest-block": {
+          "precision": 0.9423,
+          "recall": 0.8124,
+          "f1": 0.8725,
+          "f1_ci95": [
+            0.8341,
+            0.9075
+          ],
+          "precision_ci95": [
+            0.9119,
+            0.9697
+          ],
+          "recall_ci95": [
+            0.7537,
+            0.8669
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 35.0569
+        },
+        "html2text": {
+          "precision": 0.6836,
+          "recall": 0.9645,
+          "f1": 0.8001,
+          "f1_ci95": [
+            0.7601,
+            0.8374
+          ],
+          "precision_ci95": [
+            0.6296,
+            0.7374
+          ],
+          "recall_ci95": [
+            0.9428,
+            0.9787
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 59.548
+        },
+        "markdownify": {
+          "precision": 0.6995,
+          "recall": 0.9842,
+          "f1": 0.8178,
+          "f1_ci95": [
+            0.7789,
+            0.8525
+          ],
+          "precision_ci95": [
+            0.6457,
+            0.7515
+          ],
+          "recall_ci95": [
+            0.9749,
+            0.9913
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 125.0247
+        },
+        "readability-lxml": {
+          "precision": 0.9719,
+          "recall": 0.9546,
+          "f1": 0.9632,
+          "f1_ci95": [
+            0.9405,
+            0.9781
+          ],
+          "precision_ci95": [
+            0.9505,
+            0.9852
+          ],
+          "recall_ci95": [
+            0.9278,
+            0.9737
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 129.3626
+        },
+        "trafilatura": {
+          "precision": 0.939,
+          "recall": 0.9293,
+          "f1": 0.9341,
+          "f1_ci95": [
+            0.9136,
+            0.9544
+          ],
+          "precision_ci95": [
+            0.9085,
+            0.9655
+          ],
+          "recall_ci95": [
+            0.9044,
+            0.9527
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 87.2057
+        },
+        "trafilatura-md": {
+          "precision": 0.9247,
+          "recall": 0.928,
+          "f1": 0.9263,
+          "f1_ci95": [
+            0.9048,
+            0.9471
+          ],
+          "precision_ci95": [
+            0.8917,
+            0.9536
+          ],
+          "recall_ci95": [
+            0.9024,
+            0.9512
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 88.2373
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,555 @@
+{
+  "thresholds": "precision/recall 0.8; wrong block = recall < 0.1",
+  "categories": {
+    "aeb": {
+      "ok": 171,
+      "over-extraction (boilerplate kept)": 6,
+      "under-extraction (article partly missing)": 4
+    },
+    "all": {
+      "ok": 2901,
+      "over-extraction (boilerplate kept)": 153,
+      "under-extraction (article partly missing)": 633,
+      "wrong block (almost none of the article)": 140,
+      "mixed (part of the article plus boilerplate)": 68,
+      "empty output": 80
+    },
+    "wceb/cetd": {
+      "ok": 532,
+      "under-extraction (article partly missing)": 165,
+      "wrong block (almost none of the article)": 2,
+      "over-extraction (boilerplate kept)": 1
+    },
+    "wceb/cleaneval": {
+      "under-extraction (article partly missing)": 58,
+      "ok": 554,
+      "mixed (part of the article plus boilerplate)": 34,
+      "empty output": 10,
+      "over-extraction (boilerplate kept)": 50,
+      "wrong block (almost none of the article)": 25
+    },
+    "wceb/cleanportaleval": {
+      "ok": 58,
+      "under-extraction (article partly missing)": 7,
+      "over-extraction (boilerplate kept)": 4
+    },
+    "wceb/dragnet": {
+      "ok": 865,
+      "under-extraction (article partly missing)": 347,
+      "mixed (part of the article plus boilerplate)": 26,
+      "wrong block (almost none of the article)": 89,
+      "over-extraction (boilerplate kept)": 48,
+      "empty output": 4
+    },
+    "wceb/google-trends-2017": {
+      "wrong block (almost none of the article)": 20,
+      "ok": 114,
+      "mixed (part of the article plus boilerplate)": 5,
+      "over-extraction (boilerplate kept)": 12,
+      "under-extraction (article partly missing)": 28
+    },
+    "wceb/l3s-gn1": {
+      "ok": 503,
+      "empty output": 65,
+      "under-extraction (article partly missing)": 14,
+      "over-extraction (boilerplate kept)": 32,
+      "wrong block (almost none of the article)": 4,
+      "mixed (part of the article plus boilerplate)": 3
+    },
+    "wceb/readability": {
+      "empty output": 1,
+      "ok": 104,
+      "under-extraction (article partly missing)": 10
+    }
+  },
+  "examples": {
+    "over-extraction (boilerplate kept)": [
+      {
+        "dataset": "aeb",
+        "page_id": "35b158918c676ff2c74445517db76c83db70a805cc50b64e1369b354a027fcbd",
+        "url": "https://www.cleveland.com/entertainment/2019/11/doobie-brothers-to-reunite-with-michael-mcdonald-for-blossom-show.html",
+        "f1": 0.8556
+      },
+      {
+        "dataset": "aeb",
+        "page_id": "4219d096902dad9fd9d57e881e7928ca66bdf5334c2bc7dfddaa264887777a7a",
+        "url": "https://theantijunecleaver.com/2017/12/spiced-honey-pear-jam-recipe/",
+        "f1": 0.8684
+      },
+      {
+        "dataset": "aeb",
+        "page_id": "5ae11e580afc12d3ba1a12944281e6a7a5dded5c98b4efcf24aedcb28f0d5b22",
+        "url": "https://www.ascom.com/news-and-events/Ascom-business-news/Ascom-announces-a-strategic-distribution-partnership-with-GE-Healthcare-in-Europe-for-intensive-care-units.html",
+        "f1": 0.8167
+      },
+      {
+        "dataset": "aeb",
+        "page_id": "6ebac05f637ece8aa57c298a2a5e3a8047f546f855d0f29cc683cea60ce85c85",
+        "url": "https://thehill.com/blogs/blog-briefing-room/news/471031-new-york-man-pleads-guilty-to-threatening-to-kill-omar",
+        "f1": 0.8491
+      },
+      {
+        "dataset": "aeb",
+        "page_id": "c69e539d689a8335a69042727f1b58edab09d5d99fb607ec625a63151a537dc2",
+        "url": "https://www.ascom.com/news-and-events/Ascom-business-news/ascom-and-draeger-introduce-integrated-clinical-alarm-management-solution-in-north-america-to-improve-patient-care.html",
+        "f1": 0.8313
+      },
+      {
+        "dataset": "aeb",
+        "page_id": "cc03ddb5ef7d5f1fdb8a87f5e6dfd058a2a70acedf2551655a898dc5c18eb79e",
+        "url": "http://www.autoracing.com.br/calendario-stock-car-2018/",
+        "f1": 0.7778
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "93aea5bfa5fdbefbac8219a78fb53f919cf9e894afad85dd5e53a017b1dc82ce",
+        "url": "",
+        "f1": 0.792
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "0757a7fb70c89d6e5602d947b3daeb2c8c75e7190eabd364e7e4ef9a0356b6d7",
+        "url": "http://www.michaelgreer.com/keep_moving.htm",
+        "f1": 0.8839
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "0ccdf605924dd296f54ea230b15b11784fdf79f7d36b86df00a72cf7ae1baf68",
+        "url": "http://www.gdi-solutions.com/",
+        "f1": 0.7685
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "165515dcfb99678b75df71b826c4639b92d9d7ecea43673c319da0e5b61123a0",
+        "url": "http://www.besiweb.com/HKANTAR2.html",
+        "f1": 0.5798
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "1910c7078231c53cb318bba9cf80d7c9e9b22f271eebce88e09a8b5f34f53656",
+        "url": "http://www.mosnews.com/feature/2004/04/12/police.shtml",
+        "f1": 0.869
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "1ccf88c6aa85636726426369a2b79b115cbdb88ade41998c496e3d8575b2b8a3",
+        "url": "",
+        "f1": 0.7751
+      }
+    ],
+    "under-extraction (article partly missing)": [
+      {
+        "dataset": "aeb",
+        "page_id": "3f65af7b6b98b1c9ae9a3e0d8a09a85600cdc44e26e4b3a6db96a31f4b1767e3",
+        "url": "https://www.nj.com/entertainment/2019/11/florida-man-exists-south-dakota-hold-my-beer-meth-were-on-it.html",
+        "f1": 0.788
+      },
+      {
+        "dataset": "aeb",
+        "page_id": "51d066b0602c9421d8d6410bc4b931700978409a3faa2a984e8fbde519ad7241",
+        "url": "https://www.nbcdfw.com/news/local/We-Got-Her-Video-Shows-Dramatic-Rescue-of-Kidnapped-Fort-Worth-Girl-565107452.html",
+        "f1": 0.752
+      },
+      {
+        "dataset": "aeb",
+        "page_id": "c82b3d1d540bbbd6081bdfb78b4c068c583aa766bcaaefe7ad16d24e5413a829",
+        "url": "http://www.wday.ru/articles/53-letnyaya-model-posmotri-na-krasotku-kotoraya-prevratilas-v-staruhu-id120424",
+        "f1": 0.8782
+      },
+      {
+        "dataset": "aeb",
+        "page_id": "e7d77f1869803e24667fa0b985cff27fb4139951a5ffa494bc9ba810df48fb30",
+        "url": "https://bgr.com/2019/11/19/apple-black-friday-2019-deals-best-available-now/",
+        "f1": 0.845
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "004d345c9aa92494303c3e778d45a813883b0652379becef19c936d039ead8ce",
+        "url": "http://www.bbc.co.uk/news/world-africa-12030051",
+        "f1": 0.8201
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "0148028bb3cd3a6266f8a685bd9e63a763700c403e98b2713bd58ba7f7aaab50",
+        "url": "http://news.yahoo.com/s/nm/20101217/wl_nm/us_wikileaks_australia",
+        "f1": 0.7508
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "014e1be42c371f8ade847d2401034c91b8c692082b83dcfbaa362eed0dfefb2b",
+        "url": "",
+        "f1": 0.725
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "0766cf5c6e7888888a196131d41fa1ddb5476d9fbf6196403ecc0ab9e9496dc7",
+        "url": "",
+        "f1": 0.762
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "081d1fe400d065e3e10082c1d015277963736921725a75f93d050966e5a7227f",
+        "url": "http://news.yahoo.com/s/ap/20101220/ap_on_bi_ge/us_broken_budgets_new_governors",
+        "f1": 0.7238
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "086801659c089a70893b2db4adf4c8b61836c309e919a5e73b327a9534db8154",
+        "url": "",
+        "f1": 0.8571
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "0a8eeabc2d8126c768e21a834d89ef04619cd0126633d6c874a859c71e412712",
+        "url": "http://news.yahoo.com/s/ap/20101221/ap_on_sp_fo_ne/fbn_colts_collie",
+        "f1": 0.7791
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "0fea6738b1dc9e3d1af79f381b53b7ff0a7cd085a423d5121da92e8dd7a9eb22",
+        "url": "http://www.bbc.co.uk/news/world-middle-east-12039745",
+        "f1": 0.7929
+      }
+    ],
+    "wrong block (almost none of the article)": [
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "30f5e1aabc4810921db008454b2e547db38efe944b5d5b423a76adb5b51007d8",
+        "url": "",
+        "f1": 0.0632
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "46f3788fd714a974f936f95673b195de9c86ba745950f9bbbbf8920168e4c799",
+        "url": "",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "0e87732a2105733e14375efe9a40377251bc6885cfb13518149d68ede9553314",
+        "url": "http://www.thingstodo-london.com/brochure/product_show.jsp?ID=1010&PRODUCTID=1016&CODE=3858EE042",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "169c42d78aa442ddb0cfd60bbca2fd3d535f1cf2e22928a01417200c022c5037",
+        "url": "",
+        "f1": 0.0139
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "1ac7bcdf4c32b61174af56367af126babbee3b9bd940a0b5f0808a8377ba0b6e",
+        "url": "http://www.d.umn.edu/~scastleb/Some%20Interesting%20(and%20some%20useful)%20Web%20Pages.htm",
+        "f1": 0.0033
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "1df486cba0a614bc7f84e256791a0c37e6444b766d1159ef89c32e6c538a7e08",
+        "url": "http://oval.mitre.org/community/board/minutes/2004-09-21.html",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "2cfc92acc34b58a3e1fc6614cbfc6dc07a28e5bf138f9e4450c7155394bbbd33",
+        "url": "",
+        "f1": 0.0425
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "31ff069ea5bbdebbac02dbc3b5fbee66c689419db1740a881e3af2cec6bafe78",
+        "url": "",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "3699c12b4ddc731694ef7ee4f2a2d792ad5024fe7e5228d24d0c482ba00a84a7",
+        "url": "http://www.chfpatients.com/faq/dhf.htm",
+        "f1": 0.0369
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "5208046831b3518a75efa3012f8c533cda22dd4717b280a9001729e58b30514a",
+        "url": "http://www.travelintelligence.net/wsd/hotels/htls_3833_Les_Suites_TaipeiChingCheng_Taipei_review.html",
+        "f1": 0.1453
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "5a153484e21f15317ac2ad92c5ff5569895303de948424e384c1b5dc3bf37922",
+        "url": "http://www.udel.edu/PR/UDaily/2005/dec/personnel020105.html",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "5b9161446f0e2e9bf620b774c43880ea4f88da85e9bd4334fce6aa1746ae80b2",
+        "url": "http://radio.weblogs.com/0107233/categories/thanks/2005/01/03.html",
+        "f1": 0.0
+      }
+    ],
+    "mixed (part of the article plus boilerplate)": [
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "01d2d66463ededad2f080e046bb746ced1f3dab739451eb2c37d882d2be0deff",
+        "url": "http://parents.berkeley.edu/advice/babies/laundry.html",
+        "f1": 0.7028
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "01f79a0684c98aaca2050f1ee6234f3e7905001af71a495e91cf9989b6db40d4",
+        "url": "",
+        "f1": 0.7732
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "029d34b53f69374d5c88d298ebc1f97fecd47d94c7919e58aba3b73a38c9729f",
+        "url": "http://www.biomedcentral.com/1741-7015/3/1",
+        "f1": 0.364
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "02a093523b46ef475b8ce275e613d84054f9293728e2e892675c37d45f4548bd",
+        "url": "http://freshmeat.net/articles/view/141/",
+        "f1": 0.7509
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "036e06ee1999c45c768f07d6f5361487723e3b5071811434415ba0481bab796c",
+        "url": "http://www.globalsecurity.org/military/",
+        "f1": 0.4628
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "070fd6328624cd79a6ec59c5ce21d6a66799dded19d9e1cfcd12d391e3e2af95",
+        "url": "http://ideonomy.mit.edu/whatcan/things071-080.html",
+        "f1": 0.7493
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "0d6719f5f6805bc7e5c78f1e666a878243d582bdc911fc388b42cfea11791502",
+        "url": "",
+        "f1": 0.3102
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "1e4bb2dfe3cb80cb1c90d6febfd95fb472b5a6503676d6d28253a41f39a0abf8",
+        "url": "http://www.fxstreet.com/nou/content/103340/content.asp?menu=knowledge",
+        "f1": 0.2256
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "209dab117c99d34f5e613855742e4fa14381aca31b57fbb34f9546c7a5f149eb",
+        "url": "http://www.hotvsnot.com/",
+        "f1": 0.3051
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "28c13f678e3d033862d47ccaa17426622d4b876b5498fd9f77a7423ef04b41d1",
+        "url": "http://www.gtaforums.com/index.php?showtopic=175345",
+        "f1": 0.7286
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "29062907171aea1edeec9903e2d86ea1343350650de3d612f1f8ab4c1557d080",
+        "url": "",
+        "f1": 0.6139
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "3b7b798994f0de8962ffd429c2e01eccae393e6c652eb4f4da1861783e71d116",
+        "url": "",
+        "f1": 0.7295
+      }
+    ],
+    "empty output": [
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "0719d987790bd1f5e76f20c9bd56ab4935c3899fe84c2ced5d03208254849d14",
+        "url": "http://mobyrebuttal.blogspot.com/",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "09ad2db32a89bc73dd1bc76b99a5873eed62cd49b040a521a287eb558d559a7e",
+        "url": "http://www.forbes.com/markets/2005/01/19/cx_pk_0119eyeonstocks.html",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "0ecaa01dcb5f00edd4135674774ab414646464d18cc14823d17f52ac537e43b6",
+        "url": "http://jodi.ecs.soton.ac.uk/Articles/v01/i08/Hunter/",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "291655dfe894fe79e95bc5bafa08d8fb07ce0820e1dfaab1a0dd652c0cec2cdb",
+        "url": "http://www.sptimes.com/2003/12/06/Tampabay/Flu_vaccine_has_run_o.shtml",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "6fd7e61b11d5c06bd42d3c7f796c1325ae83cd9dfe2a2fe96b1b720ebcfa9248",
+        "url": "http://downtownme.com/event/event.asp?strFunction=BuildEventFromCategory&intCategoryId=9&intFrom=1",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "8d75938bb06de3c6b9d3ce6c0dd658cf575cbec252a302f6164fa26dfbb87487",
+        "url": "http://www.greenair.com/interpri.htm",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "9c5bfd4ae2c8d904a4e93c5b7ee03c647c0cb97c94b7c6410a42e22bc0ecc837",
+        "url": "http://gloria-brame.com/therapy/",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "a858987cd1bb86fef3f5b8dfb8caf3d133de1084d8c573513794723924f6dfbf",
+        "url": "http://www.sics.se/~martins/research.php",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "b34c33a0e7e7779862c29a2d525d733ba6c18748471b7bc3517eac68f6f8f545",
+        "url": "http://www.cri.ca/publications/june03_communique/licence_application.html",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "d55e5aedf8ad4bbf8393c7202f1acd0e204d7e80f2b7c20d451537f82d250e8a",
+        "url": "http://www.thenationaldebate.com/blog/",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/dragnet",
+        "page_id": "3c9396e13b22634c16e07b36e53287e9c18ad6d1ccde7cfbe68f9f61e71f9965",
+        "url": "http://www.bbc.co.uk/sport/0/football/18971248",
+        "f1": 0.0
+      },
+      {
+        "dataset": "wceb/dragnet",
+        "page_id": "48a130e0dd52194d89f690a3f502c674fb1e6de3479efc76d325f08dd5b6d9c0",
+        "url": "",
+        "f1": 0.0
+      }
+    ]
+  },
+  "all_extractors_fail": {
+    "definition": "best page F1 among ['web2md', 'trafilatura', 'readability-lxml'] below 0.5",
+    "n_pages": 189,
+    "by_dataset": {
+      "wceb/cetd": 8,
+      "wceb/cleaneval": 20,
+      "wceb/dragnet": 139,
+      "wceb/google-trends-2017": 12,
+      "wceb/l3s-gn1": 9,
+      "wceb/readability": 1
+    },
+    "features_hard": {
+      "n": 189,
+      "median_truth_tokens": 1436,
+      "median_article_share_of_page_text": 0.7718,
+      "median_paragraphs_ge_25_chars": 50,
+      "share_with_no_p_paragraphs": 0.0317
+    },
+    "features_rest": {
+      "n": 3786,
+      "median_truth_tokens": 646.5,
+      "median_article_share_of_page_text": 0.6078,
+      "median_paragraphs_ge_25_chars": 16.0,
+      "share_with_no_p_paragraphs": 0.0478
+    },
+    "examples": [
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "1c597f75076f4c8b21df57909360da98405b81b6524ecbb4a4bb3d15f66a9b12",
+        "url": "http://blog.foursquare.com/2010/12/20/photos-and-comments/",
+        "truth_tokens": 2118
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "30f5e1aabc4810921db008454b2e547db38efe944b5d5b423a76adb5b51007d8",
+        "url": "",
+        "truth_tokens": 15734
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "48cfdf5948ce7683b87c36d5666728f47b5d3b1c0e4ebb0f829a3708225453b5",
+        "url": "",
+        "truth_tokens": 4739
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "5eb9b9c01c461358e86ef29086c5685d4b0afd1e178eb431c6a5caa2f651fb0d",
+        "url": "http://news.yahoo.com/s/ap/20101220/ap_on_re_eu/eu_spain_art_theft",
+        "truth_tokens": 558
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "7e470e081d5dbcd2d06898066dcb3e13bfef5e660e2a81f780f60e466304df0e",
+        "url": "",
+        "truth_tokens": 5104
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "9a6f020062bd91a84f737985745134a7bc9113b78d128ba272d8d8ff920eda32",
+        "url": "http://blog.foursquare.com/2010/12/22/android-photos/",
+        "truth_tokens": 1346
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "c3b418f2cd41475ab8ce8078baad0f66cdecf369d85e4ea2164f2a32f9775db5",
+        "url": "http://blog.foursquare.com/2010/12/02/badges-badges-badges/",
+        "truth_tokens": 1080
+      },
+      {
+        "dataset": "wceb/cetd",
+        "page_id": "f8e64e21cc237a9ccfec2c430aa906618b9ab83397e04bc4dc0887409012ac7c",
+        "url": "http://www.economist.com/blogs/americasview/2010/12/hugo_ch%C3%A1vezs_venezuela",
+        "truth_tokens": 3648
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "0719d987790bd1f5e76f20c9bd56ab4935c3899fe84c2ced5d03208254849d14",
+        "url": "http://mobyrebuttal.blogspot.com/",
+        "truth_tokens": 35
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "09b108a19c8ca5a4777696e49d89dc9a5c7528b1a5c31992e4b5577a8313071c",
+        "url": "http://aseigo.blogspot.com/2004/11/ah-but-start-up-times.html",
+        "truth_tokens": 1915
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "0d6719f5f6805bc7e5c78f1e666a878243d582bdc911fc388b42cfea11791502",
+        "url": "",
+        "truth_tokens": 881
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "0e87732a2105733e14375efe9a40377251bc6885cfb13518149d68ede9553314",
+        "url": "http://www.thingstodo-london.com/brochure/product_show.jsp?ID=1010&PRODUCTID=1016&CODE=3858EE042",
+        "truth_tokens": 377
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "169c42d78aa442ddb0cfd60bbca2fd3d535f1cf2e22928a01417200c022c5037",
+        "url": "",
+        "truth_tokens": 133
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "1e4bb2dfe3cb80cb1c90d6febfd95fb472b5a6503676d6d28253a41f39a0abf8",
+        "url": "http://www.fxstreet.com/nou/content/103340/content.asp?menu=knowledge",
+        "truth_tokens": 103
+      },
+      {
+        "dataset": "wceb/cleaneval",
+        "page_id": "31ff069ea5bbdebbac02dbc3b5fbee66c689419db1740a881e3af2cec6bafe78",
+        "url": "",
+        "truth_tokens": 37
+      }
+    ]
+  }
+}

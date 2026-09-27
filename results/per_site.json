@@ -1,0 +1,2018 @@
+{
+  "n_sites": 126,
+  "site_wins": {
+    "all-text": {
+      "web2md_better": 123,
+      "web2md_worse": 1,
+      "tied_within_0.01": 2
+    },
+    "largest-block": {
+      "web2md_better": 67,
+      "web2md_worse": 13,
+      "tied_within_0.01": 46
+    },
+    "html2text": {
+      "web2md_better": 124,
+      "web2md_worse": 1,
+      "tied_within_0.01": 1
+    },
+    "markdownify": {
+      "web2md_better": 123,
+      "web2md_worse": 1,
+      "tied_within_0.01": 2
+    },
+    "readability-lxml": {
+      "web2md_better": 47,
+      "web2md_worse": 6,
+      "tied_within_0.01": 73
+    },
+    "trafilatura": {
+      "web2md_better": 33,
+      "web2md_worse": 20,
+      "tied_within_0.01": 73
+    },
+    "trafilatura-md": {
+      "web2md_better": 50,
+      "web2md_worse": 20,
+      "tied_within_0.01": 56
+    }
+  },
+  "web2md_worst_sites": {
+    "nbcdfw.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.752,
+        "all-text": 0.7178,
+        "largest-block": 0.9895,
+        "html2text": 0.6762,
+        "markdownify": 0.6805,
+        "readability-lxml": 0.7546,
+        "trafilatura": 0.752,
+        "trafilatura-md": 0.752
+      }
+    },
+    "nj.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.788,
+        "all-text": 0.671,
+        "largest-block": 0.9707,
+        "html2text": 0.6363,
+        "markdownify": 0.6442,
+        "readability-lxml": 0.7992,
+        "trafilatura": 0.788,
+        "trafilatura-md": 0.788
+      }
+    },
+    "ascom.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.824,
+        "all-text": 0.5197,
+        "largest-block": 1.0,
+        "html2text": 0.5193,
+        "markdownify": 0.5197,
+        "readability-lxml": 0.9339,
+        "trafilatura": 0.8564,
+        "trafilatura-md": 0.8447
+      }
+    },
+    "bgr.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.845,
+        "all-text": 0.8598,
+        "largest-block": 0.9706,
+        "html2text": 0.8553,
+        "markdownify": 0.856,
+        "readability-lxml": 0.8496,
+        "trafilatura": 0.845,
+        "trafilatura-md": 0.8874
+      }
+    },
+    "note100yen.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.8462,
+        "all-text": 0.3063,
+        "largest-block": 0.8462,
+        "html2text": 0.2583,
+        "markdownify": 0.2578,
+        "readability-lxml": 0.8462,
+        "trafilatura": 0.8199,
+        "trafilatura-md": 0.7333
+      }
+    },
+    "cleveland.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.8556,
+        "all-text": 0.3802,
+        "largest-block": 0.8556,
+        "html2text": 0.3438,
+        "markdownify": 0.3438,
+        "readability-lxml": 0.8556,
+        "trafilatura": 0.9059,
+        "trafilatura-md": 0.9059
+      }
+    },
+    "autoracing.com.br": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.8808,
+        "all-text": 0.4876,
+        "largest-block": 0.845,
+        "html2text": 0.464,
+        "markdownify": 0.4721,
+        "readability-lxml": 0.845,
+        "trafilatura": 0.851,
+        "trafilatura-md": 0.845
+      }
+    },
+    "theantijunecleaver.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.8853,
+        "all-text": 0.5708,
+        "largest-block": 0.8595,
+        "html2text": 0.5666,
+        "markdownify": 0.5762,
+        "readability-lxml": 0.8819,
+        "trafilatura": 0.996,
+        "trafilatura-md": 0.9863
+      }
+    },
+    "thehill.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.894,
+        "all-text": 0.5857,
+        "largest-block": 0.8858,
+        "html2text": 0.5836,
+        "markdownify": 0.5857,
+        "readability-lxml": 0.832,
+        "trafilatura": 0.8894,
+        "trafilatura-md": 0.8854
+      }
+    },
+    "jaraguadosul.com.br": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.895,
+        "all-text": 0.1314,
+        "largest-block": 0.871,
+        "html2text": 0.1262,
+        "markdownify": 0.1268,
+        "readability-lxml": 0.8901,
+        "trafilatura": 0.895,
+        "trafilatura-md": 0.895
+      }
+    },
+    "vse-diety.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.8976,
+        "all-text": 0.806,
+        "largest-block": 0.8916,
+        "html2text": 0.792,
+        "markdownify": 0.806,
+        "readability-lxml": 0.8806,
+        "trafilatura": 0.994,
+        "trafilatura-md": 0.9802
+      }
+    },
+    "foxnews.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9036,
+        "all-text": 0.6561,
+        "largest-block": 0.9115,
+        "html2text": 0.656,
+        "markdownify": 0.6561,
+        "readability-lxml": 0.909,
+        "trafilatura": 0.9072,
+        "trafilatura-md": 0.9176
+      }
+    },
+    "dealbreaker.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9155,
+        "all-text": 0.7097,
+        "largest-block": 0.9308,
+        "html2text": 0.5792,
+        "markdownify": 0.5882,
+        "readability-lxml": 0.9155,
+        "trafilatura": 0.9308,
+        "trafilatura-md": 0.9308
+      }
+    },
+    "morebikes.co.uk": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9191,
+        "all-text": 0.3603,
+        "largest-block": 0.9008,
+        "html2text": 0.3603,
+        "markdownify": 0.3603,
+        "readability-lxml": 0.9008,
+        "trafilatura": 0.9352,
+        "trafilatura-md": 0.9352
+      }
+    },
+    "foxbusiness.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.921,
+        "all-text": 0.401,
+        "largest-block": 0.8062,
+        "html2text": 0.401,
+        "markdownify": 0.401,
+        "readability-lxml": 0.8414,
+        "trafilatura": 0.8872,
+        "trafilatura-md": 0.7952
+      }
+    }
+  },
+  "sites": {
+    "9to5mac.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9518,
+        "all-text": 0.8826,
+        "largest-block": 0.9654,
+        "html2text": 0.869,
+        "markdownify": 0.878,
+        "readability-lxml": 0.9487,
+        "trafilatura": 0.9775,
+        "trafilatura-md": 0.9654
+      }
+    },
+    "albawaba.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9831,
+        "all-text": 0.8013,
+        "largest-block": 1.0,
+        "html2text": 0.7908,
+        "markdownify": 0.7903,
+        "readability-lxml": 0.9928,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "aljazeera.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9873,
+        "all-text": 0.6347,
+        "largest-block": 0.9514,
+        "html2text": 0.6101,
+        "markdownify": 0.6056,
+        "readability-lxml": 0.9873,
+        "trafilatura": 0.9873,
+        "trafilatura-md": 0.9873
+      }
+    },
+    "ap.org": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9747,
+        "all-text": 0.8759,
+        "largest-block": 0.9307,
+        "html2text": 0.7527,
+        "markdownify": 0.8749,
+        "readability-lxml": 0.9757,
+        "trafilatura": 0.9869,
+        "trafilatura-md": 0.9869
+      }
+    },
+    "appleinsider.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9776,
+        "all-text": 0.8764,
+        "largest-block": 0.0,
+        "html2text": 0.8729,
+        "markdownify": 0.8745,
+        "readability-lxml": 0.9747,
+        "trafilatura": 0.9757,
+        "trafilatura-md": 0.9594
+      }
+    },
+    "ascom.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.824,
+        "all-text": 0.5197,
+        "largest-block": 1.0,
+        "html2text": 0.5193,
+        "markdownify": 0.5197,
+        "readability-lxml": 0.9339,
+        "trafilatura": 0.8564,
+        "trafilatura-md": 0.8447
+      }
+    },
+    "autoindustriya.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.4888,
+        "largest-block": 0.9196,
+        "html2text": 0.4723,
+        "markdownify": 0.4829,
+        "readability-lxml": 0.9902,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "autoracing.com.br": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.8808,
+        "all-text": 0.4876,
+        "largest-block": 0.845,
+        "html2text": 0.464,
+        "markdownify": 0.4721,
+        "readability-lxml": 0.845,
+        "trafilatura": 0.851,
+        "trafilatura-md": 0.845
+      }
+    },
+    "barrons.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9886,
+        "all-text": 0.7197,
+        "largest-block": 0.8447,
+        "html2text": 0.7184,
+        "markdownify": 0.7184,
+        "readability-lxml": 0.9641,
+        "trafilatura": 0.8466,
+        "trafilatura-md": 0.8466
+      }
+    },
+    "bbc.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9781,
+        "all-text": 0.6084,
+        "largest-block": 0.9138,
+        "html2text": 0.6039,
+        "markdownify": 0.6067,
+        "readability-lxml": 0.9173,
+        "trafilatura": 0.9693,
+        "trafilatura-md": 0.9673
+      }
+    },
+    "beachbodyondemand.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9971,
+        "all-text": 0.8023,
+        "largest-block": 0.9971,
+        "html2text": 0.7092,
+        "markdownify": 0.8011,
+        "readability-lxml": 0.9971,
+        "trafilatura": 0.9958,
+        "trafilatura-md": 0.9929
+      }
+    },
+    "bgr.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.845,
+        "all-text": 0.8598,
+        "largest-block": 0.9706,
+        "html2text": 0.8553,
+        "markdownify": 0.856,
+        "readability-lxml": 0.8496,
+        "trafilatura": 0.845,
+        "trafilatura-md": 0.8874
+      }
+    },
+    "bigbrandsystem.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9662,
+        "all-text": 0.8148,
+        "largest-block": 0.9662,
+        "html2text": 0.812,
+        "markdownify": 0.8283,
+        "readability-lxml": 0.9616,
+        "trafilatura": 0.9953,
+        "trafilatura-md": 0.9924
+      }
+    },
+    "billboard.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.7483,
+        "largest-block": 1.0,
+        "html2text": 0.7076,
+        "markdownify": 0.7461,
+        "readability-lxml": 1.0,
+        "trafilatura": 0.9544,
+        "trafilatura-md": 0.9499
+      }
+    },
+    "businessinsider.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.957,
+        "all-text": 0.4311,
+        "largest-block": 0.9432,
+        "html2text": 0.4285,
+        "markdownify": 0.4309,
+        "readability-lxml": 0.9494,
+        "trafilatura": 0.7788,
+        "trafilatura-md": 0.7741
+      }
+    },
+    "catchitkansas.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.3794,
+        "largest-block": 1.0,
+        "html2text": 0.3296,
+        "markdownify": 0.3296,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 0.9615
+      }
+    },
+    "cbslocal.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.1935,
+        "largest-block": 1.0,
+        "html2text": 0.1862,
+        "markdownify": 0.1935,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 0.9965
+      }
+    },
+    "cbsnews.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9905,
+        "all-text": 0.3381,
+        "largest-block": 0.9353,
+        "html2text": 0.3374,
+        "markdownify": 0.3374,
+        "readability-lxml": 0.9749,
+        "trafilatura": 0.9893,
+        "trafilatura-md": 0.9876
+      }
+    },
+    "cbssports.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.6201,
+        "largest-block": 1.0,
+        "html2text": 0.6386,
+        "markdownify": 0.6461,
+        "readability-lxml": 1.0,
+        "trafilatura": 0.8524,
+        "trafilatura-md": 0.8474
+      }
+    },
+    "chron.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9835,
+        "all-text": 0.4274,
+        "largest-block": 0.7847,
+        "html2text": 0.4271,
+        "markdownify": 0.4274,
+        "readability-lxml": 0.7809,
+        "trafilatura": 0.9849,
+        "trafilatura-md": 0.86
+      }
+    },
+    "cityam.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9519,
+        "all-text": 0.6747,
+        "largest-block": 0.9519,
+        "html2text": 0.6576,
+        "markdownify": 0.6747,
+        "readability-lxml": 0.9519,
+        "trafilatura": 0.9519,
+        "trafilatura-md": 0.9519
+      }
+    },
+    "cleveland.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.8556,
+        "all-text": 0.3802,
+        "largest-block": 0.8556,
+        "html2text": 0.3438,
+        "markdownify": 0.3438,
+        "readability-lxml": 0.8556,
+        "trafilatura": 0.9059,
+        "trafilatura-md": 0.9059
+      }
+    },
+    "cnbc.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.5881,
+        "largest-block": 1.0,
+        "html2text": 0.5847,
+        "markdownify": 0.5851,
+        "readability-lxml": 0.9722,
+        "trafilatura": 0.9993,
+        "trafilatura-md": 0.9993
+      }
+    },
+    "cnn.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9732,
+        "all-text": 0.5137,
+        "largest-block": 0.0872,
+        "html2text": 0.6141,
+        "markdownify": 0.6214,
+        "readability-lxml": 0.9732,
+        "trafilatura": 1.0,
+        "trafilatura-md": 0.9266
+      }
+    },
+    "comoeducarseusfilhos.com.br": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9933,
+        "all-text": 0.6399,
+        "largest-block": 0.9933,
+        "html2text": 0.6209,
+        "markdownify": 0.6399,
+        "readability-lxml": 0.9933,
+        "trafilatura": 0.9933,
+        "trafilatura-md": 0.9933
+      }
+    },
+    "comwrap.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.983,
+        "all-text": 0.871,
+        "largest-block": 0.983,
+        "html2text": 0.871,
+        "markdownify": 0.871,
+        "readability-lxml": 0.983,
+        "trafilatura": 0.9807,
+        "trafilatura-md": 0.9807
+      }
+    },
+    "crn.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.988,
+        "all-text": 0.6212,
+        "largest-block": 0.988,
+        "html2text": 0.6203,
+        "markdownify": 0.6054,
+        "readability-lxml": 0.988,
+        "trafilatura": 0.988,
+        "trafilatura-md": 0.988
+      }
+    },
+    "ctpost.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9864,
+        "all-text": 0.6758,
+        "largest-block": 0.8916,
+        "html2text": 0.6758,
+        "markdownify": 0.6758,
+        "readability-lxml": 0.8871,
+        "trafilatura": 0.9861,
+        "trafilatura-md": 0.9319
+      }
+    },
+    "ctvnews.ca": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.1789,
+        "largest-block": 0.9535,
+        "html2text": 0.1776,
+        "markdownify": 0.1776,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "dawgsbynature.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9788,
+        "all-text": 0.7609,
+        "largest-block": 0.0,
+        "html2text": 0.7464,
+        "markdownify": 0.7561,
+        "readability-lxml": 0.8996,
+        "trafilatura": 0.9071,
+        "trafilatura-md": 0.8854
+      }
+    },
+    "dealbreaker.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9155,
+        "all-text": 0.7097,
+        "largest-block": 0.9308,
+        "html2text": 0.5792,
+        "markdownify": 0.5882,
+        "readability-lxml": 0.9155,
+        "trafilatura": 0.9308,
+        "trafilatura-md": 0.9308
+      }
+    },
+    "deccanherald.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.6156,
+        "largest-block": 1.0,
+        "html2text": 0.6156,
+        "markdownify": 0.6156,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "detroitnews.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.9216,
+        "largest-block": 0.944,
+        "html2text": 0.9177,
+        "markdownify": 0.9216,
+        "readability-lxml": 0.9755,
+        "trafilatura": 0.9878,
+        "trafilatura-md": 0.9878
+      }
+    },
+    "digg.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9906,
+        "all-text": 0.5447,
+        "largest-block": 0.1659,
+        "html2text": 0.5127,
+        "markdownify": 0.5446,
+        "readability-lxml": 0.9906,
+        "trafilatura": 0.9755,
+        "trafilatura-md": 0.9755
+      }
+    },
+    "entermedia.co.kr": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.8667,
+        "largest-block": 0.8667,
+        "html2text": 0.8667,
+        "markdownify": 0.8667,
+        "readability-lxml": 1.0,
+        "trafilatura": 0.9849,
+        "trafilatura-md": 0.9849
+      }
+    },
+    "expapp.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.916,
+        "largest-block": 0.5572,
+        "html2text": 0.9152,
+        "markdownify": 0.9152,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "express.co.uk": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9362,
+        "all-text": 0.491,
+        "largest-block": 0.3013,
+        "html2text": 0.491,
+        "markdownify": 0.4907,
+        "readability-lxml": 0.9024,
+        "trafilatura": 0.8968,
+        "trafilatura-md": 0.8968
+      }
+    },
+    "floridatoday.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9869,
+        "all-text": 0.9224,
+        "largest-block": 0.9469,
+        "html2text": 0.9224,
+        "markdownify": 0.9224,
+        "readability-lxml": 0.97,
+        "trafilatura": 0.9869,
+        "trafilatura-md": 0.9869
+      }
+    },
+    "forbes.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9837,
+        "all-text": 0.7583,
+        "largest-block": 0.9744,
+        "html2text": 0.75,
+        "markdownify": 0.7552,
+        "readability-lxml": 0.9744,
+        "trafilatura": 1.0,
+        "trafilatura-md": 0.9675
+      }
+    },
+    "foxbusiness.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.921,
+        "all-text": 0.401,
+        "largest-block": 0.8062,
+        "html2text": 0.401,
+        "markdownify": 0.401,
+        "readability-lxml": 0.8414,
+        "trafilatura": 0.8872,
+        "trafilatura-md": 0.7952
+      }
+    },
+    "foxnews.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9036,
+        "all-text": 0.6561,
+        "largest-block": 0.9115,
+        "html2text": 0.656,
+        "markdownify": 0.6561,
+        "readability-lxml": 0.909,
+        "trafilatura": 0.9072,
+        "trafilatura-md": 0.9176
+      }
+    },
+    "givewell.org": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9673,
+        "all-text": 0.4837,
+        "largest-block": 0.4967,
+        "html2text": 0.4837,
+        "markdownify": 0.4837,
+        "readability-lxml": 0.9673,
+        "trafilatura": 0.9707,
+        "trafilatura-md": 0.9673
+      }
+    },
+    "gizmodo.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9913,
+        "all-text": 0.7713,
+        "largest-block": 0.963,
+        "html2text": 0.8214,
+        "markdownify": 0.8216,
+        "readability-lxml": 1.0,
+        "trafilatura": 0.9913,
+        "trafilatura-md": 0.9892
+      }
+    },
+    "gto-normativy.ru": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.5261,
+        "largest-block": 1.0,
+        "html2text": 0.5077,
+        "markdownify": 0.5077,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "hawaiinewsnow.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9492,
+        "all-text": 0.4595,
+        "largest-block": 0.3614,
+        "html2text": 0.4444,
+        "markdownify": 0.4584,
+        "readability-lxml": 0.88,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "healthline.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.9034,
+        "largest-block": 1.0,
+        "html2text": 0.9031,
+        "markdownify": 0.9031,
+        "readability-lxml": 1.0,
+        "trafilatura": 0.9447,
+        "trafilatura-md": 0.9883
+      }
+    },
+    "hollywoodreporter.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.9401,
+        "largest-block": 1.0,
+        "html2text": 0.9207,
+        "markdownify": 0.9401,
+        "readability-lxml": 1.0,
+        "trafilatura": 0.9907,
+        "trafilatura-md": 0.9903
+      }
+    },
+    "ign.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9244,
+        "all-text": 0.9278,
+        "largest-block": 0.9278,
+        "html2text": 0.9066,
+        "markdownify": 0.9151,
+        "readability-lxml": 0.904,
+        "trafilatura": 0.9136,
+        "trafilatura-md": 0.9111
+      }
+    },
+    "indiapost.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9963,
+        "all-text": 0.2875,
+        "largest-block": 0.9389,
+        "html2text": 0.2871,
+        "markdownify": 0.2875,
+        "readability-lxml": 0.9694,
+        "trafilatura": 0.9853,
+        "trafilatura-md": 0.9853
+      }
+    },
+    "indiewire.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9932,
+        "all-text": 0.8789,
+        "largest-block": 0.984,
+        "html2text": 0.8401,
+        "markdownify": 0.845,
+        "readability-lxml": 1.0,
+        "trafilatura": 0.9938,
+        "trafilatura-md": 0.9954
+      }
+    },
+    "inexhibit.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9677,
+        "all-text": 0.7466,
+        "largest-block": 0.9677,
+        "html2text": 0.7164,
+        "markdownify": 0.7466,
+        "readability-lxml": 0.9677,
+        "trafilatura": 0.8953,
+        "trafilatura-md": 0.8941
+      }
+    },
+    "jaraguadosul.com.br": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.895,
+        "all-text": 0.1314,
+        "largest-block": 0.871,
+        "html2text": 0.1262,
+        "markdownify": 0.1268,
+        "readability-lxml": 0.8901,
+        "trafilatura": 0.895,
+        "trafilatura-md": 0.895
+      }
+    },
+    "jeongdongtheater.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.6541,
+        "largest-block": 0.8916,
+        "html2text": 0.6461,
+        "markdownify": 0.6461,
+        "readability-lxml": 0.8916,
+        "trafilatura": 0.9828,
+        "trafilatura-md": 0.8655
+      }
+    },
+    "jpost.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.1723,
+        "largest-block": 0.0,
+        "html2text": 0.1755,
+        "markdownify": 0.1755,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "kabarislamia.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.997,
+        "all-text": 0.5538,
+        "largest-block": 0.9808,
+        "html2text": 0.5158,
+        "markdownify": 0.5168,
+        "readability-lxml": 0.997,
+        "trafilatura": 0.997,
+        "trafilatura-md": 0.997
+      }
+    },
+    "latimes.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9781,
+        "all-text": 0.6403,
+        "largest-block": 0.9451,
+        "html2text": 0.648,
+        "markdownify": 0.648,
+        "readability-lxml": 0.9922,
+        "trafilatura": 0.998,
+        "trafilatura-md": 0.998
+      }
+    },
+    "lhpat-tm.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.5431,
+        "largest-block": 0.869,
+        "html2text": 0.5385,
+        "markdownify": 0.5362,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 0.9545
+      }
+    },
+    "linknaija.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9917,
+        "all-text": 0.4401,
+        "largest-block": 0.4401,
+        "html2text": 0.439,
+        "markdownify": 0.4401,
+        "readability-lxml": 0.9783,
+        "trafilatura": 0.9783,
+        "trafilatura-md": 0.8979
+      }
+    },
+    "livescience.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9825,
+        "all-text": 0.7553,
+        "largest-block": 0.9351,
+        "html2text": 0.7186,
+        "markdownify": 0.7553,
+        "readability-lxml": 0.9518,
+        "trafilatura": 0.9741,
+        "trafilatura-md": 0.9661
+      }
+    },
+    "macrumors.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9691,
+        "all-text": 0.1798,
+        "largest-block": 0.0,
+        "html2text": 0.1745,
+        "markdownify": 0.1798,
+        "readability-lxml": 0.9451,
+        "trafilatura": 0.7921,
+        "trafilatura-md": 0.9691
+      }
+    },
+    "mensagensreflexao.com.br": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9444,
+        "all-text": 0.2631,
+        "largest-block": 0.9158,
+        "html2text": 0.2631,
+        "markdownify": 0.2631,
+        "readability-lxml": 0.0,
+        "trafilatura": 0.3325,
+        "trafilatura-md": 0.3325
+      }
+    },
+    "moneycontrol.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9628,
+        "all-text": 0.574,
+        "largest-block": 0.9366,
+        "html2text": 0.5672,
+        "markdownify": 0.5709,
+        "readability-lxml": 0.9491,
+        "trafilatura": 0.9491,
+        "trafilatura-md": 0.9491
+      }
+    },
+    "morebikes.co.uk": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9191,
+        "all-text": 0.3603,
+        "largest-block": 0.9008,
+        "html2text": 0.3603,
+        "markdownify": 0.3603,
+        "readability-lxml": 0.9008,
+        "trafilatura": 0.9352,
+        "trafilatura-md": 0.9352
+      }
+    },
+    "msn.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.7145,
+        "largest-block": 0.9841,
+        "html2text": 0.6685,
+        "markdownify": 0.6702,
+        "readability-lxml": 0.9841,
+        "trafilatura": 1.0,
+        "trafilatura-md": 0.9851
+      }
+    },
+    "mspoweruser.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.4848,
+        "largest-block": 1.0,
+        "html2text": 0.4758,
+        "markdownify": 0.4817,
+        "readability-lxml": 0.8841,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "my6sense.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.9241,
+        "largest-block": 1.0,
+        "html2text": 0.9132,
+        "markdownify": 0.9241,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 0.9975
+      }
+    },
+    "mysanantonio.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.976,
+        "all-text": 0.4464,
+        "largest-block": 0.9588,
+        "html2text": 0.4464,
+        "markdownify": 0.4464,
+        "readability-lxml": 0.9569,
+        "trafilatura": 0.9437,
+        "trafilatura-md": 0.9211
+      }
+    },
+    "nationalreview.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9793,
+        "all-text": 0.7253,
+        "largest-block": 0.9354,
+        "html2text": 0.7194,
+        "markdownify": 0.7237,
+        "readability-lxml": 0.9643,
+        "trafilatura": 0.9776,
+        "trafilatura-md": 0.9776
+      }
+    },
+    "nbcdfw.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.752,
+        "all-text": 0.7178,
+        "largest-block": 0.9895,
+        "html2text": 0.6762,
+        "markdownify": 0.6805,
+        "readability-lxml": 0.7546,
+        "trafilatura": 0.752,
+        "trafilatura-md": 0.752
+      }
+    },
+    "nbcnews.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9497,
+        "all-text": 0.6937,
+        "largest-block": 0.9619,
+        "html2text": 0.693,
+        "markdownify": 0.693,
+        "readability-lxml": 0.9625,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "nbcsports.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.156,
+        "largest-block": 0.995,
+        "html2text": 0.1513,
+        "markdownify": 0.156,
+        "readability-lxml": 0.995,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "newsnation.in": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.6916,
+        "largest-block": 1.0,
+        "html2text": 0.6807,
+        "markdownify": 0.6916,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "newsweek.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.8531,
+        "largest-block": 0.933,
+        "html2text": 0.8332,
+        "markdownify": 0.8531,
+        "readability-lxml": 0.9688,
+        "trafilatura": 0.9919,
+        "trafilatura-md": 0.9919
+      }
+    },
+    "nj.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.788,
+        "all-text": 0.671,
+        "largest-block": 0.9707,
+        "html2text": 0.6363,
+        "markdownify": 0.6442,
+        "readability-lxml": 0.7992,
+        "trafilatura": 0.788,
+        "trafilatura-md": 0.788
+      }
+    },
+    "note100yen.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.8462,
+        "all-text": 0.3063,
+        "largest-block": 0.8462,
+        "html2text": 0.2583,
+        "markdownify": 0.2578,
+        "readability-lxml": 0.8462,
+        "trafilatura": 0.8199,
+        "trafilatura-md": 0.7333
+      }
+    },
+    "nypost.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.4404,
+        "largest-block": 0.9848,
+        "html2text": 0.4481,
+        "markdownify": 0.4545,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "nytimes.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9989,
+        "all-text": 0.8602,
+        "largest-block": 0.461,
+        "html2text": 0.8571,
+        "markdownify": 0.8581,
+        "readability-lxml": 0.9989,
+        "trafilatura": 0.9851,
+        "trafilatura-md": 0.9851
+      }
+    },
+    "oregonlive.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.7813,
+        "largest-block": 1.0,
+        "html2text": 0.7281,
+        "markdownify": 0.743,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "panarmenian.net": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9903,
+        "all-text": 0.5936,
+        "largest-block": 0.9903,
+        "html2text": 0.5798,
+        "markdownify": 0.5635,
+        "readability-lxml": 0.9903,
+        "trafilatura": 0.7602,
+        "trafilatura-md": 0.7208
+      }
+    },
+    "phys.org": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9579,
+        "all-text": 0.5636,
+        "largest-block": 0.8275,
+        "html2text": 0.5523,
+        "markdownify": 0.5563,
+        "readability-lxml": 0.8344,
+        "trafilatura": 0.9694,
+        "trafilatura-md": 0.8528
+      }
+    },
+    "politifact.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9861,
+        "all-text": 0.6584,
+        "largest-block": 1.0,
+        "html2text": 0.6577,
+        "markdownify": 0.6582,
+        "readability-lxml": 1.0,
+        "trafilatura": 0.9745,
+        "trafilatura-md": 0.9745
+      }
+    },
+    "polygraph.info": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.8737,
+        "largest-block": 1.0,
+        "html2text": 0.8672,
+        "markdownify": 0.8631,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 0.9959
+      }
+    },
+    "practicalhorsemanmag.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9574,
+        "all-text": 0.4944,
+        "largest-block": 0.9725,
+        "html2text": 0.4398,
+        "markdownify": 0.4903,
+        "readability-lxml": 0.934,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "pv-magazine.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.5275,
+        "largest-block": 1.0,
+        "html2text": 0.5025,
+        "markdownify": 0.5042,
+        "readability-lxml": 0.9496,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "quantamagazine.org": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9957,
+        "all-text": 0.9348,
+        "largest-block": 0.7197,
+        "html2text": 0.9213,
+        "markdownify": 0.9394,
+        "readability-lxml": 1.0,
+        "trafilatura": 0.9984,
+        "trafilatura-md": 0.9812
+      }
+    },
+    "remember8090.it": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9497,
+        "all-text": 0.8305,
+        "largest-block": 0.9791,
+        "html2text": 0.7974,
+        "markdownify": 0.8317,
+        "readability-lxml": 0.9497,
+        "trafilatura": 0.9558,
+        "trafilatura-md": 0.9616
+      }
+    },
+    "reuters.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9822,
+        "all-text": 0.8612,
+        "largest-block": 0.954,
+        "html2text": 0.8595,
+        "markdownify": 0.8595,
+        "readability-lxml": 0.954,
+        "trafilatura": 0.9822,
+        "trafilatura-md": 0.9822
+      }
+    },
+    "rollingstone.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.996,
+        "all-text": 0.5824,
+        "largest-block": 0.9503,
+        "html2text": 0.5826,
+        "markdownify": 0.6045,
+        "readability-lxml": 0.996,
+        "trafilatura": 0.996,
+        "trafilatura-md": 0.996
+      }
+    },
+    "rt.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9269,
+        "all-text": 0.3957,
+        "largest-block": 0.8452,
+        "html2text": 0.4416,
+        "markdownify": 0.5075,
+        "readability-lxml": 0.9269,
+        "trafilatura": 0.8037,
+        "trafilatura-md": 0.8037
+      }
+    },
+    "sciencealert.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.9078,
+        "largest-block": 0.9916,
+        "html2text": 0.8907,
+        "markdownify": 0.9078,
+        "readability-lxml": 0.9916,
+        "trafilatura": 1.0,
+        "trafilatura-md": 0.9916
+      }
+    },
+    "sfgate.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9894,
+        "all-text": 0.4621,
+        "largest-block": 0.9628,
+        "html2text": 0.4621,
+        "markdownify": 0.4621,
+        "readability-lxml": 0.9616,
+        "trafilatura": 0.9877,
+        "trafilatura-md": 0.9526
+      }
+    },
+    "sky.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9843,
+        "all-text": 0.7235,
+        "largest-block": 0.8873,
+        "html2text": 0.7153,
+        "markdownify": 0.7235,
+        "readability-lxml": 0.9116,
+        "trafilatura": 0.9245,
+        "trafilatura-md": 0.9245
+      }
+    },
+    "slashgear.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9873,
+        "all-text": 0.9297,
+        "largest-block": 0.9973,
+        "html2text": 0.9266,
+        "markdownify": 0.9297,
+        "readability-lxml": 0.9848,
+        "trafilatura": 0.9876,
+        "trafilatura-md": 0.9876
+      }
+    },
+    "slate.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9917,
+        "all-text": 0.952,
+        "largest-block": 0.9821,
+        "html2text": 0.8951,
+        "markdownify": 0.9543,
+        "readability-lxml": 0.9915,
+        "trafilatura": 0.9917,
+        "trafilatura-md": 0.9917
+      }
+    },
+    "smithsonianmag.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.6176,
+        "largest-block": 1.0,
+        "html2text": 0.5335,
+        "markdownify": 0.5839,
+        "readability-lxml": 0.9864,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "snopes.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9715,
+        "all-text": 0.4959,
+        "largest-block": 0.7962,
+        "html2text": 0.4904,
+        "markdownify": 0.4934,
+        "readability-lxml": 0.9715,
+        "trafilatura": 0.9442,
+        "trafilatura-md": 0.9419
+      }
+    },
+    "space.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9405,
+        "all-text": 0.7407,
+        "largest-block": 0.8898,
+        "html2text": 0.7028,
+        "markdownify": 0.7407,
+        "readability-lxml": 0.9197,
+        "trafilatura": 0.9427,
+        "trafilatura-md": 0.8948
+      }
+    },
+    "spacenews.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.9089,
+        "largest-block": 0.9807,
+        "html2text": 0.9023,
+        "markdownify": 0.9079,
+        "readability-lxml": 0.9807,
+        "trafilatura": 0.9945,
+        "trafilatura-md": 0.9945
+      }
+    },
+    "spokesman.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.7394,
+        "largest-block": 1.0,
+        "html2text": 0.7339,
+        "markdownify": 0.7386,
+        "readability-lxml": 1.0,
+        "trafilatura": 0.9717,
+        "trafilatura-md": 0.9685
+      }
+    },
+    "sportsnet.ca": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.554,
+        "largest-block": 0.9825,
+        "html2text": 0.5535,
+        "markdownify": 0.5535,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "sputniknews.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9787,
+        "all-text": 0.5284,
+        "largest-block": 1.0,
+        "html2text": 0.5259,
+        "markdownify": 0.5254,
+        "readability-lxml": 0.9787,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "techcrunch.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.9735,
+        "largest-block": 1.0,
+        "html2text": 0.9735,
+        "markdownify": 0.9735,
+        "readability-lxml": 0.9835,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "telegraph.co.uk": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.954,
+        "all-text": 0.3411,
+        "largest-block": 0.7082,
+        "html2text": 0.3348,
+        "markdownify": 0.34,
+        "readability-lxml": 0.954,
+        "trafilatura": 0.9306,
+        "trafilatura-md": 0.9306
+      }
+    },
+    "theantijunecleaver.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.8853,
+        "all-text": 0.5708,
+        "largest-block": 0.8595,
+        "html2text": 0.5666,
+        "markdownify": 0.5762,
+        "readability-lxml": 0.8819,
+        "trafilatura": 0.996,
+        "trafilatura-md": 0.9863
+      }
+    },
+    "theguardian.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.7668,
+        "largest-block": 0.9733,
+        "html2text": 0.7606,
+        "markdownify": 0.7615,
+        "readability-lxml": 0.9842,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "thehill.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.894,
+        "all-text": 0.5857,
+        "largest-block": 0.8858,
+        "html2text": 0.5836,
+        "markdownify": 0.5857,
+        "readability-lxml": 0.832,
+        "trafilatura": 0.8894,
+        "trafilatura-md": 0.8854
+      }
+    },
+    "theparadigmng.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9948,
+        "all-text": 0.4971,
+        "largest-block": 0.9476,
+        "html2text": 0.4971,
+        "markdownify": 0.4971,
+        "readability-lxml": 0.8787,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "therealdeal.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.726,
+        "largest-block": 0.9713,
+        "html2text": 0.7042,
+        "markdownify": 0.7243,
+        "readability-lxml": 0.9713,
+        "trafilatura": 1.0,
+        "trafilatura-md": 0.9713
+      }
+    },
+    "therepublic.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.6608,
+        "largest-block": 0.9608,
+        "html2text": 0.6575,
+        "markdownify": 0.6608,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "thespacereview.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9813,
+        "all-text": 0.9768,
+        "largest-block": 0.9778,
+        "html2text": 0.9768,
+        "markdownify": 0.9744,
+        "readability-lxml": 0.9781,
+        "trafilatura": 0.9875,
+        "trafilatura-md": 0.9875
+      }
+    },
+    "thesun.co.uk": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.523,
+        "largest-block": 0.7372,
+        "html2text": 0.554,
+        "markdownify": 0.5543,
+        "readability-lxml": 0.808,
+        "trafilatura": 0.9722,
+        "trafilatura-md": 0.9722
+      }
+    },
+    "theverge.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9851,
+        "all-text": 0.6431,
+        "largest-block": 1.0,
+        "html2text": 0.4487,
+        "markdownify": 0.6344,
+        "readability-lxml": 0.9855,
+        "trafilatura": 0.9851,
+        "trafilatura-md": 0.9694
+      }
+    },
+    "timesunion.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.6106,
+        "largest-block": 0.9417,
+        "html2text": 0.6448,
+        "markdownify": 0.6453,
+        "readability-lxml": 0.9422,
+        "trafilatura": 0.9903,
+        "trafilatura-md": 0.9577
+      }
+    },
+    "twincities.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.5453,
+        "largest-block": 1.0,
+        "html2text": 0.5451,
+        "markdownify": 0.5451,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 1.0
+      }
+    },
+    "usatoday.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9855,
+        "all-text": 0.9419,
+        "largest-block": 0.9577,
+        "html2text": 0.941,
+        "markdownify": 0.9419,
+        "readability-lxml": 0.9697,
+        "trafilatura": 0.9855,
+        "trafilatura-md": 0.9855
+      }
+    },
+    "venturebeat.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9816,
+        "all-text": 0.8519,
+        "largest-block": 0.9816,
+        "html2text": 0.8088,
+        "markdownify": 0.8519,
+        "readability-lxml": 0.9816,
+        "trafilatura": 0.9816,
+        "trafilatura-md": 0.9816
+      }
+    },
+    "vg247.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9968,
+        "all-text": 0.93,
+        "largest-block": 0.9968,
+        "html2text": 0.924,
+        "markdownify": 0.93,
+        "readability-lxml": 0.9968,
+        "trafilatura": 0.9963,
+        "trafilatura-md": 0.9963
+      }
+    },
+    "vortexcannon.org": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9867,
+        "all-text": 0.4037,
+        "largest-block": 0.9805,
+        "html2text": 0.4037,
+        "markdownify": 0.4031,
+        "readability-lxml": 0.9867,
+        "trafilatura": 0.9867,
+        "trafilatura-md": 0.9867
+      }
+    },
+    "vox.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9971,
+        "all-text": 0.8531,
+        "largest-block": 0.9675,
+        "html2text": 0.8384,
+        "markdownify": 0.8413,
+        "readability-lxml": 0.9359,
+        "trafilatura": 0.9947,
+        "trafilatura-md": 0.9707
+      }
+    },
+    "vse-diety.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.8976,
+        "all-text": 0.806,
+        "largest-block": 0.8916,
+        "html2text": 0.792,
+        "markdownify": 0.806,
+        "readability-lxml": 0.8806,
+        "trafilatura": 0.994,
+        "trafilatura-md": 0.9802
+      }
+    },
+    "washingtonexaminer.com": {
+      "n_pages": 2,
+      "split": "heldout",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.4396,
+        "largest-block": 1.0,
+        "html2text": 0.4282,
+        "markdownify": 0.4394,
+        "readability-lxml": 1.0,
+        "trafilatura": 1.0,
+        "trafilatura-md": 0.9918
+      }
+    },
+    "wccftech.com": {
+      "n_pages": 1,
+      "split": "heldout",
+      "f1": {
+        "web2md": 0.9755,
+        "all-text": 0.5236,
+        "largest-block": 0.9713,
+        "html2text": 0.5146,
+        "markdownify": 0.5236,
+        "readability-lxml": 0.9727,
+        "trafilatura": 0.9757,
+        "trafilatura-md": 0.9757
+      }
+    },
+    "wday.ru": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9331,
+        "all-text": 0.8464,
+        "largest-block": 0.5941,
+        "html2text": 0.8417,
+        "markdownify": 0.8422,
+        "readability-lxml": 0.9915,
+        "trafilatura": 0.998,
+        "trafilatura-md": 0.998
+      }
+    },
+    "wired.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9918,
+        "all-text": 0.8683,
+        "largest-block": 0.7153,
+        "html2text": 0.8533,
+        "markdownify": 0.8664,
+        "readability-lxml": 0.9843,
+        "trafilatura": 0.5714,
+        "trafilatura-md": 0.5714
+      }
+    },
+    "wsj.com": {
+      "n_pages": 2,
+      "split": "dev",
+      "f1": {
+        "web2md": 1.0,
+        "all-text": 0.1643,
+        "largest-block": 1.0,
+        "html2text": 0.1351,
+        "markdownify": 0.1353,
+        "readability-lxml": 1.0,
+        "trafilatura": 0.8255,
+        "trafilatura-md": 0.8255
+      }
+    },
+    "zdnet.com": {
+      "n_pages": 1,
+      "split": "dev",
+      "f1": {
+        "web2md": 0.9279,
+        "all-text": 0.6298,
+        "largest-block": 0.8736,
+        "html2text": 0.6423,
+        "markdownify": 0.6453,
+        "readability-lxml": 0.8519,
+        "trafilatura": 0.9926,
+        "trafilatura-md": 0.9892
+      }
+    }
+  }
+}

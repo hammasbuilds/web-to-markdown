@@ -1,0 +1,32 @@
+{
+  "purpose": "reproduce the benchmark's published F1 from its published outputs",
+  "results": {
+    "trafilatura": {
+      "published_f1": 0.958,
+      "our_f1": 0.9575,
+      "abs_diff": 0.0005,
+      "f1_ci95": [
+        0.9473,
+        0.9689
+      ]
+    },
+    "readability": {
+      "published_f1": 0.922,
+      "our_f1": 0.9223,
+      "abs_diff": 0.0003,
+      "f1_ci95": [
+        0.8966,
+        0.9434
+      ]
+    },
+    "html-text": {
+      "published_f1": 0.665,
+      "our_f1": 0.6649,
+      "abs_diff": 0.0001,
+      "f1_ci95": [
+        0.6352,
+        0.6927
+      ]
+    }
+  }
+}

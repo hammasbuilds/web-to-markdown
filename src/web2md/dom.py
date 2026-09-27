@@ -87,6 +87,23 @@ _IMPLIED_END: dict[str, tuple[frozenset[str], frozenset[str]]] = {
 
 MAX_DEPTH = 200
 
+# Elements allowed in <head>; any other start tag there implies </head>.
+_HEAD_TAGS = frozenset(
+    {
+        "html",
+        "head",
+        "body",
+        "title",
+        "meta",
+        "link",
+        "style",
+        "script",
+        "noscript",
+        "base",
+        "template",
+    }
+)
+
 # Raw-text elements whose contents html.parser already treats as CDATA.
 RAW_TEXT_TAGS = frozenset({"script", "style"})
 
@@ -148,6 +165,7 @@ class _TreeBuilder(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.root = Element("#document")
         self.stack: list[Element] = [self.root]
+        self.seen_document_tags: dict[str, bool] = {}
 
     # -- helpers -----------------------------------------------------------
     def _close_through(self, index: int) -> None:
@@ -162,8 +180,40 @@ class _TreeBuilder(HTMLParser):
                 return None
         return None
 
+    def _leave_head(self) -> None:
+        """Close an open <head> when body content arrives, as browsers do.
+
+        A broken attribute quote in a <meta> tag can swallow ``</head><body>``;
+        without this rule the whole page would then be parsed as head content.
+        """
+        if self.stack[-1].tag == "head":
+            self.stack.pop()
+
+    def _document_tag(self, tag: str) -> bool:
+        """Whether an <html>/<head>/<body> start tag should create an element.
+
+        Only the first of each does, and only at document level. Pages write
+        ``<body>`` inside ``<noscript>`` or ``document.write`` fallbacks; taken
+        literally, that tiny element becomes "the body" and the real page, which
+        sits outside it, is lost.
+        """
+        if self.seen_document_tags.get(tag):
+            return False
+        open_tags = {el.tag for el in self.stack[1:]}
+        allowed = {"html": set(), "head": {"html"}, "body": {"html", "head"}}[tag]
+        if not open_tags <= allowed:
+            return False
+        if tag == "body" and "head" in open_tags:
+            self._close_through(next(i for i, el in enumerate(self.stack) if el.tag == "head"))
+        self.seen_document_tags[tag] = True
+        return True
+
     # -- HTMLParser callbacks ------------------------------------------------
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in ("html", "head", "body") and not self._document_tag(tag):
+            return
+        if tag not in _HEAD_TAGS:
+            self._leave_head()
         if tag in _CLOSES_P:
             idx = self._find_open(frozenset({"p"}), frozenset({"button", "table", "td", "th"}))
             if idx is not None:
@@ -182,9 +232,11 @@ class _TreeBuilder(HTMLParser):
             self.stack.append(node)
 
     def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        before = self.stack[-1]
         self.handle_starttag(tag, attrs)
-        if tag not in VOID_TAGS and self.stack[-1].tag == tag:
-            self.stack.pop()
+        top = self.stack[-1]
+        if top is not before and top.tag == tag and not top.children:
+            self.stack.pop()  # "<div/>": treat the XHTML self-closing form as closed
 
     def handle_endtag(self, tag: str) -> None:
         if tag == "p" and self._find_open(frozenset({"p"}), frozenset()) is None:
@@ -196,6 +248,8 @@ class _TreeBuilder(HTMLParser):
                 return
 
     def handle_data(self, data: str) -> None:
+        if data.strip() and self.stack[-1].tag == "head":
+            self._leave_head()  # visible text cannot live in <head>
         if data:
             self.stack[-1].children.append(data)
 

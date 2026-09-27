@@ -1,0 +1,71 @@
+{
+  "n_pages": 181,
+  "canonical_found": 174,
+  "canonical_matches_benchmark_url": 166,
+  "match_rate": 0.9171,
+  "comparison": "scheme, leading www., fragment and trailing slash ignored",
+  "field_coverage": {
+    "title": {
+      "found": 181,
+      "rate": 1.0
+    },
+    "author": {
+      "found": 162,
+      "rate": 0.895
+    },
+    "date": {
+      "found": 160,
+      "rate": 0.884
+    },
+    "canonical_url": {
+      "found": 174,
+      "rate": 0.9613
+    },
+    "description": {
+      "found": 172,
+      "rate": 0.9503
+    },
+    "site_name": {
+      "found": 154,
+      "rate": 0.8508
+    },
+    "language": {
+      "found": 149,
+      "rate": 0.8232
+    }
+  },
+  "mismatch_examples": [
+    {
+      "truth": "http://www.wday.ru/articles/mastera-vkusa-i-krasotyi-23-samyih-krutyih-fudblogera-po-versii-wday-ru-id119898",
+      "extracted": "https://www.wday.ru/dom-eda/soh/mastera-vkusa-i-krasotyi-23-samyih-krutyih-fudblogera-po-versii-wday-ru/"
+    },
+    {
+      "truth": "https://www.reuters.com/article/us-global-markets/asian-shares-soft-as-trade-doubts-creep-back-in-idUSKBN1XT00W",
+      "extracted": "https://www.reuters.com/article/us-global-markets-idUSKBN1XT00W"
+    },
+    {
+      "truth": "https://www.msn.com/en-us/health/other/the-man-whose-duvet-nearly-killed-him-how-this-medical-mystery-was-solved/ar-BBWXwNX",
+      "extracted": "https://www.cnn.com/2019/11/18/health/feather-down-duvet-sickness-wellness/index.html"
+    },
+    {
+      "truth": "https://www.msn.com/en-us/news/us/doctors-offer-to-give-free-flu-shots-to-detained-migrants-warn-of-epidemic/ar-BBWZedJ?srcref=rss",
+      "extracted": "https://www.nbcnews.com/news/latino/doctors-offer-give-free-flu-shots-detained-migrants-warn-trump-n1085206"
+    },
+    {
+      "truth": "http://www.wday.ru/articles/53-letnyaya-model-posmotri-na-krasotku-kotoraya-prevratilas-v-staruhu-id120424",
+      "extracted": "https://www.wday.ru/krasota-zdorovie/novosty/53-letnyaya-model-posmotri-na-krasotku-kotoraya-prevratilas-v-staruhu/"
+    },
+    {
+      "truth": "http://jaraguadosul.com.br/news/servi-o-de-atendimento-domiciliar-registra-arrombamento-em-dois-ve-culos",
+      "extracted": "https://www.jaraguadosul.sc.gov.br/news/servi-o-de-atendimento-domiciliar-registra-arrombamento-em-dois-ve-culos"
+    },
+    {
+      "truth": "https://www.businessinsider.com/how-to-retire-early-steps-for-early-retirement",
+      "extracted": "https://www.businessinsider.de/how-to-retire-early-steps-for-early-retirement"
+    },
+    {
+      "truth": "https://www.businessinsider.com/10-things-in-tech-you-need-to-know-today-november-19-2019-11",
+      "extracted": "https://www.businessinsider.de/10-things-in-tech-you-need-to-know-today-november-19-2019-11"
+    }
+  ]
+}

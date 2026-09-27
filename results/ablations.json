@@ -1,0 +1,1380 @@
+{
+  "note": "each row switches one web2md stage off; see ExtractOptions",
+  "groups": {
+    "aeb": {
+      "n_pages": 181,
+      "systems": {
+        "web2md": {
+          "precision": 0.9609,
+          "recall": 0.9844,
+          "f1": 0.9725,
+          "f1_ci95": [
+            0.9665,
+            0.9781
+          ],
+          "precision_ci95": [
+            0.9521,
+            0.9698
+          ],
+          "recall_ci95": [
+            0.9773,
+            0.9905
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 136.9943
+        },
+        "web2md[no-hints]": {
+          "precision": 0.9213,
+          "recall": 0.947,
+          "f1": 0.934,
+          "f1_ci95": [
+            0.905,
+            0.9568
+          ],
+          "precision_ci95": [
+            0.891,
+            0.9447
+          ],
+          "recall_ci95": [
+            0.9181,
+            0.9702
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 140.111
+        },
+        "web2md[no-link-density]": {
+          "precision": 0.9514,
+          "recall": 0.9865,
+          "f1": 0.9686,
+          "f1_ci95": [
+            0.9622,
+            0.9746
+          ],
+          "precision_ci95": [
+            0.9408,
+            0.9606
+          ],
+          "recall_ci95": [
+            0.9786,
+            0.9925
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 148.3026
+        },
+        "web2md[no-siblings]": {
+          "precision": 0.9602,
+          "recall": 0.9769,
+          "f1": 0.9685,
+          "f1_ci95": [
+            0.9549,
+            0.9784
+          ],
+          "precision_ci95": [
+            0.9453,
+            0.972
+          ],
+          "recall_ci95": [
+            0.9627,
+            0.987
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 142.4671
+        },
+        "web2md[no-clean]": {
+          "precision": 0.9151,
+          "recall": 0.9893,
+          "f1": 0.9508,
+          "f1_ci95": [
+            0.9423,
+            0.9594
+          ],
+          "precision_ci95": [
+            0.9003,
+            0.9304
+          ],
+          "recall_ci95": [
+            0.9842,
+            0.9935
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 136.6016
+        },
+        "web2md[no-fallback]": {
+          "precision": 0.9398,
+          "recall": 0.9079,
+          "f1": 0.9236,
+          "f1_ci95": [
+            0.8915,
+            0.9495
+          ],
+          "precision_ci95": [
+            0.9157,
+            0.9608
+          ],
+          "recall_ci95": [
+            0.8651,
+            0.9454
+          ],
+          "errors": 0,
+          "empty_outputs": 10,
+          "ms_per_page": 136.576
+        }
+      }
+    },
+    "aeb/dev": {
+      "n_pages": 80,
+      "systems": {
+        "web2md": {
+          "precision": 0.9589,
+          "recall": 0.9848,
+          "f1": 0.9717,
+          "f1_ci95": [
+            0.9625,
+            0.9801
+          ],
+          "precision_ci95": [
+            0.943,
+            0.9725
+          ],
+          "recall_ci95": [
+            0.9749,
+            0.9928
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 131.6468
+        },
+        "web2md[no-hints]": {
+          "precision": 0.9458,
+          "recall": 0.9628,
+          "f1": 0.9543,
+          "f1_ci95": [
+            0.9235,
+            0.974
+          ],
+          "precision_ci95": [
+            0.9145,
+            0.9677
+          ],
+          "recall_ci95": [
+            0.9314,
+            0.986
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 130.8822
+        },
+        "web2md[no-link-density]": {
+          "precision": 0.9428,
+          "recall": 0.9839,
+          "f1": 0.9629,
+          "f1_ci95": [
+            0.9518,
+            0.9735
+          ],
+          "precision_ci95": [
+            0.927,
+            0.959
+          ],
+          "recall_ci95": [
+            0.9698,
+            0.9943
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 138.1652
+        },
+        "web2md[no-siblings]": {
+          "precision": 0.9523,
+          "recall": 0.9723,
+          "f1": 0.9622,
+          "f1_ci95": [
+            0.9323,
+            0.9807
+          ],
+          "precision_ci95": [
+            0.9217,
+            0.974
+          ],
+          "recall_ci95": [
+            0.9428,
+            0.9911
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 134.362
+        },
+        "web2md[no-clean]": {
+          "precision": 0.9112,
+          "recall": 0.991,
+          "f1": 0.9494,
+          "f1_ci95": [
+            0.9338,
+            0.9632
+          ],
+          "precision_ci95": [
+            0.8842,
+            0.9356
+          ],
+          "recall_ci95": [
+            0.9846,
+            0.9956
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 128.8565
+        },
+        "web2md[no-fallback]": {
+          "precision": 0.9593,
+          "recall": 0.9477,
+          "f1": 0.9535,
+          "f1_ci95": [
+            0.9274,
+            0.9735
+          ],
+          "precision_ci95": [
+            0.9438,
+            0.9726
+          ],
+          "recall_ci95": [
+            0.9008,
+            0.9852
+          ],
+          "errors": 0,
+          "empty_outputs": 3,
+          "ms_per_page": 131.7782
+        }
+      }
+    },
+    "aeb/heldout": {
+      "n_pages": 101,
+      "systems": {
+        "web2md": {
+          "precision": 0.9625,
+          "recall": 0.9841,
+          "f1": 0.9732,
+          "f1_ci95": [
+            0.9645,
+            0.9806
+          ],
+          "precision_ci95": [
+            0.9496,
+            0.9735
+          ],
+          "recall_ci95": [
+            0.9733,
+            0.9921
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 141.23
+        },
+        "web2md[no-hints]": {
+          "precision": 0.9019,
+          "recall": 0.9345,
+          "f1": 0.9179,
+          "f1_ci95": [
+            0.8756,
+            0.9572
+          ],
+          "precision_ci95": [
+            0.8589,
+            0.9419
+          ],
+          "recall_ci95": [
+            0.8881,
+            0.9739
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 147.4209
+        },
+        "web2md[no-link-density]": {
+          "precision": 0.9582,
+          "recall": 0.9886,
+          "f1": 0.9732,
+          "f1_ci95": [
+            0.9645,
+            0.98
+          ],
+          "precision_ci95": [
+            0.9454,
+            0.9694
+          ],
+          "recall_ci95": [
+            0.9805,
+            0.9949
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 156.3322
+        },
+        "web2md[no-siblings]": {
+          "precision": 0.9665,
+          "recall": 0.9805,
+          "f1": 0.9735,
+          "f1_ci95": [
+            0.9635,
+            0.9816
+          ],
+          "precision_ci95": [
+            0.954,
+            0.9777
+          ],
+          "recall_ci95": [
+            0.9675,
+            0.9903
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 148.8871
+        },
+        "web2md[no-clean]": {
+          "precision": 0.9183,
+          "recall": 0.988,
+          "f1": 0.9519,
+          "f1_ci95": [
+            0.9399,
+            0.9624
+          ],
+          "precision_ci95": [
+            0.8987,
+            0.9356
+          ],
+          "recall_ci95": [
+            0.9799,
+            0.9935
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 142.7362
+        },
+        "web2md[no-fallback]": {
+          "precision": 0.9239,
+          "recall": 0.8763,
+          "f1": 0.8995,
+          "f1_ci95": [
+            0.8459,
+            0.9417
+          ],
+          "precision_ci95": [
+            0.8777,
+            0.96
+          ],
+          "recall_ci95": [
+            0.8097,
+            0.9342
+          ],
+          "errors": 0,
+          "empty_outputs": 7,
+          "ms_per_page": 140.3763
+        }
+      }
+    },
+    "wceb/cetd": {
+      "n_pages": 700,
+      "systems": {
+        "web2md": {
+          "precision": 0.9864,
+          "recall": 0.8476,
+          "f1": 0.9117,
+          "f1_ci95": [
+            0.904,
+            0.9191
+          ],
+          "precision_ci95": [
+            0.9822,
+            0.989
+          ],
+          "recall_ci95": [
+            0.8348,
+            0.8601
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 115.5437
+        },
+        "web2md[no-hints]": {
+          "precision": 0.9859,
+          "recall": 0.8601,
+          "f1": 0.9187,
+          "f1_ci95": [
+            0.9111,
+            0.926
+          ],
+          "precision_ci95": [
+            0.9821,
+            0.9886
+          ],
+          "recall_ci95": [
+            0.8481,
+            0.8717
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 115.8497
+        },
+        "web2md[no-link-density]": {
+          "precision": 0.9808,
+          "recall": 0.8733,
+          "f1": 0.924,
+          "f1_ci95": [
+            0.9164,
+            0.9313
+          ],
+          "precision_ci95": [
+            0.9755,
+            0.9846
+          ],
+          "recall_ci95": [
+            0.861,
+            0.8859
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 117.9848
+        },
+        "web2md[no-siblings]": {
+          "precision": 0.9876,
+          "recall": 0.8406,
+          "f1": 0.9082,
+          "f1_ci95": [
+            0.9002,
+            0.9157
+          ],
+          "precision_ci95": [
+            0.9836,
+            0.9901
+          ],
+          "recall_ci95": [
+            0.8281,
+            0.853
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 116.3358
+        },
+        "web2md[no-clean]": {
+          "precision": 0.9844,
+          "recall": 0.8849,
+          "f1": 0.932,
+          "f1_ci95": [
+            0.9244,
+            0.9394
+          ],
+          "precision_ci95": [
+            0.9797,
+            0.9877
+          ],
+          "recall_ci95": [
+            0.872,
+            0.8974
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 122.6801
+        },
+        "web2md[no-fallback]": {
+          "precision": 0.9862,
+          "recall": 0.7757,
+          "f1": 0.8684,
+          "f1_ci95": [
+            0.8557,
+            0.8817
+          ],
+          "precision_ci95": [
+            0.982,
+            0.9888
+          ],
+          "recall_ci95": [
+            0.7555,
+            0.7966
+          ],
+          "errors": 0,
+          "empty_outputs": 50,
+          "ms_per_page": 117.9219
+        }
+      }
+    },
+    "wceb (all)": {
+      "n_pages": 3794,
+      "systems": {
+        "web2md": {
+          "precision": 0.9365,
+          "recall": 0.8179,
+          "f1": 0.8732,
+          "f1_ci95": [
+            0.8672,
+            0.8795
+          ],
+          "precision_ci95": [
+            0.9308,
+            0.9419
+          ],
+          "recall_ci95": [
+            0.8099,
+            0.8268
+          ],
+          "errors": 0,
+          "empty_outputs": 80,
+          "ms_per_page": 97.7459
+        },
+        "web2md[no-hints]": {
+          "precision": 0.9242,
+          "recall": 0.8283,
+          "f1": 0.8737,
+          "f1_ci95": [
+            0.8674,
+            0.8801
+          ],
+          "precision_ci95": [
+            0.9182,
+            0.9298
+          ],
+          "recall_ci95": [
+            0.8199,
+            0.8366
+          ],
+          "errors": 0,
+          "empty_outputs": 82,
+          "ms_per_page": 88.719
+        },
+        "web2md[no-link-density]": {
+          "precision": 0.909,
+          "recall": 0.8332,
+          "f1": 0.8694,
+          "f1_ci95": [
+            0.8637,
+            0.8759
+          ],
+          "precision_ci95": [
+            0.9023,
+            0.9153
+          ],
+          "recall_ci95": [
+            0.8251,
+            0.8418
+          ],
+          "errors": 0,
+          "empty_outputs": 74,
+          "ms_per_page": 90.8853
+        },
+        "web2md[no-siblings]": {
+          "precision": 0.9395,
+          "recall": 0.8124,
+          "f1": 0.8714,
+          "f1_ci95": [
+            0.8654,
+            0.8776
+          ],
+          "precision_ci95": [
+            0.9339,
+            0.9448
+          ],
+          "recall_ci95": [
+            0.8045,
+            0.8212
+          ],
+          "errors": 0,
+          "empty_outputs": 80,
+          "ms_per_page": 89.5833
+        },
+        "web2md[no-clean]": {
+          "precision": 0.9171,
+          "recall": 0.8444,
+          "f1": 0.8792,
+          "f1_ci95": [
+            0.8734,
+            0.8853
+          ],
+          "precision_ci95": [
+            0.9111,
+            0.9229
+          ],
+          "recall_ci95": [
+            0.8365,
+            0.853
+          ],
+          "errors": 0,
+          "empty_outputs": 74,
+          "ms_per_page": 91.5014
+        },
+        "web2md[no-fallback]": {
+          "precision": 0.941,
+          "recall": 0.764,
+          "f1": 0.8433,
+          "f1_ci95": [
+            0.8357,
+            0.8505
+          ],
+          "precision_ci95": [
+            0.9357,
+            0.9462
+          ],
+          "recall_ci95": [
+            0.7529,
+            0.7743
+          ],
+          "errors": 0,
+          "empty_outputs": 307,
+          "ms_per_page": 96.4235
+        }
+      }
+    },
+    "wceb/cleaneval": {
+      "n_pages": 731,
+      "systems": {
+        "web2md": {
+          "precision": 0.9112,
+          "recall": 0.8685,
+          "f1": 0.8893,
+          "f1_ci95": [
+            0.8758,
+            0.9017
+          ],
+          "precision_ci95": [
+            0.8983,
+            0.9233
+          ],
+          "recall_ci95": [
+            0.8495,
+            0.8859
+          ],
+          "errors": 0,
+          "empty_outputs": 10,
+          "ms_per_page": 65.1099
+        },
+        "web2md[no-hints]": {
+          "precision": 0.9117,
+          "recall": 0.868,
+          "f1": 0.8893,
+          "f1_ci95": [
+            0.8767,
+            0.9024
+          ],
+          "precision_ci95": [
+            0.8988,
+            0.9245
+          ],
+          "recall_ci95": [
+            0.8498,
+            0.8864
+          ],
+          "errors": 0,
+          "empty_outputs": 12,
+          "ms_per_page": 63.172
+        },
+        "web2md[no-link-density]": {
+          "precision": 0.8849,
+          "recall": 0.8925,
+          "f1": 0.8887,
+          "f1_ci95": [
+            0.8757,
+            0.9009
+          ],
+          "precision_ci95": [
+            0.871,
+            0.8992
+          ],
+          "recall_ci95": [
+            0.8772,
+            0.9082
+          ],
+          "errors": 0,
+          "empty_outputs": 6,
+          "ms_per_page": 67.3946
+        },
+        "web2md[no-siblings]": {
+          "precision": 0.9108,
+          "recall": 0.8634,
+          "f1": 0.8864,
+          "f1_ci95": [
+            0.8726,
+            0.8991
+          ],
+          "precision_ci95": [
+            0.8976,
+            0.923
+          ],
+          "recall_ci95": [
+            0.8439,
+            0.8811
+          ],
+          "errors": 0,
+          "empty_outputs": 10,
+          "ms_per_page": 65.6473
+        },
+        "web2md[no-clean]": {
+          "precision": 0.8903,
+          "recall": 0.8901,
+          "f1": 0.8902,
+          "f1_ci95": [
+            0.8777,
+            0.9024
+          ],
+          "precision_ci95": [
+            0.877,
+            0.9045
+          ],
+          "recall_ci95": [
+            0.8744,
+            0.9064
+          ],
+          "errors": 0,
+          "empty_outputs": 6,
+          "ms_per_page": 66.7133
+        },
+        "web2md[no-fallback]": {
+          "precision": 0.9136,
+          "recall": 0.864,
+          "f1": 0.8881,
+          "f1_ci95": [
+            0.8754,
+            0.901
+          ],
+          "precision_ci95": [
+            0.9014,
+            0.9259
+          ],
+          "recall_ci95": [
+            0.8462,
+            0.8823
+          ],
+          "errors": 0,
+          "empty_outputs": 12,
+          "ms_per_page": 64.6877
+        }
+      }
+    },
+    "wceb/cleanportaleval": {
+      "n_pages": 69,
+      "systems": {
+        "web2md": {
+          "precision": 0.9714,
+          "recall": 0.9249,
+          "f1": 0.9476,
+          "f1_ci95": [
+            0.9318,
+            0.9599
+          ],
+          "precision_ci95": [
+            0.9557,
+            0.9829
+          ],
+          "recall_ci95": [
+            0.898,
+            0.9465
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 96.1923
+        },
+        "web2md[no-hints]": {
+          "precision": 0.9524,
+          "recall": 0.9364,
+          "f1": 0.9444,
+          "f1_ci95": [
+            0.9082,
+            0.9661
+          ],
+          "precision_ci95": [
+            0.9123,
+            0.9774
+          ],
+          "recall_ci95": [
+            0.8997,
+            0.9614
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 96.1022
+        },
+        "web2md[no-link-density]": {
+          "precision": 0.964,
+          "recall": 0.9246,
+          "f1": 0.9439,
+          "f1_ci95": [
+            0.9278,
+            0.957
+          ],
+          "precision_ci95": [
+            0.9474,
+            0.9767
+          ],
+          "recall_ci95": [
+            0.8978,
+            0.9461
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 92.6595
+        },
+        "web2md[no-siblings]": {
+          "precision": 0.9741,
+          "recall": 0.9246,
+          "f1": 0.9487,
+          "f1_ci95": [
+            0.9332,
+            0.9611
+          ],
+          "precision_ci95": [
+            0.9582,
+            0.9856
+          ],
+          "recall_ci95": [
+            0.8976,
+            0.9461
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 96.7033
+        },
+        "web2md[no-clean]": {
+          "precision": 0.9549,
+          "recall": 0.9548,
+          "f1": 0.9548,
+          "f1_ci95": [
+            0.9433,
+            0.9644
+          ],
+          "precision_ci95": [
+            0.9358,
+            0.9701
+          ],
+          "recall_ci95": [
+            0.938,
+            0.9689
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 99.1414
+        },
+        "web2md[no-fallback]": {
+          "precision": 0.9714,
+          "recall": 0.9249,
+          "f1": 0.9476,
+          "f1_ci95": [
+            0.9318,
+            0.9599
+          ],
+          "precision_ci95": [
+            0.9557,
+            0.9829
+          ],
+          "recall_ci95": [
+            0.898,
+            0.9465
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 93.5306
+        }
+      }
+    },
+    "wceb/dragnet": {
+      "n_pages": 1379,
+      "systems": {
+        "web2md": {
+          "precision": 0.9277,
+          "recall": 0.7606,
+          "f1": 0.8359,
+          "f1_ci95": [
+            0.8237,
+            0.8471
+          ],
+          "precision_ci95": [
+            0.9168,
+            0.9379
+          ],
+          "recall_ci95": [
+            0.7449,
+            0.7756
+          ],
+          "errors": 0,
+          "empty_outputs": 4,
+          "ms_per_page": 95.9445
+        },
+        "web2md[no-hints]": {
+          "precision": 0.9119,
+          "recall": 0.7908,
+          "f1": 0.847,
+          "f1_ci95": [
+            0.8351,
+            0.8585
+          ],
+          "precision_ci95": [
+            0.8999,
+            0.9238
+          ],
+          "recall_ci95": [
+            0.777,
+            0.8042
+          ],
+          "errors": 0,
+          "empty_outputs": 4,
+          "ms_per_page": 76.6635
+        },
+        "web2md[no-link-density]": {
+          "precision": 0.898,
+          "recall": 0.7762,
+          "f1": 0.8327,
+          "f1_ci95": [
+            0.8214,
+            0.8436
+          ],
+          "precision_ci95": [
+            0.8871,
+            0.9094
+          ],
+          "recall_ci95": [
+            0.7615,
+            0.7906
+          ],
+          "errors": 0,
+          "empty_outputs": 4,
+          "ms_per_page": 73.9647
+        },
+        "web2md[no-siblings]": {
+          "precision": 0.9332,
+          "recall": 0.7551,
+          "f1": 0.8347,
+          "f1_ci95": [
+            0.8229,
+            0.8463
+          ],
+          "precision_ci95": [
+            0.9223,
+            0.9433
+          ],
+          "recall_ci95": [
+            0.739,
+            0.77
+          ],
+          "errors": 0,
+          "empty_outputs": 4,
+          "ms_per_page": 75.5168
+        },
+        "web2md[no-clean]": {
+          "precision": 0.9094,
+          "recall": 0.7867,
+          "f1": 0.8436,
+          "f1_ci95": [
+            0.8323,
+            0.8541
+          ],
+          "precision_ci95": [
+            0.8983,
+            0.9193
+          ],
+          "recall_ci95": [
+            0.772,
+            0.8014
+          ],
+          "errors": 0,
+          "empty_outputs": 4,
+          "ms_per_page": 77.4912
+        },
+        "web2md[no-fallback]": {
+          "precision": 0.9384,
+          "recall": 0.6675,
+          "f1": 0.7801,
+          "f1_ci95": [
+            0.7651,
+            0.7943
+          ],
+          "precision_ci95": [
+            0.9286,
+            0.9475
+          ],
+          "recall_ci95": [
+            0.648,
+            0.6875
+          ],
+          "errors": 0,
+          "empty_outputs": 154,
+          "ms_per_page": 93.369
+        }
+      }
+    },
+    "wceb/google-trends-2017": {
+      "n_pages": 179,
+      "systems": {
+        "web2md": {
+          "precision": 0.8465,
+          "recall": 0.7565,
+          "f1": 0.799,
+          "f1_ci95": [
+            0.7582,
+            0.8377
+          ],
+          "precision_ci95": [
+            0.8037,
+            0.8846
+          ],
+          "recall_ci95": [
+            0.7113,
+            0.8013
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 275.8928
+        },
+        "web2md[no-hints]": {
+          "precision": 0.7931,
+          "recall": 0.7421,
+          "f1": 0.7668,
+          "f1_ci95": [
+            0.717,
+            0.8093
+          ],
+          "precision_ci95": [
+            0.7425,
+            0.8387
+          ],
+          "recall_ci95": [
+            0.6912,
+            0.7897
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 234.0048
+        },
+        "web2md[no-link-density]": {
+          "precision": 0.8422,
+          "recall": 0.781,
+          "f1": 0.8105,
+          "f1_ci95": [
+            0.7719,
+            0.8442
+          ],
+          "precision_ci95": [
+            0.8043,
+            0.8759
+          ],
+          "recall_ci95": [
+            0.7361,
+            0.8241
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 233.3858
+        },
+        "web2md[no-siblings]": {
+          "precision": 0.8494,
+          "recall": 0.7524,
+          "f1": 0.798,
+          "f1_ci95": [
+            0.7578,
+            0.8364
+          ],
+          "precision_ci95": [
+            0.8065,
+            0.8884
+          ],
+          "recall_ci95": [
+            0.708,
+            0.7967
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 240.8617
+        },
+        "web2md[no-clean]": {
+          "precision": 0.8323,
+          "recall": 0.8213,
+          "f1": 0.8268,
+          "f1_ci95": [
+            0.7918,
+            0.858
+          ],
+          "precision_ci95": [
+            0.794,
+            0.8663
+          ],
+          "recall_ci95": [
+            0.7806,
+            0.8576
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 238.216
+        },
+        "web2md[no-fallback]": {
+          "precision": 0.8749,
+          "recall": 0.71,
+          "f1": 0.7839,
+          "f1_ci95": [
+            0.7397,
+            0.8221
+          ],
+          "precision_ci95": [
+            0.8341,
+            0.911
+          ],
+          "recall_ci95": [
+            0.6571,
+            0.7603
+          ],
+          "errors": 0,
+          "empty_outputs": 14,
+          "ms_per_page": 264.3352
+        }
+      }
+    },
+    "wceb/l3s-gn1": {
+      "n_pages": 621,
+      "systems": {
+        "web2md": {
+          "precision": 0.9427,
+          "recall": 0.837,
+          "f1": 0.8867,
+          "f1_ci95": [
+            0.8703,
+            0.9011
+          ],
+          "precision_ci95": [
+            0.9291,
+            0.9539
+          ],
+          "recall_ci95": [
+            0.8116,
+            0.8603
+          ],
+          "errors": 0,
+          "empty_outputs": 65,
+          "ms_per_page": 58.247
+        },
+        "web2md[no-hints]": {
+          "precision": 0.9217,
+          "recall": 0.8264,
+          "f1": 0.8715,
+          "f1_ci95": [
+            0.8538,
+            0.888
+          ],
+          "precision_ci95": [
+            0.9041,
+            0.9372
+          ],
+          "recall_ci95": [
+            0.7998,
+            0.85
+          ],
+          "errors": 0,
+          "empty_outputs": 65,
+          "ms_per_page": 60.0834
+        },
+        "web2md[no-link-density]": {
+          "precision": 0.882,
+          "recall": 0.8326,
+          "f1": 0.8566,
+          "f1_ci95": [
+            0.8386,
+            0.8729
+          ],
+          "precision_ci95": [
+            0.8637,
+            0.8981
+          ],
+          "recall_ci95": [
+            0.8075,
+            0.8557
+          ],
+          "errors": 0,
+          "empty_outputs": 64,
+          "ms_per_page": 70.2742
+        },
+        "web2md[no-siblings]": {
+          "precision": 0.9468,
+          "recall": 0.8319,
+          "f1": 0.8856,
+          "f1_ci95": [
+            0.8695,
+            0.9001
+          ],
+          "precision_ci95": [
+            0.9326,
+            0.9575
+          ],
+          "recall_ci95": [
+            0.8069,
+            0.8553
+          ],
+          "errors": 0,
+          "empty_outputs": 65,
+          "ms_per_page": 61.0458
+        },
+        "web2md[no-clean]": {
+          "precision": 0.8993,
+          "recall": 0.8458,
+          "f1": 0.8717,
+          "f1_ci95": [
+            0.855,
+            0.8874
+          ],
+          "precision_ci95": [
+            0.8829,
+            0.9148
+          ],
+          "recall_ci95": [
+            0.8197,
+            0.8688
+          ],
+          "errors": 0,
+          "empty_outputs": 64,
+          "ms_per_page": 60.5561
+        },
+        "web2md[no-fallback]": {
+          "precision": 0.9385,
+          "recall": 0.8233,
+          "f1": 0.8771,
+          "f1_ci95": [
+            0.8599,
+            0.8921
+          ],
+          "precision_ci95": [
+            0.9236,
+            0.9506
+          ],
+          "recall_ci95": [
+            0.7971,
+            0.8483
+          ],
+          "errors": 0,
+          "empty_outputs": 72,
+          "ms_per_page": 57.6173
+        }
+      }
+    },
+    "wceb/readability": {
+      "n_pages": 115,
+      "systems": {
+        "web2md": {
+          "precision": 0.9854,
+          "recall": 0.9309,
+          "f1": 0.9574,
+          "f1_ci95": [
+            0.9389,
+            0.9714
+          ],
+          "precision_ci95": [
+            0.9801,
+            0.9898
+          ],
+          "recall_ci95": [
+            0.8972,
+            0.9564
+          ],
+          "errors": 0,
+          "empty_outputs": 1,
+          "ms_per_page": 155.4013
+        },
+        "web2md[no-hints]": {
+          "precision": 0.9736,
+          "recall": 0.913,
+          "f1": 0.9424,
+          "f1_ci95": [
+            0.9153,
+            0.9641
+          ],
+          "precision_ci95": [
+            0.9533,
+            0.9867
+          ],
+          "recall_ci95": [
+            0.872,
+            0.9481
+          ],
+          "errors": 0,
+          "empty_outputs": 1,
+          "ms_per_page": 154.5896
+        },
+        "web2md[no-link-density]": {
+          "precision": 0.9568,
+          "recall": 0.9242,
+          "f1": 0.9402,
+          "f1_ci95": [
+            0.9117,
+            0.9655
+          ],
+          "precision_ci95": [
+            0.9301,
+            0.9787
+          ],
+          "recall_ci95": [
+            0.8865,
+            0.9571
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 166.5831
+        },
+        "web2md[no-siblings]": {
+          "precision": 0.9857,
+          "recall": 0.9263,
+          "f1": 0.9551,
+          "f1_ci95": [
+            0.9371,
+            0.9689
+          ],
+          "precision_ci95": [
+            0.9807,
+            0.9902
+          ],
+          "recall_ci95": [
+            0.8936,
+            0.9509
+          ],
+          "errors": 0,
+          "empty_outputs": 1,
+          "ms_per_page": 161.9298
+        },
+        "web2md[no-clean]": {
+          "precision": 0.9623,
+          "recall": 0.9606,
+          "f1": 0.9614,
+          "f1_ci95": [
+            0.9461,
+            0.9744
+          ],
+          "precision_ci95": [
+            0.9439,
+            0.9765
+          ],
+          "recall_ci95": [
+            0.937,
+            0.9784
+          ],
+          "errors": 0,
+          "empty_outputs": 0,
+          "ms_per_page": 161.4421
+        },
+        "web2md[no-fallback]": {
+          "precision": 0.976,
+          "recall": 0.8826,
+          "f1": 0.9269,
+          "f1_ci95": [
+            0.8917,
+            0.9528
+          ],
+          "precision_ci95": [
+            0.9557,
+            0.9887
+          ],
+          "recall_ci95": [
+            0.8313,
+            0.9251
+          ],
+          "errors": 0,
+          "empty_outputs": 5,
+          "ms_per_page": 153.852
+        }
+      }
+    }
+  }
+}
