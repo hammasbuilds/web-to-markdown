@@ -148,6 +148,10 @@ def main(argv: list[str] | None = None) -> int:
         "failures.json",
         report.failures(pages, outputs, counts, ["web2md", "trafilatura", "readability-lxml"]),
     )
+    report.write(
+        "comments_convention.json",
+        report.comment_convention(pages, outputs, headline, args.n_boot),
+    )
     alt_counts = report.all_counts(
         pages,
         only(["web2md", "trafilatura-md"]),

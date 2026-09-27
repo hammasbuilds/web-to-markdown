@@ -17,10 +17,9 @@ from __future__ import annotations
 import importlib.metadata
 from collections.abc import Callable
 from dataclasses import dataclass
-from html import escape
 
 from web2md import ExtractOptions, convert
-from web2md.dom import VOID_TAGS, Element, parse
+from web2md.dom import Element, parse
 from web2md.extract import _collapse
 from web2md.markdown import to_markdown
 
@@ -97,10 +96,10 @@ def _optional_systems() -> tuple[list[System], dict[str, str]]:
         import markdownify
 
         def run_markdownify(html: str) -> str:
-            # markdownify renders every tag it meets; drop non-content ones first.
-            return markdownify.MarkdownConverter(
-                heading_style="ATX", escape_underscores=False, escape_asterisks=False
-            ).convert(_strip_invisible(html))
+            # Its own BeautifulSoup parse; script and style are dropped by markdownify.
+            return markdownify.markdownify(
+                html, heading_style="ATX", escape_underscores=False, escape_asterisks=False
+            )
 
         systems.append(
             System(
@@ -175,25 +174,6 @@ def _optional_systems() -> tuple[list[System], dict[str, str]]:
     except ImportError as exc:
         missing["trafilatura"] = str(exc)
     return systems, missing
-
-
-def _strip_invisible(html: str) -> str:
-    root = parse(html)
-    for el in list(root.iter("script", "style", "noscript", "template", "head", "svg")):
-        el.remove()
-    return _serialise(root)
-
-
-def _serialise(el: Element | str) -> str:
-    if isinstance(el, str):
-        return escape(el, quote=False)
-    inner = "".join(_serialise(c) for c in el.children)
-    if el.tag == "#document":
-        return inner
-    attrs = "".join(f' {k}="{escape(v)}"' for k, v in el.attrs.items())
-    if el.tag in VOID_TAGS:
-        return f"<{el.tag}{attrs}>"
-    return f"<{el.tag}{attrs}>{inner}</{el.tag}>"
 
 
 def systems(include_ablations: bool = True) -> tuple[list[System], dict[str, str]]:

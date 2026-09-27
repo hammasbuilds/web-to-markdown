@@ -86,6 +86,22 @@ def corpus_score(counts: Sequence[Counts]) -> Score:
     return Score(p, r, f1)
 
 
+class _PerPage:
+    """Per-page precision and recall, computed once so resampling is just summing."""
+
+    def __init__(self, counts: Sequence[Counts]) -> None:
+        # (value, counted) pairs: a page with no predicted shingles has no precision.
+        self.p = [(_precision(*c), c[0] + c[1] > 0) for c in counts]
+        self.r = [(_recall(*c), c[0] + c[2] > 0) for c in counts]
+
+    def score(self, idx: Sequence[int]) -> Score:
+        ps = [self.p[i][0] for i in idx if self.p[i][1]]
+        rs = [self.r[i][0] for i in idx if self.r[i][1]]
+        p = sum(ps) / len(ps) if ps else 0.0
+        r = sum(rs) / len(rs) if rs else 0.0
+        return Score(p, r, 2 * p * r / (p + r) if p + r else 0.0)
+
+
 def bootstrap(
     counts: Sequence[Counts], n_boot: int = 1000, seed: int = 0, alpha: float = 0.05
 ) -> dict[str, tuple[float, float]]:
@@ -95,9 +111,9 @@ def bootstrap(
     draws: dict[str, list[float]] = {"precision": [], "recall": [], "f1": []}
     if n == 0:
         return {k: (0.0, 0.0) for k in draws}
+    pages = _PerPage(counts)
     for _ in range(n_boot):
-        sample = [counts[rng.randrange(n)] for _ in range(n)]
-        s = corpus_score(sample)
+        s = pages.score([rng.randrange(n) for _ in range(n)])
         draws["precision"].append(s.precision)
         draws["recall"].append(s.recall)
         draws["f1"].append(s.f1)
@@ -114,9 +130,10 @@ def paired_bootstrap_diff(
     rng = random.Random(seed)
     n = len(a)
     point = corpus_score(a).f1 - corpus_score(b).f1
+    pa, pb = _PerPage(a), _PerPage(b)
     diffs = []
     for _ in range(n_boot):
         idx = [rng.randrange(n) for _ in range(n)]
-        diffs.append(corpus_score([a[i] for i in idx]).f1 - corpus_score([b[i] for i in idx]).f1)
+        diffs.append(pa.score(idx).f1 - pb.score(idx).f1)
     diffs.sort()
     return point, diffs[int(0.025 * n_boot)], diffs[int(0.975 * n_boot) - 1]

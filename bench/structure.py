@@ -199,3 +199,11 @@ def survives(gold: Gold, reg: Regions) -> bool:
     pool = pools[gold.kind]
     hits = sum(any(_contains(line, unit) for line in pool) for unit in gold.units)
     return hits >= MATCH * len(gold.units)
+
+
+def text_present(gold: Gold, output_tokens: list[str], output_text: str) -> bool:
+    """Whether the structure's *words* reached the output, marked up or not."""
+    if gold.kind == "code":
+        return _coverage(gold.code_text, output_text) >= MATCH
+    hits = sum(_contains(output_tokens, unit) for unit in gold.units)
+    return hits >= MATCH * len(gold.units)

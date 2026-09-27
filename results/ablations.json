@@ -22,7 +22,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 136.9943
+          "ms_per_page": 146.1451
         },
         "web2md[no-hints]": {
           "precision": 0.9213,
@@ -42,7 +42,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 140.111
+          "ms_per_page": 141.2692
         },
         "web2md[no-link-density]": {
           "precision": 0.9514,
@@ -62,7 +62,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 148.3026
+          "ms_per_page": 145.1787
         },
         "web2md[no-siblings]": {
           "precision": 0.9602,
@@ -82,7 +82,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 142.4671
+          "ms_per_page": 145.7241
         },
         "web2md[no-clean]": {
           "precision": 0.9151,
@@ -102,7 +102,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 136.6016
+          "ms_per_page": 144.1569
         },
         "web2md[no-fallback]": {
           "precision": 0.9398,
@@ -122,7 +122,7 @@
           ],
           "errors": 0,
           "empty_outputs": 10,
-          "ms_per_page": 136.576
+          "ms_per_page": 142.8426
         }
       }
     },
@@ -147,7 +147,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 131.6468
+          "ms_per_page": 134.7717
         },
         "web2md[no-hints]": {
           "precision": 0.9458,
@@ -167,7 +167,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 130.8822
+          "ms_per_page": 136.0243
         },
         "web2md[no-link-density]": {
           "precision": 0.9428,
@@ -187,7 +187,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 138.1652
+          "ms_per_page": 138.0592
         },
         "web2md[no-siblings]": {
           "precision": 0.9523,
@@ -207,7 +207,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 134.362
+          "ms_per_page": 137.0495
         },
         "web2md[no-clean]": {
           "precision": 0.9112,
@@ -227,7 +227,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 128.8565
+          "ms_per_page": 134.916
         },
         "web2md[no-fallback]": {
           "precision": 0.9593,
@@ -247,7 +247,7 @@
           ],
           "errors": 0,
           "empty_outputs": 3,
-          "ms_per_page": 131.7782
+          "ms_per_page": 136.1892
         }
       }
     },
@@ -272,7 +272,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 141.23
+          "ms_per_page": 155.1536
         },
         "web2md[no-hints]": {
           "precision": 0.9019,
@@ -292,7 +292,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 147.4209
+          "ms_per_page": 145.4235
         },
         "web2md[no-link-density]": {
           "precision": 0.9582,
@@ -312,7 +312,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 156.3322
+          "ms_per_page": 150.8178
         },
         "web2md[no-siblings]": {
           "precision": 0.9665,
@@ -332,7 +332,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 148.8871
+          "ms_per_page": 152.5952
         },
         "web2md[no-clean]": {
           "precision": 0.9183,
@@ -352,7 +352,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 142.7362
+          "ms_per_page": 151.4765
         },
         "web2md[no-fallback]": {
           "precision": 0.9239,
@@ -372,7 +372,7 @@
           ],
           "errors": 0,
           "empty_outputs": 7,
-          "ms_per_page": 140.3763
+          "ms_per_page": 148.1126
         }
       }
     },
@@ -397,7 +397,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 115.5437
+          "ms_per_page": 123.3859
         },
         "web2md[no-hints]": {
           "precision": 0.9859,
@@ -417,7 +417,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 115.8497
+          "ms_per_page": 120.2022
         },
         "web2md[no-link-density]": {
           "precision": 0.9808,
@@ -437,7 +437,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 117.9848
+          "ms_per_page": 130.7417
         },
         "web2md[no-siblings]": {
           "precision": 0.9876,
@@ -457,7 +457,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 116.3358
+          "ms_per_page": 126.7657
         },
         "web2md[no-clean]": {
           "precision": 0.9844,
@@ -477,7 +477,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 122.6801
+          "ms_per_page": 129.0587
         },
         "web2md[no-fallback]": {
           "precision": 0.9862,
@@ -497,7 +497,7 @@
           ],
           "errors": 0,
           "empty_outputs": 50,
-          "ms_per_page": 117.9219
+          "ms_per_page": 122.0087
         }
       }
     },
@@ -505,124 +505,124 @@
       "n_pages": 3794,
       "systems": {
         "web2md": {
-          "precision": 0.9365,
-          "recall": 0.8179,
-          "f1": 0.8732,
+          "precision": 0.9362,
+          "recall": 0.8347,
+          "f1": 0.8826,
           "f1_ci95": [
-            0.8672,
-            0.8795
+            0.8768,
+            0.8883
           ],
           "precision_ci95": [
             0.9308,
-            0.9419
+            0.9416
           ],
           "recall_ci95": [
-            0.8099,
-            0.8268
+            0.8271,
+            0.8425
           ],
           "errors": 0,
-          "empty_outputs": 80,
-          "ms_per_page": 97.7459
+          "empty_outputs": 11,
+          "ms_per_page": 108.8104
         },
         "web2md[no-hints]": {
-          "precision": 0.9242,
-          "recall": 0.8283,
-          "f1": 0.8737,
+          "precision": 0.9235,
+          "recall": 0.8448,
+          "f1": 0.8824,
           "f1_ci95": [
-            0.8674,
-            0.8801
+            0.8764,
+            0.8885
           ],
           "precision_ci95": [
-            0.9182,
-            0.9298
+            0.9175,
+            0.9293
           ],
           "recall_ci95": [
-            0.8199,
-            0.8366
+            0.8374,
+            0.852
           ],
           "errors": 0,
-          "empty_outputs": 82,
-          "ms_per_page": 88.719
+          "empty_outputs": 13,
+          "ms_per_page": 107.0729
         },
         "web2md[no-link-density]": {
-          "precision": 0.909,
-          "recall": 0.8332,
-          "f1": 0.8694,
+          "precision": 0.9083,
+          "recall": 0.8505,
+          "f1": 0.8785,
           "f1_ci95": [
-            0.8637,
-            0.8759
+            0.873,
+            0.8845
           ],
           "precision_ci95": [
-            0.9023,
-            0.9153
+            0.9016,
+            0.9146
           ],
           "recall_ci95": [
-            0.8251,
-            0.8418
+            0.8431,
+            0.8583
           ],
           "errors": 0,
-          "empty_outputs": 74,
-          "ms_per_page": 90.8853
+          "empty_outputs": 5,
+          "ms_per_page": 112.9501
         },
         "web2md[no-siblings]": {
-          "precision": 0.9395,
-          "recall": 0.8124,
-          "f1": 0.8714,
+          "precision": 0.9392,
+          "recall": 0.8292,
+          "f1": 0.8808,
           "f1_ci95": [
-            0.8654,
-            0.8776
+            0.8751,
+            0.8868
           ],
           "precision_ci95": [
-            0.9339,
-            0.9448
+            0.9337,
+            0.9445
           ],
           "recall_ci95": [
-            0.8045,
-            0.8212
+            0.8214,
+            0.8369
           ],
           "errors": 0,
-          "empty_outputs": 80,
-          "ms_per_page": 89.5833
+          "empty_outputs": 11,
+          "ms_per_page": 109.2976
         },
         "web2md[no-clean]": {
-          "precision": 0.9171,
-          "recall": 0.8444,
-          "f1": 0.8792,
+          "precision": 0.9159,
+          "recall": 0.8612,
+          "f1": 0.8877,
           "f1_ci95": [
-            0.8734,
-            0.8853
+            0.8824,
+            0.8934
           ],
           "precision_ci95": [
-            0.9111,
-            0.9229
+            0.91,
+            0.922
           ],
           "recall_ci95": [
-            0.8365,
-            0.853
+            0.8534,
+            0.8688
           ],
           "errors": 0,
-          "empty_outputs": 74,
-          "ms_per_page": 91.5014
+          "empty_outputs": 2,
+          "ms_per_page": 110.4219
         },
         "web2md[no-fallback]": {
-          "precision": 0.941,
-          "recall": 0.764,
-          "f1": 0.8433,
+          "precision": 0.9401,
+          "recall": 0.7803,
+          "f1": 0.8528,
           "f1_ci95": [
-            0.8357,
-            0.8505
+            0.846,
+            0.8599
           ],
           "precision_ci95": [
-            0.9357,
-            0.9462
+            0.9349,
+            0.9453
           ],
           "recall_ci95": [
-            0.7529,
-            0.7743
+            0.7703,
+            0.7905
           ],
           "errors": 0,
-          "empty_outputs": 307,
-          "ms_per_page": 96.4235
+          "empty_outputs": 238,
+          "ms_per_page": 107.8343
         }
       }
     },
@@ -630,124 +630,124 @@
       "n_pages": 731,
       "systems": {
         "web2md": {
-          "precision": 0.9112,
-          "recall": 0.8685,
-          "f1": 0.8893,
+          "precision": 0.9135,
+          "recall": 0.8771,
+          "f1": 0.8949,
           "f1_ci95": [
-            0.8758,
-            0.9017
+            0.8827,
+            0.907
           ],
           "precision_ci95": [
-            0.8983,
-            0.9233
+            0.9011,
+            0.9252
           ],
           "recall_ci95": [
-            0.8495,
-            0.8859
+            0.8599,
+            0.8939
           ],
           "errors": 0,
-          "empty_outputs": 10,
-          "ms_per_page": 65.1099
+          "empty_outputs": 6,
+          "ms_per_page": 67.2494
         },
         "web2md[no-hints]": {
-          "precision": 0.9117,
-          "recall": 0.868,
-          "f1": 0.8893,
+          "precision": 0.914,
+          "recall": 0.8767,
+          "f1": 0.895,
           "f1_ci95": [
-            0.8767,
-            0.9024
+            0.883,
+            0.9079
           ],
           "precision_ci95": [
-            0.8988,
+            0.9016,
+            0.9251
+          ],
+          "recall_ci95": [
+            0.86,
+            0.8946
+          ],
+          "errors": 0,
+          "empty_outputs": 8,
+          "ms_per_page": 66.5034
+        },
+        "web2md[no-link-density]": {
+          "precision": 0.8868,
+          "recall": 0.9011,
+          "f1": 0.8939,
+          "f1_ci95": [
+            0.8817,
+            0.9052
+          ],
+          "precision_ci95": [
+            0.8731,
+            0.8994
+          ],
+          "recall_ci95": [
+            0.8868,
+            0.9154
+          ],
+          "errors": 0,
+          "empty_outputs": 2,
+          "ms_per_page": 72.5823
+        },
+        "web2md[no-siblings]": {
+          "precision": 0.9131,
+          "recall": 0.872,
+          "f1": 0.8921,
+          "f1_ci95": [
+            0.8794,
+            0.9044
+          ],
+          "precision_ci95": [
+            0.9005,
             0.9245
           ],
           "recall_ci95": [
-            0.8498,
-            0.8864
-          ],
-          "errors": 0,
-          "empty_outputs": 12,
-          "ms_per_page": 63.172
-        },
-        "web2md[no-link-density]": {
-          "precision": 0.8849,
-          "recall": 0.8925,
-          "f1": 0.8887,
-          "f1_ci95": [
-            0.8757,
-            0.9009
-          ],
-          "precision_ci95": [
-            0.871,
-            0.8992
-          ],
-          "recall_ci95": [
-            0.8772,
-            0.9082
+            0.8549,
+            0.8894
           ],
           "errors": 0,
           "empty_outputs": 6,
-          "ms_per_page": 67.3946
-        },
-        "web2md[no-siblings]": {
-          "precision": 0.9108,
-          "recall": 0.8634,
-          "f1": 0.8864,
-          "f1_ci95": [
-            0.8726,
-            0.8991
-          ],
-          "precision_ci95": [
-            0.8976,
-            0.923
-          ],
-          "recall_ci95": [
-            0.8439,
-            0.8811
-          ],
-          "errors": 0,
-          "empty_outputs": 10,
-          "ms_per_page": 65.6473
+          "ms_per_page": 69.7352
         },
         "web2md[no-clean]": {
-          "precision": 0.8903,
-          "recall": 0.8901,
-          "f1": 0.8902,
+          "precision": 0.8924,
+          "recall": 0.8989,
+          "f1": 0.8956,
           "f1_ci95": [
-            0.8777,
-            0.9024
+            0.8838,
+            0.9071
           ],
           "precision_ci95": [
-            0.877,
-            0.9045
+            0.8792,
+            0.9054
           ],
           "recall_ci95": [
-            0.8744,
-            0.9064
+            0.8846,
+            0.9137
           ],
           "errors": 0,
-          "empty_outputs": 6,
-          "ms_per_page": 66.7133
+          "empty_outputs": 1,
+          "ms_per_page": 65.8506
         },
         "web2md[no-fallback]": {
-          "precision": 0.9136,
-          "recall": 0.864,
-          "f1": 0.8881,
+          "precision": 0.9159,
+          "recall": 0.8726,
+          "f1": 0.8937,
           "f1_ci95": [
-            0.8754,
-            0.901
+            0.8818,
+            0.9056
           ],
           "precision_ci95": [
-            0.9014,
-            0.9259
+            0.9045,
+            0.9273
           ],
           "recall_ci95": [
-            0.8462,
-            0.8823
+            0.8565,
+            0.8898
           ],
           "errors": 0,
-          "empty_outputs": 12,
-          "ms_per_page": 64.6877
+          "empty_outputs": 8,
+          "ms_per_page": 67.8693
         }
       }
     },
@@ -772,7 +772,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 96.1923
+          "ms_per_page": 103.281
         },
         "web2md[no-hints]": {
           "precision": 0.9524,
@@ -792,7 +792,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 96.1022
+          "ms_per_page": 101.1897
         },
         "web2md[no-link-density]": {
           "precision": 0.964,
@@ -812,7 +812,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 92.6595
+          "ms_per_page": 111.7338
         },
         "web2md[no-siblings]": {
           "precision": 0.9741,
@@ -832,7 +832,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 96.7033
+          "ms_per_page": 98.5973
         },
         "web2md[no-clean]": {
           "precision": 0.9549,
@@ -852,7 +852,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 99.1414
+          "ms_per_page": 107.566
         },
         "web2md[no-fallback]": {
           "precision": 0.9714,
@@ -872,7 +872,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 93.5306
+          "ms_per_page": 110.8347
         }
       }
     },
@@ -881,123 +881,123 @@
       "systems": {
         "web2md": {
           "precision": 0.9277,
-          "recall": 0.7606,
-          "f1": 0.8359,
+          "recall": 0.7626,
+          "f1": 0.8371,
           "f1_ci95": [
-            0.8237,
-            0.8471
+            0.8252,
+            0.8486
           ],
           "precision_ci95": [
             0.9168,
-            0.9379
+            0.938
           ],
           "recall_ci95": [
-            0.7449,
-            0.7756
+            0.7471,
+            0.7775
           ],
           "errors": 0,
-          "empty_outputs": 4,
-          "ms_per_page": 95.9445
+          "empty_outputs": 0,
+          "ms_per_page": 105.3166
         },
         "web2md[no-hints]": {
-          "precision": 0.9119,
-          "recall": 0.7908,
-          "f1": 0.847,
+          "precision": 0.912,
+          "recall": 0.7933,
+          "f1": 0.8486,
           "f1_ci95": [
-            0.8351,
-            0.8585
+            0.8368,
+            0.8599
           ],
           "precision_ci95": [
-            0.8999,
-            0.9238
+            0.9,
+            0.9239
           ],
           "recall_ci95": [
-            0.777,
-            0.8042
+            0.7795,
+            0.8074
           ],
           "errors": 0,
-          "empty_outputs": 4,
-          "ms_per_page": 76.6635
+          "empty_outputs": 0,
+          "ms_per_page": 106.5772
         },
         "web2md[no-link-density]": {
-          "precision": 0.898,
-          "recall": 0.7762,
-          "f1": 0.8327,
+          "precision": 0.8981,
+          "recall": 0.7782,
+          "f1": 0.8339,
           "f1_ci95": [
-            0.8214,
-            0.8436
+            0.8224,
+            0.8445
           ],
           "precision_ci95": [
-            0.8871,
-            0.9094
+            0.8872,
+            0.9095
           ],
           "recall_ci95": [
-            0.7615,
-            0.7906
+            0.7633,
+            0.7925
           ],
           "errors": 0,
-          "empty_outputs": 4,
-          "ms_per_page": 73.9647
+          "empty_outputs": 0,
+          "ms_per_page": 105.1548
         },
         "web2md[no-siblings]": {
           "precision": 0.9332,
-          "recall": 0.7551,
-          "f1": 0.8347,
+          "recall": 0.757,
+          "f1": 0.8359,
           "f1_ci95": [
-            0.8229,
-            0.8463
+            0.8242,
+            0.8476
           ],
           "precision_ci95": [
-            0.9223,
-            0.9433
+            0.9225,
+            0.9434
           ],
           "recall_ci95": [
-            0.739,
-            0.77
+            0.7416,
+            0.772
           ],
           "errors": 0,
-          "empty_outputs": 4,
-          "ms_per_page": 75.5168
+          "empty_outputs": 0,
+          "ms_per_page": 106.5407
         },
         "web2md[no-clean]": {
-          "precision": 0.9094,
-          "recall": 0.7867,
-          "f1": 0.8436,
+          "precision": 0.9095,
+          "recall": 0.7887,
+          "f1": 0.8448,
           "f1_ci95": [
-            0.8323,
-            0.8541
+            0.8335,
+            0.8551
           ],
           "precision_ci95": [
-            0.8983,
-            0.9193
+            0.8985,
+            0.9195
           ],
           "recall_ci95": [
-            0.772,
-            0.8014
+            0.7741,
+            0.8027
           ],
           "errors": 0,
-          "empty_outputs": 4,
-          "ms_per_page": 77.4912
+          "empty_outputs": 0,
+          "ms_per_page": 108.7434
         },
         "web2md[no-fallback]": {
-          "precision": 0.9384,
-          "recall": 0.6675,
-          "f1": 0.7801,
+          "precision": 0.9385,
+          "recall": 0.6694,
+          "f1": 0.7815,
           "f1_ci95": [
-            0.7651,
-            0.7943
+            0.7671,
+            0.7953
           ],
           "precision_ci95": [
             0.9286,
-            0.9475
+            0.9476
           ],
           "recall_ci95": [
-            0.648,
-            0.6875
+            0.6503,
+            0.6887
           ],
           "errors": 0,
-          "empty_outputs": 154,
-          "ms_per_page": 93.369
+          "empty_outputs": 150,
+          "ms_per_page": 106.8596
         }
       }
     },
@@ -1022,7 +1022,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 275.8928
+          "ms_per_page": 347.46
         },
         "web2md[no-hints]": {
           "precision": 0.7931,
@@ -1042,7 +1042,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 234.0048
+          "ms_per_page": 319.8653
         },
         "web2md[no-link-density]": {
           "precision": 0.8422,
@@ -1062,7 +1062,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 233.3858
+          "ms_per_page": 336.3479
         },
         "web2md[no-siblings]": {
           "precision": 0.8494,
@@ -1082,7 +1082,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 240.8617
+          "ms_per_page": 333.8456
         },
         "web2md[no-clean]": {
           "precision": 0.8323,
@@ -1102,7 +1102,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 238.216
+          "ms_per_page": 330.3008
         },
         "web2md[no-fallback]": {
           "precision": 0.8749,
@@ -1122,7 +1122,7 @@
           ],
           "errors": 0,
           "empty_outputs": 14,
-          "ms_per_page": 264.3352
+          "ms_per_page": 320.0474
         }
       }
     },
@@ -1130,124 +1130,124 @@
       "n_pages": 621,
       "systems": {
         "web2md": {
-          "precision": 0.9427,
-          "recall": 0.837,
-          "f1": 0.8867,
+          "precision": 0.9378,
+          "recall": 0.9251,
+          "f1": 0.9314,
           "f1_ci95": [
-            0.8703,
-            0.9011
+            0.9201,
+            0.9407
           ],
           "precision_ci95": [
-            0.9291,
-            0.9539
+            0.9244,
+            0.9495
           ],
           "recall_ci95": [
-            0.8116,
-            0.8603
+            0.9137,
+            0.936
           ],
           "errors": 0,
-          "empty_outputs": 65,
-          "ms_per_page": 58.247
+          "empty_outputs": 4,
+          "ms_per_page": 68.4371
         },
         "web2md[no-hints]": {
-          "precision": 0.9217,
-          "recall": 0.8264,
-          "f1": 0.8715,
+          "precision": 0.9144,
+          "recall": 0.911,
+          "f1": 0.9127,
           "f1_ci95": [
-            0.8538,
-            0.888
+            0.8989,
+            0.9261
           ],
           "precision_ci95": [
-            0.9041,
-            0.9372
+            0.8964,
+            0.9296
           ],
           "recall_ci95": [
-            0.7998,
-            0.85
+            0.8962,
+            0.9251
           ],
           "errors": 0,
-          "empty_outputs": 65,
-          "ms_per_page": 60.0834
+          "empty_outputs": 4,
+          "ms_per_page": 69.3801
         },
         "web2md[no-link-density]": {
-          "precision": 0.882,
-          "recall": 0.8326,
-          "f1": 0.8566,
+          "precision": 0.8784,
+          "recall": 0.9238,
+          "f1": 0.9005,
           "f1_ci95": [
-            0.8386,
-            0.8729
+            0.8867,
+            0.9134
           ],
           "precision_ci95": [
-            0.8637,
-            0.8981
+            0.8609,
+            0.8955
           ],
           "recall_ci95": [
-            0.8075,
-            0.8557
+            0.9113,
+            0.9355
           ],
           "errors": 0,
-          "empty_outputs": 64,
-          "ms_per_page": 70.2742
+          "empty_outputs": 3,
+          "ms_per_page": 80.4887
         },
         "web2md[no-siblings]": {
-          "precision": 0.9468,
-          "recall": 0.8319,
-          "f1": 0.8856,
+          "precision": 0.9416,
+          "recall": 0.9199,
+          "f1": 0.9306,
           "f1_ci95": [
-            0.8695,
-            0.9001
+            0.9193,
+            0.9398
           ],
           "precision_ci95": [
-            0.9326,
-            0.9575
+            0.9282,
+            0.9532
           ],
           "recall_ci95": [
-            0.8069,
-            0.8553
+            0.9075,
+            0.9307
           ],
           "errors": 0,
-          "empty_outputs": 65,
-          "ms_per_page": 61.0458
+          "empty_outputs": 4,
+          "ms_per_page": 66.3433
         },
         "web2md[no-clean]": {
-          "precision": 0.8993,
-          "recall": 0.8458,
-          "f1": 0.8717,
+          "precision": 0.8914,
+          "recall": 0.9341,
+          "f1": 0.9123,
           "f1_ci95": [
-            0.855,
-            0.8874
+            0.8993,
+            0.9238
           ],
           "precision_ci95": [
-            0.8829,
-            0.9148
+            0.8745,
+            0.9077
           ],
           "recall_ci95": [
-            0.8197,
-            0.8688
+            0.9224,
+            0.9446
           ],
           "errors": 0,
-          "empty_outputs": 64,
-          "ms_per_page": 60.5561
+          "empty_outputs": 1,
+          "ms_per_page": 68.2663
         },
         "web2md[no-fallback]": {
-          "precision": 0.9385,
-          "recall": 0.8233,
-          "f1": 0.8771,
+          "precision": 0.9309,
+          "recall": 0.9083,
+          "f1": 0.9195,
           "f1_ci95": [
-            0.8599,
-            0.8921
+            0.9065,
+            0.9308
           ],
           "precision_ci95": [
-            0.9236,
-            0.9506
+            0.9164,
+            0.9444
           ],
           "recall_ci95": [
-            0.7971,
-            0.8483
+            0.8932,
+            0.9221
           ],
           "errors": 0,
-          "empty_outputs": 72,
-          "ms_per_page": 57.6173
+          "empty_outputs": 11,
+          "ms_per_page": 65.572
         }
       }
     },
@@ -1272,7 +1272,7 @@
           ],
           "errors": 0,
           "empty_outputs": 1,
-          "ms_per_page": 155.4013
+          "ms_per_page": 176.0377
         },
         "web2md[no-hints]": {
           "precision": 0.9736,
@@ -1292,7 +1292,7 @@
           ],
           "errors": 0,
           "empty_outputs": 1,
-          "ms_per_page": 154.5896
+          "ms_per_page": 166.8343
         },
         "web2md[no-link-density]": {
           "precision": 0.9568,
@@ -1312,7 +1312,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 166.5831
+          "ms_per_page": 183.0246
         },
         "web2md[no-siblings]": {
           "precision": 0.9857,
@@ -1332,7 +1332,7 @@
           ],
           "errors": 0,
           "empty_outputs": 1,
-          "ms_per_page": 161.9298
+          "ms_per_page": 176.3681
         },
         "web2md[no-clean]": {
           "precision": 0.9623,
@@ -1352,7 +1352,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 161.4421
+          "ms_per_page": 187.5348
         },
         "web2md[no-fallback]": {
           "precision": 0.976,
@@ -1372,7 +1372,7 @@
           ],
           "errors": 0,
           "empty_outputs": 5,
-          "ms_per_page": 153.852
+          "ms_per_page": 183.3829
         }
       }
     }

@@ -25,7 +25,7 @@ from bench.metrics import (
     tokenize,
 )
 from bench.runner import Output
-from bench.structure import KINDS, Gold, gold_structures, regions, survives
+from bench.structure import KINDS, Gold, gold_structures, regions, survives, text_present
 from bench.textview import markdown_to_text
 
 RESULTS = Path(__file__).resolve().parent.parent / "results"
@@ -172,14 +172,27 @@ def structure_scores(
             if system not in markdown_systems:
                 continue
             per_page: list[dict[str, tuple[int, int]]] = []
+            per_page_text: list[dict[str, tuple[int, int]]] = []
             for p in members:
-                reg = regions(outputs[system][p.page_id].markdown)
+                markdown = outputs[system][p.page_id].markdown
+                reg = regions(markdown)
+                text = markdown_to_text(markdown)
+                tokens = tokenize(text)
                 tally: dict[str, tuple[int, int]] = {}
+                tally_text: dict[str, tuple[int, int]] = {}
                 for k in KINDS:
                     gs = [g for g in golds[p.page_id] if g.kind == k]
                     tally[k] = (sum(survives(g, reg) for g in gs), len(gs))
+                    tally_text[k] = (sum(text_present(g, tokens, text) for g in gs), len(gs))
                 per_page.append(tally)
-            rows[system] = {k: _survival(per_page, k, n_boot) for k in KINDS}
+                per_page_text.append(tally_text)
+            rows[system] = {
+                k: {
+                    "structure_kept": _survival(per_page, k, n_boot),
+                    "text_kept": _survival(per_page_text, k, n_boot),
+                }
+                for k in KINDS
+            }
         result[group] = {
             "n_pages": len(members),
             "gold_structures": totals,
@@ -255,6 +268,7 @@ def failures(
     for p in pages:
         best = max(page_f1(counts[s][p.page_id]) for s in present)
         (hard if best < 0.5 else rest).append(p)
+    marked = sum(1 for p in hard if COMMENTS_MARKER in p.truth)
     return {
         "thresholds": "precision/recall 0.8; wrong block = recall < 0.1",
         "categories": {g: dict(v) for g, v in cats.items()},
@@ -262,6 +276,7 @@ def failures(
         "all_extractors_fail": {
             "definition": f"best page F1 among {present} below 0.5",
             "n_pages": len(hard),
+            "with_user_comments_in_truth": marked,
             "by_dataset": _count_by(hard, lambda p: p.dataset),
             "features_hard": _page_features(hard),
             "features_rest": _page_features(rest),
@@ -346,4 +361,44 @@ def canonical_accuracy(pages: Sequence[Page]) -> dict[str, Any]:
         "comparison": "scheme, leading www., fragment and trailing slash ignored",
         "field_coverage": {k: {"found": v, "rate": _r(v / n)} for k, v in fields.items()},
         "mismatch_examples": misses,
+    }
+
+
+# -- ground-truth conventions ----------------------------------------------------
+
+COMMENTS_MARKER = "!@#$%^&*()  COMMENTS"
+
+
+def comment_convention(
+    pages: Sequence[Page], outputs: Outputs, systems_: Sequence[str], n_boot: int
+) -> dict[str, Any]:
+    """Dragnet's truth files mark where user comments begin; WCEB's conversion kept them.
+
+    Rescore those pages against the article alone (truth cut at the marker) to see
+    how much of every extractor's Dragnet "failure" is that labelling choice.
+    """
+    marked = [p for p in pages if COMMENTS_MARKER in p.truth]
+    if not marked:
+        return {"n_pages_with_comments_in_truth": 0}
+    rows: dict[str, Any] = {}
+    for system in systems_:
+        as_is, article_only = [], []
+        for p in marked:
+            text = markdown_to_text(outputs[system][p.page_id].markdown)
+            as_is.append(page_counts(p.truth, text))
+            article_only.append(page_counts(p.truth.split(COMMENTS_MARKER)[0], text))
+        s1, s2 = corpus_score(as_is), corpus_score(article_only)
+        ci2 = bootstrap(article_only, n_boot=n_boot)["f1"]
+        rows[system] = {
+            "f1_truth_with_comments": _r(s1.f1),
+            "recall_truth_with_comments": _r(s1.recall),
+            "f1_article_only": _r(s2.f1),
+            "f1_article_only_ci95": [_r(ci2[0]), _r(ci2[1])],
+            "recall_article_only": _r(s2.recall),
+        }
+    return {
+        "marker": COMMENTS_MARKER,
+        "n_pages_with_comments_in_truth": len(marked),
+        "by_dataset": _count_by(marked, lambda p: p.dataset),
+        "systems": rows,
     }
