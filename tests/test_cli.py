@@ -74,3 +74,10 @@ def test_help_lists_examples(capsys):
         main(["--help"])
     assert exc.value.code == 0
     assert "examples:" in capsys.readouterr().out
+
+
+def test_binary_input_is_refused(tmp_path, capsys):
+    blob = tmp_path / "image.png"
+    blob.write_bytes(b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR" + bytes(64))
+    assert main([str(blob)]) == 2
+    assert "binary file" in capsys.readouterr().err

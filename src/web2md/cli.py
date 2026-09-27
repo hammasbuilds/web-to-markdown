@@ -84,6 +84,9 @@ def main(argv: list[str] | None = None) -> int:
     except FetchError as exc:
         print(f"web2md: {exc}", file=sys.stderr)
         return 2
+    if "\x00" in html[:8192]:
+        print(f"web2md: {args.source} looks like a binary file, not HTML", file=sys.stderr)
+        return 2
     conv = convert(
         html,
         url,

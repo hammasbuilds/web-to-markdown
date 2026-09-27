@@ -22,9 +22,13 @@ RUNS = DATA / "runs"
 SRC = Path(__file__).resolve().parent.parent / "src" / "web2md"
 
 
+# Modules that can change a conversion's output; the CLI and fetcher cannot.
+OUTPUT_MODULES = ("convert.py", "dom.py", "extract.py", "markdown.py", "metadata.py", "tokens.py")
+
+
 def source_hash() -> str:
     digest = hashlib.sha256()
-    for path in sorted(SRC.glob("*.py")):
+    for path in sorted(SRC / name for name in OUTPUT_MODULES):
         digest.update(path.name.encode())
         digest.update(path.read_bytes().replace(b"\r\n", b"\n"))
     return digest.hexdigest()[:12]
