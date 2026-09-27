@@ -12,7 +12,10 @@ The pipeline, each stage switchable for ablation:
 3. **siblings** - the best candidate's siblings join it when they score close
    to it or read as prose (long, few links).
 4. **clean** - inside the result, remove blocks that look like boilerplate:
-   link-heavy lists, image galleries, form widgets, a repeated title.
+   teaser articles nested in the article, short headers (headline, byline,
+   date), figures and captions, short blocks whose class says byline/share/
+   tags, link-heavy lists, image galleries, form widgets, a repeated title.
+   Code blocks and data tables are never removed here.
 
 If the result is under ``MIN_CHARS`` characters on a page with at least twice
 that much text, extraction reruns with ``hints`` off: class-name rules are the stage most
@@ -143,7 +146,6 @@ class ExtractOptions:
 class Extraction:
     root: Element
     fallback_used: bool = False
-    candidate_tag: str = ""
 
 
 def _class_id(el: Element) -> str:
@@ -531,17 +533,16 @@ def _same_title(a: str, b: str) -> bool:
     return n >= 3 and any(longer[i : i + n] == shorter for i in range(len(longer) - n + 1))
 
 
-def _run(root: Element, opts: ExtractOptions, title: str) -> tuple[Element, str]:
+def _run(root: Element, opts: ExtractOptions, title: str) -> Element:
     measure = _Measure()
     _prune(root, opts)
     body = root.find("body") or root
     scores = _score(body, opts, measure)
     top = _promote(_ranked(scores, body)) or body
-    tag = top.tag
     article = _merge_siblings(top, scores, measure, opts) if opts.siblings else top
     if opts.clean:
         _clean(article, scores, measure, opts, title)
-    return article, tag
+    return article
 
 
 def extract(
@@ -557,10 +558,10 @@ def extract(
     opts = options or ExtractOptions()
     root = parse_tree()
     total = len(_collapse(root.text()))
-    article, tag = _run(root, opts, title)
+    article = _run(root, opts, title)
     found = len(_collapse(article.text()))
     if opts.fallback and opts.hints and found < MIN_CHARS and total >= 2 * max(found, MIN_CHARS):
-        retry, retry_tag = _run(parse_tree(), replace(opts, hints=False), title)
-        if len(_collapse(retry.text())) > len(_collapse(article.text())):
-            return Extraction(retry, fallback_used=True, candidate_tag=retry_tag)
-    return Extraction(article, candidate_tag=tag)
+        retry = _run(parse_tree(), replace(opts, hints=False), title)
+        if len(_collapse(retry.text())) > found:
+            return Extraction(retry, fallback_used=True)
+    return Extraction(article)
