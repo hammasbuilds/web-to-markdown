@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    # No runtime dependencies and no network in the tests, so the matrix is cheap.
+    strategy:
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install pytest "ruff==0.16.7" -e .
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: pytest -q
+      - run: python demo.py

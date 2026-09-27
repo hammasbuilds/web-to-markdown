@@ -22,7 +22,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 146.1451
+          "ms_per_page": 158.4996
         },
         "web2md[no-hints]": {
           "precision": 0.9213,
@@ -42,7 +42,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 141.2692
+          "ms_per_page": 148.8071
         },
         "web2md[no-link-density]": {
           "precision": 0.9514,
@@ -62,7 +62,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 145.1787
+          "ms_per_page": 159.8622
         },
         "web2md[no-siblings]": {
           "precision": 0.9602,
@@ -82,7 +82,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 145.7241
+          "ms_per_page": 155.4965
         },
         "web2md[no-clean]": {
           "precision": 0.9151,
@@ -102,7 +102,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 144.1569
+          "ms_per_page": 155.8562
         },
         "web2md[no-fallback]": {
           "precision": 0.9398,
@@ -122,7 +122,7 @@
           ],
           "errors": 0,
           "empty_outputs": 10,
-          "ms_per_page": 142.8426
+          "ms_per_page": 153.6605
         }
       }
     },
@@ -147,7 +147,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 134.7717
+          "ms_per_page": 153.1703
         },
         "web2md[no-hints]": {
           "precision": 0.9458,
@@ -167,7 +167,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 136.0243
+          "ms_per_page": 137.7066
         },
         "web2md[no-link-density]": {
           "precision": 0.9428,
@@ -187,7 +187,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 138.0592
+          "ms_per_page": 150.1699
         },
         "web2md[no-siblings]": {
           "precision": 0.9523,
@@ -207,7 +207,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 137.0495
+          "ms_per_page": 144.1467
         },
         "web2md[no-clean]": {
           "precision": 0.9112,
@@ -227,7 +227,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 134.916
+          "ms_per_page": 145.2966
         },
         "web2md[no-fallback]": {
           "precision": 0.9593,
@@ -247,7 +247,7 @@
           ],
           "errors": 0,
           "empty_outputs": 3,
-          "ms_per_page": 136.1892
+          "ms_per_page": 144.6614
         }
       }
     },
@@ -272,7 +272,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 155.1536
+          "ms_per_page": 162.7208
         },
         "web2md[no-hints]": {
           "precision": 0.9019,
@@ -292,7 +292,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 145.4235
+          "ms_per_page": 157.5996
         },
         "web2md[no-link-density]": {
           "precision": 0.9582,
@@ -312,7 +312,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 150.8178
+          "ms_per_page": 167.5393
         },
         "web2md[no-siblings]": {
           "precision": 0.9665,
@@ -332,7 +332,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 152.5952
+          "ms_per_page": 164.4865
         },
         "web2md[no-clean]": {
           "precision": 0.9183,
@@ -352,7 +352,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 151.4765
+          "ms_per_page": 164.2202
         },
         "web2md[no-fallback]": {
           "precision": 0.9239,
@@ -372,7 +372,7 @@
           ],
           "errors": 0,
           "empty_outputs": 7,
-          "ms_per_page": 148.1126
+          "ms_per_page": 160.7885
         }
       }
     },
@@ -397,7 +397,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 123.3859
+          "ms_per_page": 161.174
         },
         "web2md[no-hints]": {
           "precision": 0.9859,
@@ -417,7 +417,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 120.2022
+          "ms_per_page": 145.1951
         },
         "web2md[no-link-density]": {
           "precision": 0.9808,
@@ -437,7 +437,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 130.7417
+          "ms_per_page": 143.8251
         },
         "web2md[no-siblings]": {
           "precision": 0.9876,
@@ -457,7 +457,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 126.7657
+          "ms_per_page": 137.9196
         },
         "web2md[no-clean]": {
           "precision": 0.9844,
@@ -477,7 +477,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 129.0587
+          "ms_per_page": 142.8539
         },
         "web2md[no-fallback]": {
           "precision": 0.9862,
@@ -497,7 +497,7 @@
           ],
           "errors": 0,
           "empty_outputs": 50,
-          "ms_per_page": 122.0087
+          "ms_per_page": 141.4362
         }
       }
     },
@@ -522,7 +522,7 @@
           ],
           "errors": 0,
           "empty_outputs": 11,
-          "ms_per_page": 108.8104
+          "ms_per_page": 119.7067
         },
         "web2md[no-hints]": {
           "precision": 0.9235,
@@ -542,7 +542,7 @@
           ],
           "errors": 0,
           "empty_outputs": 13,
-          "ms_per_page": 107.0729
+          "ms_per_page": 116.3961
         },
         "web2md[no-link-density]": {
           "precision": 0.9083,
@@ -562,7 +562,7 @@
           ],
           "errors": 0,
           "empty_outputs": 5,
-          "ms_per_page": 112.9501
+          "ms_per_page": 118.3686
         },
         "web2md[no-siblings]": {
           "precision": 0.9392,
@@ -582,7 +582,7 @@
           ],
           "errors": 0,
           "empty_outputs": 11,
-          "ms_per_page": 109.2976
+          "ms_per_page": 116.3818
         },
         "web2md[no-clean]": {
           "precision": 0.9159,
@@ -602,7 +602,7 @@
           ],
           "errors": 0,
           "empty_outputs": 2,
-          "ms_per_page": 110.4219
+          "ms_per_page": 114.0226
         },
         "web2md[no-fallback]": {
           "precision": 0.9401,
@@ -622,7 +622,7 @@
           ],
           "errors": 0,
           "empty_outputs": 238,
-          "ms_per_page": 107.8343
+          "ms_per_page": 111.6621
         }
       }
     },
@@ -647,7 +647,7 @@
           ],
           "errors": 0,
           "empty_outputs": 6,
-          "ms_per_page": 67.2494
+          "ms_per_page": 79.725
         },
         "web2md[no-hints]": {
           "precision": 0.914,
@@ -667,7 +667,7 @@
           ],
           "errors": 0,
           "empty_outputs": 8,
-          "ms_per_page": 66.5034
+          "ms_per_page": 88.7022
         },
         "web2md[no-link-density]": {
           "precision": 0.8868,
@@ -687,7 +687,7 @@
           ],
           "errors": 0,
           "empty_outputs": 2,
-          "ms_per_page": 72.5823
+          "ms_per_page": 91.5604
         },
         "web2md[no-siblings]": {
           "precision": 0.9131,
@@ -707,7 +707,7 @@
           ],
           "errors": 0,
           "empty_outputs": 6,
-          "ms_per_page": 69.7352
+          "ms_per_page": 87.2324
         },
         "web2md[no-clean]": {
           "precision": 0.8924,
@@ -727,7 +727,7 @@
           ],
           "errors": 0,
           "empty_outputs": 1,
-          "ms_per_page": 65.8506
+          "ms_per_page": 74.3416
         },
         "web2md[no-fallback]": {
           "precision": 0.9159,
@@ -747,7 +747,7 @@
           ],
           "errors": 0,
           "empty_outputs": 8,
-          "ms_per_page": 67.8693
+          "ms_per_page": 77.1559
         }
       }
     },
@@ -772,7 +772,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 103.281
+          "ms_per_page": 112.5748
         },
         "web2md[no-hints]": {
           "precision": 0.9524,
@@ -792,7 +792,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 101.1897
+          "ms_per_page": 108.694
         },
         "web2md[no-link-density]": {
           "precision": 0.964,
@@ -812,7 +812,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 111.7338
+          "ms_per_page": 115.3252
         },
         "web2md[no-siblings]": {
           "precision": 0.9741,
@@ -832,7 +832,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 98.5973
+          "ms_per_page": 112.3151
         },
         "web2md[no-clean]": {
           "precision": 0.9549,
@@ -852,7 +852,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 107.566
+          "ms_per_page": 113.5629
         },
         "web2md[no-fallback]": {
           "precision": 0.9714,
@@ -872,7 +872,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 110.8347
+          "ms_per_page": 111.1036
         }
       }
     },
@@ -897,7 +897,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 105.3166
+          "ms_per_page": 108.5722
         },
         "web2md[no-hints]": {
           "precision": 0.912,
@@ -917,7 +917,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 106.5772
+          "ms_per_page": 107.5997
         },
         "web2md[no-link-density]": {
           "precision": 0.8981,
@@ -937,7 +937,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 105.1548
+          "ms_per_page": 104.3817
         },
         "web2md[no-siblings]": {
           "precision": 0.9332,
@@ -957,7 +957,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 106.5407
+          "ms_per_page": 112.3688
         },
         "web2md[no-clean]": {
           "precision": 0.9095,
@@ -977,7 +977,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 108.7434
+          "ms_per_page": 108.8415
         },
         "web2md[no-fallback]": {
           "precision": 0.9385,
@@ -997,7 +997,7 @@
           ],
           "errors": 0,
           "empty_outputs": 150,
-          "ms_per_page": 106.8596
+          "ms_per_page": 102.0275
         }
       }
     },
@@ -1022,7 +1022,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 347.46
+          "ms_per_page": 349.7711
         },
         "web2md[no-hints]": {
           "precision": 0.7931,
@@ -1042,7 +1042,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 319.8653
+          "ms_per_page": 318.5618
         },
         "web2md[no-link-density]": {
           "precision": 0.8422,
@@ -1062,7 +1062,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 336.3479
+          "ms_per_page": 330.4429
         },
         "web2md[no-siblings]": {
           "precision": 0.8494,
@@ -1082,7 +1082,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 333.8456
+          "ms_per_page": 319.1984
         },
         "web2md[no-clean]": {
           "precision": 0.8323,
@@ -1102,7 +1102,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 330.3008
+          "ms_per_page": 321.4487
         },
         "web2md[no-fallback]": {
           "precision": 0.8749,
@@ -1122,7 +1122,7 @@
           ],
           "errors": 0,
           "empty_outputs": 14,
-          "ms_per_page": 320.0474
+          "ms_per_page": 313.7068
         }
       }
     },
@@ -1147,7 +1147,7 @@
           ],
           "errors": 0,
           "empty_outputs": 4,
-          "ms_per_page": 68.4371
+          "ms_per_page": 70.1351
         },
         "web2md[no-hints]": {
           "precision": 0.9144,
@@ -1167,7 +1167,7 @@
           ],
           "errors": 0,
           "empty_outputs": 4,
-          "ms_per_page": 69.3801
+          "ms_per_page": 69.4025
         },
         "web2md[no-link-density]": {
           "precision": 0.8784,
@@ -1187,7 +1187,7 @@
           ],
           "errors": 0,
           "empty_outputs": 3,
-          "ms_per_page": 80.4887
+          "ms_per_page": 79.018
         },
         "web2md[no-siblings]": {
           "precision": 0.9416,
@@ -1207,7 +1207,7 @@
           ],
           "errors": 0,
           "empty_outputs": 4,
-          "ms_per_page": 66.3433
+          "ms_per_page": 67.3328
         },
         "web2md[no-clean]": {
           "precision": 0.8914,
@@ -1227,7 +1227,7 @@
           ],
           "errors": 0,
           "empty_outputs": 1,
-          "ms_per_page": 68.2663
+          "ms_per_page": 68.811
         },
         "web2md[no-fallback]": {
           "precision": 0.9309,
@@ -1247,7 +1247,7 @@
           ],
           "errors": 0,
           "empty_outputs": 11,
-          "ms_per_page": 65.572
+          "ms_per_page": 70.8607
         }
       }
     },
@@ -1272,7 +1272,7 @@
           ],
           "errors": 0,
           "empty_outputs": 1,
-          "ms_per_page": 176.0377
+          "ms_per_page": 168.8255
         },
         "web2md[no-hints]": {
           "precision": 0.9736,
@@ -1292,7 +1292,7 @@
           ],
           "errors": 0,
           "empty_outputs": 1,
-          "ms_per_page": 166.8343
+          "ms_per_page": 166.3274
         },
         "web2md[no-link-density]": {
           "precision": 0.9568,
@@ -1312,7 +1312,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 183.0246
+          "ms_per_page": 185.766
         },
         "web2md[no-siblings]": {
           "precision": 0.9857,
@@ -1332,7 +1332,7 @@
           ],
           "errors": 0,
           "empty_outputs": 1,
-          "ms_per_page": 176.3681
+          "ms_per_page": 170.3092
         },
         "web2md[no-clean]": {
           "precision": 0.9623,
@@ -1352,7 +1352,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 187.5348
+          "ms_per_page": 174.4444
         },
         "web2md[no-fallback]": {
           "precision": 0.976,
@@ -1372,7 +1372,7 @@
           ],
           "errors": 0,
           "empty_outputs": 5,
-          "ms_per_page": 183.3829
+          "ms_per_page": 171.4758
         }
       }
     }

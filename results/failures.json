@@ -430,7 +430,7 @@
   "all_extractors_fail": {
     "definition": "best page F1 among ['web2md', 'trafilatura', 'readability-lxml'] below 0.5",
     "n_pages": 189,
-    "with_user_comments_in_truth": 114,
+    "with_user_comments_in_truth": 127,
     "by_dataset": {
       "wceb/cetd": 8,
       "wceb/cleaneval": 20,
