@@ -1,0 +1,89 @@
+{
+  "marker": "!@#$%^&*()  COMMENTS",
+  "n_pages_with_comments_in_truth": 399,
+  "by_dataset": {
+    "wceb/dragnet": 399
+  },
+  "systems": {
+    "web2md": {
+      "f1_truth_with_comments": 0.6734,
+      "recall_truth_with_comments": 0.5197,
+      "f1_article_only": 0.9036,
+      "f1_article_only_ci95": [
+        0.8827,
+        0.9235
+      ],
+      "recall_article_only": 0.9067
+    },
+    "all-text": {
+      "f1_truth_with_comments": 0.7608,
+      "recall_truth_with_comments": 0.96,
+      "f1_article_only": 0.4558,
+      "f1_article_only_ci95": [
+        0.4318,
+        0.4784
+      ],
+      "recall_article_only": 0.99
+    },
+    "largest-block": {
+      "f1_truth_with_comments": 0.6146,
+      "recall_truth_with_comments": 0.4632,
+      "f1_article_only": 0.7058,
+      "f1_article_only_ci95": [
+        0.6637,
+        0.7469
+      ],
+      "recall_article_only": 0.7195
+    },
+    "html2text": {
+      "f1_truth_with_comments": 0.7329,
+      "recall_truth_with_comments": 0.95,
+      "f1_article_only": 0.4283,
+      "f1_article_only_ci95": [
+        0.4057,
+        0.4492
+      ],
+      "recall_article_only": 0.9737
+    },
+    "markdownify": {
+      "f1_truth_with_comments": 0.7389,
+      "recall_truth_with_comments": 0.9604,
+      "f1_article_only": 0.4334,
+      "f1_article_only_ci95": [
+        0.41,
+        0.4545
+      ],
+      "recall_article_only": 0.9897
+    },
+    "readability-lxml": {
+      "f1_truth_with_comments": 0.6541,
+      "recall_truth_with_comments": 0.4998,
+      "f1_article_only": 0.9222,
+      "f1_article_only_ci95": [
+        0.9062,
+        0.9372
+      ],
+      "recall_article_only": 0.9274
+    },
+    "trafilatura": {
+      "f1_truth_with_comments": 0.6447,
+      "recall_truth_with_comments": 0.4954,
+      "f1_article_only": 0.9121,
+      "f1_article_only_ci95": [
+        0.8963,
+        0.9262
+      ],
+      "recall_article_only": 0.9298
+    },
+    "trafilatura-md": {
+      "f1_truth_with_comments": 0.6376,
+      "recall_truth_with_comments": 0.4931,
+      "f1_article_only": 0.8952,
+      "f1_article_only_ci95": [
+        0.8782,
+        0.9119
+      ],
+      "recall_article_only": 0.9177
+    }
+  }
+}

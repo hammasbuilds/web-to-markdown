@@ -268,7 +268,7 @@ def failures(
     for p in pages:
         best = max(page_f1(counts[s][p.page_id]) for s in present)
         (hard if best < 0.5 else rest).append(p)
-    marked = sum(1 for p in hard if COMMENTS_MARKER in p.truth)
+    marked = sum(1 for p in hard if p.dataset == "wceb/dragnet" and _COMMENTS.search(p.truth))
     return {
         "thresholds": "precision/recall 0.8; wrong block = recall < 0.1",
         "categories": {g: dict(v) for g, v in cats.items()},
@@ -367,6 +367,8 @@ def canonical_accuracy(pages: Sequence[Page]) -> dict[str, Any]:
 # -- ground-truth conventions ----------------------------------------------------
 
 COMMENTS_MARKER = "!@#$%^&*()  COMMENTS"
+# The marker was typed by hand: 21 of the 420 marked Dragnet files carry a variant.
+_COMMENTS = re.compile(r"[!@#$%^&*() ]{6,}COMMENTS")
 
 
 def comment_convention(
@@ -377,7 +379,7 @@ def comment_convention(
     Rescore those pages against the article alone (truth cut at the marker) to see
     how much of every extractor's Dragnet "failure" is that labelling choice.
     """
-    marked = [p for p in pages if COMMENTS_MARKER in p.truth]
+    marked = [p for p in pages if p.dataset == "wceb/dragnet" and _COMMENTS.search(p.truth)]
     if not marked:
         return {"n_pages_with_comments_in_truth": 0}
     rows: dict[str, Any] = {}
@@ -386,7 +388,7 @@ def comment_convention(
         for p in marked:
             text = markdown_to_text(outputs[system][p.page_id].markdown)
             as_is.append(page_counts(p.truth, text))
-            article_only.append(page_counts(p.truth.split(COMMENTS_MARKER)[0], text))
+            article_only.append(page_counts(_COMMENTS.split(p.truth)[0], text))
         s1, s2 = corpus_score(as_is), corpus_score(article_only)
         ci2 = bootstrap(article_only, n_boot=n_boot)["f1"]
         rows[system] = {
@@ -397,7 +399,7 @@ def comment_convention(
             "recall_article_only": _r(s2.recall),
         }
     return {
-        "marker": COMMENTS_MARKER,
+        "marker": COMMENTS_MARKER + " (and hand-typed variants)",
         "n_pages_with_comments_in_truth": len(marked),
         "by_dataset": _count_by(marked, lambda p: p.dataset),
         "systems": rows,

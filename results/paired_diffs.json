@@ -67,10 +67,10 @@
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.3042,
+        "f1_diff": 0.3105,
         "ci95": [
-          0.275,
-          0.3327
+          0.2813,
+          0.3388
         ],
         "significant": true
       },
@@ -165,10 +165,10 @@
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.2924,
+        "f1_diff": 0.2988,
         "ci95": [
-          0.2506,
-          0.337
+          0.257,
+          0.344
         ],
         "significant": true
       },
@@ -263,10 +263,10 @@
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.3136,
+        "f1_diff": 0.3199,
         "ci95": [
-          0.2736,
-          0.3537
+          0.2802,
+          0.3591
         ],
         "significant": true
       },
@@ -361,10 +361,10 @@
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.1417,
+        "f1_diff": 0.1451,
         "ci95": [
-          0.1302,
-          0.1533
+          0.1337,
+          0.1568
         ],
         "significant": true
       },
@@ -459,9 +459,9 @@
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.1624,
+        "f1_diff": 0.1622,
         "ci95": [
-          0.1546,
+          0.1543,
           0.1705
         ],
         "significant": true
@@ -557,10 +557,10 @@
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.0191,
+        "f1_diff": 0.0187,
         "ci95": [
-          0.008,
-          0.0302
+          0.0074,
+          0.0291
         ],
         "significant": true
       },
@@ -655,10 +655,10 @@
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.3463,
+        "f1_diff": 0.3502,
         "ci95": [
-          0.3084,
-          0.3838
+          0.3125,
+          0.3879
         ],
         "significant": true
       },
@@ -753,10 +753,10 @@
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.2049,
+        "f1_diff": 0.2082,
         "ci95": [
-          0.189,
-          0.2212
+          0.1921,
+          0.2245
         ],
         "significant": true
       },
@@ -851,10 +851,10 @@
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.1692,
+        "f1_diff": 0.1735,
         "ci95": [
-          0.1219,
-          0.2118
+          0.1259,
+          0.2165
         ],
         "significant": true
       },
@@ -949,10 +949,10 @@
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.2894,
+        "f1_diff": 0.2691,
         "ci95": [
-          0.2733,
-          0.3055
+          0.2549,
+          0.284
         ],
         "significant": true
       },
@@ -1047,10 +1047,10 @@
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.1397,
+        "f1_diff": 0.1627,
         "ci95": [
-          0.1022,
-          0.177
+          0.1232,
+          0.2044
         ],
         "significant": true
       },

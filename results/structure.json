@@ -18,247 +18,534 @@
       "survival": {
         "web2md": {
           "list": {
-            "kept": 40,
-            "total": 60,
-            "rate": 0.6667,
-            "ci95": [
-              0.4103,
-              0.8312
-            ]
+            "structure_kept": {
+              "kept": 40,
+              "total": 60,
+              "rate": 0.6667,
+              "ci95": [
+                0.4103,
+                0.8312
+              ]
+            },
+            "text_kept": {
+              "kept": 51,
+              "total": 60,
+              "rate": 0.85,
+              "ci95": [
+                0.6316,
+                0.9714
+              ]
+            }
           },
           "table": {
-            "kept": 6,
-            "total": 6,
-            "rate": 1.0,
-            "ci95": [
-              1.0,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 6,
+              "total": 6,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 6,
+              "total": 6,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "code": {
-            "kept": 0,
-            "total": 0,
-            "rate": null,
-            "ci95": null
+            "structure_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            },
+            "text_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            }
           },
           "heading": {
-            "kept": 283,
-            "total": 337,
-            "rate": 0.8398,
-            "ci95": [
-              0.6732,
-              0.9477
-            ]
+            "structure_kept": {
+              "kept": 283,
+              "total": 337,
+              "rate": 0.8398,
+              "ci95": [
+                0.6732,
+                0.9477
+              ]
+            },
+            "text_kept": {
+              "kept": 293,
+              "total": 337,
+              "rate": 0.8694,
+              "ci95": [
+                0.7047,
+                0.9725
+              ]
+            }
           }
         },
         "all-text": {
           "list": {
-            "kept": 50,
-            "total": 60,
-            "rate": 0.8333,
-            "ci95": [
-              0.6757,
-              0.9268
-            ]
+            "structure_kept": {
+              "kept": 50,
+              "total": 60,
+              "rate": 0.8333,
+              "ci95": [
+                0.6757,
+                0.9268
+              ]
+            },
+            "text_kept": {
+              "kept": 60,
+              "total": 60,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "table": {
-            "kept": 6,
-            "total": 6,
-            "rate": 1.0,
-            "ci95": [
-              1.0,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 6,
+              "total": 6,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 6,
+              "total": 6,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "code": {
-            "kept": 0,
-            "total": 0,
-            "rate": null,
-            "ci95": null
+            "structure_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            },
+            "text_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            }
           },
           "heading": {
-            "kept": 329,
-            "total": 337,
-            "rate": 0.9763,
-            "ci95": [
-              0.9235,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 329,
+              "total": 337,
+              "rate": 0.9763,
+              "ci95": [
+                0.9235,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 336,
+              "total": 337,
+              "rate": 0.997,
+              "ci95": [
+                0.9901,
+                1.0
+              ]
+            }
           }
         },
         "largest-block": {
           "list": {
-            "kept": 48,
-            "total": 60,
-            "rate": 0.8,
-            "ci95": [
-              0.625,
-              0.8961
-            ]
+            "structure_kept": {
+              "kept": 48,
+              "total": 60,
+              "rate": 0.8,
+              "ci95": [
+                0.625,
+                0.8961
+              ]
+            },
+            "text_kept": {
+              "kept": 57,
+              "total": 60,
+              "rate": 0.95,
+              "ci95": [
+                0.8431,
+                1.0
+              ]
+            }
           },
           "table": {
-            "kept": 2,
-            "total": 6,
-            "rate": 0.3333,
-            "ci95": [
-              0.1111,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 2,
+              "total": 6,
+              "rate": 0.3333,
+              "ci95": [
+                0.1111,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 2,
+              "total": 6,
+              "rate": 0.3333,
+              "ci95": [
+                0.1111,
+                1.0
+              ]
+            }
           },
           "code": {
-            "kept": 0,
-            "total": 0,
-            "rate": null,
-            "ci95": null
+            "structure_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            },
+            "text_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            }
           },
           "heading": {
-            "kept": 265,
-            "total": 337,
-            "rate": 0.7864,
-            "ci95": [
-              0.58,
-              0.9297
-            ]
+            "structure_kept": {
+              "kept": 265,
+              "total": 337,
+              "rate": 0.7864,
+              "ci95": [
+                0.58,
+                0.9297
+              ]
+            },
+            "text_kept": {
+              "kept": 280,
+              "total": 337,
+              "rate": 0.8309,
+              "ci95": [
+                0.6431,
+                0.9712
+              ]
+            }
           }
         },
         "html2text": {
           "list": {
-            "kept": 47,
-            "total": 60,
-            "rate": 0.7833,
-            "ci95": [
-              0.6286,
-              0.8958
-            ]
+            "structure_kept": {
+              "kept": 47,
+              "total": 60,
+              "rate": 0.7833,
+              "ci95": [
+                0.6286,
+                0.8958
+              ]
+            },
+            "text_kept": {
+              "kept": 57,
+              "total": 60,
+              "rate": 0.95,
+              "ci95": [
+                0.8923,
+                1.0
+              ]
+            }
           },
           "table": {
-            "kept": 6,
-            "total": 6,
-            "rate": 1.0,
-            "ci95": [
-              1.0,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 6,
+              "total": 6,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 6,
+              "total": 6,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "code": {
-            "kept": 0,
-            "total": 0,
-            "rate": null,
-            "ci95": null
+            "structure_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            },
+            "text_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            }
           },
           "heading": {
-            "kept": 316,
-            "total": 337,
-            "rate": 0.9377,
-            "ci95": [
-              0.8717,
-              0.9903
-            ]
+            "structure_kept": {
+              "kept": 316,
+              "total": 337,
+              "rate": 0.9377,
+              "ci95": [
+                0.8717,
+                0.9903
+              ]
+            },
+            "text_kept": {
+              "kept": 336,
+              "total": 337,
+              "rate": 0.997,
+              "ci95": [
+                0.9901,
+                1.0
+              ]
+            }
           }
         },
         "markdownify": {
           "list": {
-            "kept": 50,
-            "total": 60,
-            "rate": 0.8333,
-            "ci95": [
-              0.6757,
-              0.9268
-            ]
+            "structure_kept": {
+              "kept": 50,
+              "total": 60,
+              "rate": 0.8333,
+              "ci95": [
+                0.6757,
+                0.9268
+              ]
+            },
+            "text_kept": {
+              "kept": 60,
+              "total": 60,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "table": {
-            "kept": 6,
-            "total": 6,
-            "rate": 1.0,
-            "ci95": [
-              1.0,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 6,
+              "total": 6,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 6,
+              "total": 6,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "code": {
-            "kept": 0,
-            "total": 0,
-            "rate": null,
-            "ci95": null
+            "structure_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            },
+            "text_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            }
           },
           "heading": {
-            "kept": 329,
-            "total": 337,
-            "rate": 0.9763,
-            "ci95": [
-              0.9235,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 329,
+              "total": 337,
+              "rate": 0.9763,
+              "ci95": [
+                0.9235,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 336,
+              "total": 337,
+              "rate": 0.997,
+              "ci95": [
+                0.9901,
+                1.0
+              ]
+            }
           }
         },
         "readability-lxml": {
           "list": {
-            "kept": 40,
-            "total": 60,
-            "rate": 0.6667,
-            "ci95": [
-              0.4103,
-              0.8312
-            ]
+            "structure_kept": {
+              "kept": 40,
+              "total": 60,
+              "rate": 0.6667,
+              "ci95": [
+                0.4103,
+                0.8312
+              ]
+            },
+            "text_kept": {
+              "kept": 51,
+              "total": 60,
+              "rate": 0.85,
+              "ci95": [
+                0.6316,
+                0.9714
+              ]
+            }
           },
           "table": {
-            "kept": 6,
-            "total": 6,
-            "rate": 1.0,
-            "ci95": [
-              1.0,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 6,
+              "total": 6,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 6,
+              "total": 6,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "code": {
-            "kept": 0,
-            "total": 0,
-            "rate": null,
-            "ci95": null
+            "structure_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            },
+            "text_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            }
           },
           "heading": {
-            "kept": 283,
-            "total": 337,
-            "rate": 0.8398,
-            "ci95": [
-              0.6645,
-              0.9509
-            ]
+            "structure_kept": {
+              "kept": 283,
+              "total": 337,
+              "rate": 0.8398,
+              "ci95": [
+                0.6645,
+                0.9509
+              ]
+            },
+            "text_kept": {
+              "kept": 294,
+              "total": 337,
+              "rate": 0.8724,
+              "ci95": [
+                0.7086,
+                0.9751
+              ]
+            }
           }
         },
         "trafilatura-md": {
           "list": {
-            "kept": 41,
-            "total": 60,
-            "rate": 0.6833,
-            "ci95": [
-              0.425,
-              0.8462
-            ]
+            "structure_kept": {
+              "kept": 41,
+              "total": 60,
+              "rate": 0.6833,
+              "ci95": [
+                0.425,
+                0.8462
+              ]
+            },
+            "text_kept": {
+              "kept": 50,
+              "total": 60,
+              "rate": 0.8333,
+              "ci95": [
+                0.6,
+                0.973
+              ]
+            }
           },
           "table": {
-            "kept": 4,
-            "total": 6,
-            "rate": 0.6667,
-            "ci95": [
-              0.5556,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 4,
+              "total": 6,
+              "rate": 0.6667,
+              "ci95": [
+                0.5556,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 6,
+              "total": 6,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "code": {
-            "kept": 0,
-            "total": 0,
-            "rate": null,
-            "ci95": null
+            "structure_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            },
+            "text_kept": {
+              "kept": 0,
+              "total": 0,
+              "rate": null,
+              "ci95": null
+            }
           },
           "heading": {
-            "kept": 294,
-            "total": 337,
-            "rate": 0.8724,
-            "ci95": [
-              0.7344,
-              0.9607
-            ]
+            "structure_kept": {
+              "kept": 294,
+              "total": 337,
+              "rate": 0.8724,
+              "ci95": [
+                0.7344,
+                0.9607
+              ]
+            },
+            "text_kept": {
+              "kept": 322,
+              "total": 337,
+              "rate": 0.9555,
+              "ci95": [
+                0.8889,
+                0.9944
+              ]
+            }
           }
         }
       }
@@ -280,268 +567,576 @@
       "survival": {
         "web2md": {
           "list": {
-            "kept": 592,
-            "total": 2006,
-            "rate": 0.2951,
-            "ci95": [
-              0.2495,
-              0.3429
-            ]
+            "structure_kept": {
+              "kept": 592,
+              "total": 2006,
+              "rate": 0.2951,
+              "ci95": [
+                0.2495,
+                0.3429
+              ]
+            },
+            "text_kept": {
+              "kept": 999,
+              "total": 2006,
+              "rate": 0.498,
+              "ci95": [
+                0.4459,
+                0.5468
+              ]
+            }
           },
           "table": {
-            "kept": 276,
-            "total": 639,
-            "rate": 0.4319,
-            "ci95": [
-              0.3152,
-              0.5644
-            ]
+            "structure_kept": {
+              "kept": 276,
+              "total": 639,
+              "rate": 0.4319,
+              "ci95": [
+                0.3152,
+                0.5644
+              ]
+            },
+            "text_kept": {
+              "kept": 340,
+              "total": 639,
+              "rate": 0.5321,
+              "ci95": [
+                0.4283,
+                0.6443
+              ]
+            }
           },
           "code": {
-            "kept": 199,
-            "total": 231,
-            "rate": 0.8615,
-            "ci95": [
-              0.6708,
-              0.9863
-            ]
+            "structure_kept": {
+              "kept": 199,
+              "total": 231,
+              "rate": 0.8615,
+              "ci95": [
+                0.6708,
+                0.9863
+              ]
+            },
+            "text_kept": {
+              "kept": 204,
+              "total": 231,
+              "rate": 0.8831,
+              "ci95": [
+                0.6919,
+                0.9958
+              ]
+            }
           },
           "heading": {
-            "kept": 2725,
-            "total": 9059,
-            "rate": 0.3008,
-            "ci95": [
-              0.2582,
-              0.3477
-            ]
+            "structure_kept": {
+              "kept": 2725,
+              "total": 9059,
+              "rate": 0.3008,
+              "ci95": [
+                0.2582,
+                0.3477
+              ]
+            },
+            "text_kept": {
+              "kept": 4274,
+              "total": 9059,
+              "rate": 0.4718,
+              "ci95": [
+                0.4125,
+                0.5337
+              ]
+            }
           }
         },
         "all-text": {
           "list": {
-            "kept": 1189,
-            "total": 2006,
-            "rate": 0.5927,
-            "ci95": [
-              0.5496,
-              0.6378
-            ]
+            "structure_kept": {
+              "kept": 1189,
+              "total": 2006,
+              "rate": 0.5927,
+              "ci95": [
+                0.5496,
+                0.6378
+              ]
+            },
+            "text_kept": {
+              "kept": 1988,
+              "total": 2006,
+              "rate": 0.991,
+              "ci95": [
+                0.9838,
+                0.9967
+              ]
+            }
           },
           "table": {
-            "kept": 357,
-            "total": 639,
-            "rate": 0.5587,
-            "ci95": [
-              0.4449,
-              0.6659
-            ]
+            "structure_kept": {
+              "kept": 357,
+              "total": 639,
+              "rate": 0.5587,
+              "ci95": [
+                0.4449,
+                0.6659
+              ]
+            },
+            "text_kept": {
+              "kept": 631,
+              "total": 639,
+              "rate": 0.9875,
+              "ci95": [
+                0.9679,
+                1.0
+              ]
+            }
           },
           "code": {
-            "kept": 226,
-            "total": 231,
-            "rate": 0.9784,
-            "ci95": [
-              0.9279,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 226,
+              "total": 231,
+              "rate": 0.9784,
+              "ci95": [
+                0.9279,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 231,
+              "total": 231,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "heading": {
-            "kept": 7012,
-            "total": 9059,
-            "rate": 0.774,
-            "ci95": [
-              0.7323,
-              0.8137
-            ]
+            "structure_kept": {
+              "kept": 7012,
+              "total": 9059,
+              "rate": 0.774,
+              "ci95": [
+                0.7323,
+                0.8137
+              ]
+            },
+            "text_kept": {
+              "kept": 9055,
+              "total": 9059,
+              "rate": 0.9996,
+              "ci95": [
+                0.9991,
+                0.9999
+              ]
+            }
           }
         },
         "largest-block": {
           "list": {
-            "kept": 926,
-            "total": 2006,
-            "rate": 0.4616,
-            "ci95": [
-              0.4074,
-              0.5194
-            ]
+            "structure_kept": {
+              "kept": 926,
+              "total": 2006,
+              "rate": 0.4616,
+              "ci95": [
+                0.4074,
+                0.5194
+              ]
+            },
+            "text_kept": {
+              "kept": 1513,
+              "total": 2006,
+              "rate": 0.7542,
+              "ci95": [
+                0.704,
+                0.798
+              ]
+            }
           },
           "table": {
-            "kept": 276,
-            "total": 639,
-            "rate": 0.4319,
-            "ci95": [
-              0.3147,
-              0.5612
-            ]
+            "structure_kept": {
+              "kept": 276,
+              "total": 639,
+              "rate": 0.4319,
+              "ci95": [
+                0.3147,
+                0.5612
+              ]
+            },
+            "text_kept": {
+              "kept": 536,
+              "total": 639,
+              "rate": 0.8388,
+              "ci95": [
+                0.7616,
+                0.901
+              ]
+            }
           },
           "code": {
-            "kept": 187,
-            "total": 231,
-            "rate": 0.8095,
-            "ci95": [
-              0.525,
-              0.9857
-            ]
+            "structure_kept": {
+              "kept": 187,
+              "total": 231,
+              "rate": 0.8095,
+              "ci95": [
+                0.525,
+                0.9857
+              ]
+            },
+            "text_kept": {
+              "kept": 191,
+              "total": 231,
+              "rate": 0.8268,
+              "ci95": [
+                0.5434,
+                0.9932
+              ]
+            }
           },
           "heading": {
-            "kept": 2753,
-            "total": 9059,
-            "rate": 0.3039,
-            "ci95": [
-              0.2598,
-              0.3543
-            ]
+            "structure_kept": {
+              "kept": 2753,
+              "total": 9059,
+              "rate": 0.3039,
+              "ci95": [
+                0.2598,
+                0.3543
+              ]
+            },
+            "text_kept": {
+              "kept": 4461,
+              "total": 9059,
+              "rate": 0.4924,
+              "ci95": [
+                0.4308,
+                0.5549
+              ]
+            }
           }
         },
         "html2text": {
           "list": {
-            "kept": 1129,
-            "total": 2006,
-            "rate": 0.5628,
-            "ci95": [
-              0.518,
-              0.6085
-            ]
+            "structure_kept": {
+              "kept": 1129,
+              "total": 2006,
+              "rate": 0.5628,
+              "ci95": [
+                0.518,
+                0.6085
+              ]
+            },
+            "text_kept": {
+              "kept": 1606,
+              "total": 2006,
+              "rate": 0.8006,
+              "ci95": [
+                0.7701,
+                0.8304
+              ]
+            }
           },
           "table": {
-            "kept": 252,
-            "total": 639,
-            "rate": 0.3944,
-            "ci95": [
-              0.299,
-              0.4953
-            ]
+            "structure_kept": {
+              "kept": 252,
+              "total": 639,
+              "rate": 0.3944,
+              "ci95": [
+                0.299,
+                0.4953
+              ]
+            },
+            "text_kept": {
+              "kept": 540,
+              "total": 639,
+              "rate": 0.8451,
+              "ci95": [
+                0.7884,
+                0.8939
+              ]
+            }
           },
           "code": {
-            "kept": 225,
-            "total": 231,
-            "rate": 0.974,
-            "ci95": [
-              0.9294,
-              0.9963
-            ]
+            "structure_kept": {
+              "kept": 225,
+              "total": 231,
+              "rate": 0.974,
+              "ci95": [
+                0.9294,
+                0.9963
+              ]
+            },
+            "text_kept": {
+              "kept": 231,
+              "total": 231,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "heading": {
-            "kept": 6671,
-            "total": 9059,
-            "rate": 0.7364,
-            "ci95": [
-              0.6919,
-              0.7799
-            ]
+            "structure_kept": {
+              "kept": 6671,
+              "total": 9059,
+              "rate": 0.7364,
+              "ci95": [
+                0.6919,
+                0.7799
+              ]
+            },
+            "text_kept": {
+              "kept": 8797,
+              "total": 9059,
+              "rate": 0.9711,
+              "ci95": [
+                0.9555,
+                0.9828
+              ]
+            }
           }
         },
         "markdownify": {
           "list": {
-            "kept": 1036,
-            "total": 2006,
-            "rate": 0.5165,
-            "ci95": [
-              0.4611,
-              0.5654
-            ]
+            "structure_kept": {
+              "kept": 1036,
+              "total": 2006,
+              "rate": 0.5165,
+              "ci95": [
+                0.4609,
+                0.5658
+              ]
+            },
+            "text_kept": {
+              "kept": 1931,
+              "total": 2006,
+              "rate": 0.9626,
+              "ci95": [
+                0.9504,
+                0.9734
+              ]
+            }
           },
           "table": {
-            "kept": 373,
-            "total": 639,
-            "rate": 0.5837,
-            "ci95": [
-              0.4764,
-              0.6855
-            ]
+            "structure_kept": {
+              "kept": 379,
+              "total": 639,
+              "rate": 0.5931,
+              "ci95": [
+                0.4858,
+                0.6937
+              ]
+            },
+            "text_kept": {
+              "kept": 579,
+              "total": 639,
+              "rate": 0.9061,
+              "ci95": [
+                0.8667,
+                0.9395
+              ]
+            }
           },
           "code": {
-            "kept": 227,
-            "total": 231,
-            "rate": 0.9827,
-            "ci95": [
-              0.9432,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 227,
+              "total": 231,
+              "rate": 0.9827,
+              "ci95": [
+                0.9432,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 231,
+              "total": 231,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "heading": {
-            "kept": 6986,
-            "total": 9059,
-            "rate": 0.7712,
-            "ci95": [
-              0.7296,
-              0.811
-            ]
+            "structure_kept": {
+              "kept": 7024,
+              "total": 9059,
+              "rate": 0.7754,
+              "ci95": [
+                0.7336,
+                0.8161
+              ]
+            },
+            "text_kept": {
+              "kept": 8931,
+              "total": 9059,
+              "rate": 0.9859,
+              "ci95": [
+                0.9723,
+                0.996
+              ]
+            }
           }
         },
         "readability-lxml": {
           "list": {
-            "kept": 643,
-            "total": 2006,
-            "rate": 0.3205,
-            "ci95": [
-              0.2763,
-              0.3695
-            ]
+            "structure_kept": {
+              "kept": 643,
+              "total": 2006,
+              "rate": 0.3205,
+              "ci95": [
+                0.2763,
+                0.3695
+              ]
+            },
+            "text_kept": {
+              "kept": 1077,
+              "total": 2006,
+              "rate": 0.5369,
+              "ci95": [
+                0.4834,
+                0.5868
+              ]
+            }
           },
           "table": {
-            "kept": 221,
-            "total": 639,
-            "rate": 0.3459,
-            "ci95": [
-              0.2222,
-              0.4902
-            ]
+            "structure_kept": {
+              "kept": 221,
+              "total": 639,
+              "rate": 0.3459,
+              "ci95": [
+                0.2222,
+                0.4902
+              ]
+            },
+            "text_kept": {
+              "kept": 258,
+              "total": 639,
+              "rate": 0.4038,
+              "ci95": [
+                0.2873,
+                0.5365
+              ]
+            }
           },
           "code": {
-            "kept": 227,
-            "total": 231,
-            "rate": 0.9827,
-            "ci95": [
-              0.9622,
-              0.996
-            ]
+            "structure_kept": {
+              "kept": 227,
+              "total": 231,
+              "rate": 0.9827,
+              "ci95": [
+                0.9622,
+                0.996
+              ]
+            },
+            "text_kept": {
+              "kept": 228,
+              "total": 231,
+              "rate": 0.987,
+              "ci95": [
+                0.9701,
+                1.0
+              ]
+            }
           },
           "heading": {
-            "kept": 2717,
-            "total": 9059,
-            "rate": 0.2999,
-            "ci95": [
-              0.2598,
-              0.3473
-            ]
+            "structure_kept": {
+              "kept": 2717,
+              "total": 9059,
+              "rate": 0.2999,
+              "ci95": [
+                0.2598,
+                0.3473
+              ]
+            },
+            "text_kept": {
+              "kept": 4313,
+              "total": 9059,
+              "rate": 0.4761,
+              "ci95": [
+                0.4172,
+                0.5401
+              ]
+            }
           }
         },
         "trafilatura-md": {
           "list": {
-            "kept": 588,
-            "total": 2006,
-            "rate": 0.2931,
-            "ci95": [
-              0.2468,
-              0.3404
-            ]
+            "structure_kept": {
+              "kept": 588,
+              "total": 2006,
+              "rate": 0.2931,
+              "ci95": [
+                0.2468,
+                0.3404
+              ]
+            },
+            "text_kept": {
+              "kept": 1035,
+              "total": 2006,
+              "rate": 0.516,
+              "ci95": [
+                0.4643,
+                0.5671
+              ]
+            }
           },
           "table": {
-            "kept": 257,
-            "total": 639,
-            "rate": 0.4022,
-            "ci95": [
-              0.3259,
-              0.4736
-            ]
+            "structure_kept": {
+              "kept": 257,
+              "total": 639,
+              "rate": 0.4022,
+              "ci95": [
+                0.3259,
+                0.4736
+              ]
+            },
+            "text_kept": {
+              "kept": 367,
+              "total": 639,
+              "rate": 0.5743,
+              "ci95": [
+                0.4698,
+                0.6799
+              ]
+            }
           },
           "code": {
-            "kept": 105,
-            "total": 231,
-            "rate": 0.4545,
-            "ci95": [
-              0.1756,
-              0.7563
-            ]
+            "structure_kept": {
+              "kept": 105,
+              "total": 231,
+              "rate": 0.4545,
+              "ci95": [
+                0.1756,
+                0.7563
+              ]
+            },
+            "text_kept": {
+              "kept": 228,
+              "total": 231,
+              "rate": 0.987,
+              "ci95": [
+                0.9591,
+                1.0
+              ]
+            }
           },
           "heading": {
-            "kept": 2995,
-            "total": 9059,
-            "rate": 0.3306,
-            "ci95": [
-              0.2855,
-              0.3789
-            ]
+            "structure_kept": {
+              "kept": 2995,
+              "total": 9059,
+              "rate": 0.3306,
+              "ci95": [
+                0.2855,
+                0.3789
+              ]
+            },
+            "text_kept": {
+              "kept": 5050,
+              "total": 9059,
+              "rate": 0.5575,
+              "ci95": [
+                0.4922,
+                0.629
+              ]
+            }
           }
         }
       }
@@ -563,268 +1158,576 @@
       "survival": {
         "web2md": {
           "list": {
-            "kept": 552,
-            "total": 1946,
-            "rate": 0.2837,
-            "ci95": [
-              0.2405,
-              0.3273
-            ]
+            "structure_kept": {
+              "kept": 552,
+              "total": 1946,
+              "rate": 0.2837,
+              "ci95": [
+                0.2405,
+                0.3273
+              ]
+            },
+            "text_kept": {
+              "kept": 948,
+              "total": 1946,
+              "rate": 0.4872,
+              "ci95": [
+                0.4348,
+                0.5343
+              ]
+            }
           },
           "table": {
-            "kept": 270,
-            "total": 633,
-            "rate": 0.4265,
-            "ci95": [
-              0.309,
-              0.5495
-            ]
+            "structure_kept": {
+              "kept": 270,
+              "total": 633,
+              "rate": 0.4265,
+              "ci95": [
+                0.309,
+                0.5495
+              ]
+            },
+            "text_kept": {
+              "kept": 334,
+              "total": 633,
+              "rate": 0.5276,
+              "ci95": [
+                0.4208,
+                0.6325
+              ]
+            }
           },
           "code": {
-            "kept": 199,
-            "total": 231,
-            "rate": 0.8615,
-            "ci95": [
-              0.6708,
-              0.9863
-            ]
+            "structure_kept": {
+              "kept": 199,
+              "total": 231,
+              "rate": 0.8615,
+              "ci95": [
+                0.6708,
+                0.9863
+              ]
+            },
+            "text_kept": {
+              "kept": 204,
+              "total": 231,
+              "rate": 0.8831,
+              "ci95": [
+                0.6919,
+                0.9958
+              ]
+            }
           },
           "heading": {
-            "kept": 2442,
-            "total": 8722,
-            "rate": 0.28,
-            "ci95": [
-              0.239,
-              0.3262
-            ]
+            "structure_kept": {
+              "kept": 2442,
+              "total": 8722,
+              "rate": 0.28,
+              "ci95": [
+                0.239,
+                0.3262
+              ]
+            },
+            "text_kept": {
+              "kept": 3981,
+              "total": 8722,
+              "rate": 0.4564,
+              "ci95": [
+                0.4,
+                0.5213
+              ]
+            }
           }
         },
         "all-text": {
           "list": {
-            "kept": 1139,
-            "total": 1946,
-            "rate": 0.5853,
-            "ci95": [
-              0.5397,
-              0.632
-            ]
+            "structure_kept": {
+              "kept": 1139,
+              "total": 1946,
+              "rate": 0.5853,
+              "ci95": [
+                0.5397,
+                0.632
+              ]
+            },
+            "text_kept": {
+              "kept": 1928,
+              "total": 1946,
+              "rate": 0.9908,
+              "ci95": [
+                0.9827,
+                0.9965
+              ]
+            }
           },
           "table": {
-            "kept": 351,
-            "total": 633,
-            "rate": 0.5545,
-            "ci95": [
-              0.4419,
-              0.6546
-            ]
+            "structure_kept": {
+              "kept": 351,
+              "total": 633,
+              "rate": 0.5545,
+              "ci95": [
+                0.4419,
+                0.6546
+              ]
+            },
+            "text_kept": {
+              "kept": 625,
+              "total": 633,
+              "rate": 0.9874,
+              "ci95": [
+                0.9676,
+                1.0
+              ]
+            }
           },
           "code": {
-            "kept": 226,
-            "total": 231,
-            "rate": 0.9784,
-            "ci95": [
-              0.9279,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 226,
+              "total": 231,
+              "rate": 0.9784,
+              "ci95": [
+                0.9279,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 231,
+              "total": 231,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "heading": {
-            "kept": 6683,
-            "total": 8722,
-            "rate": 0.7662,
-            "ci95": [
-              0.7196,
-              0.8095
-            ]
+            "structure_kept": {
+              "kept": 6683,
+              "total": 8722,
+              "rate": 0.7662,
+              "ci95": [
+                0.7196,
+                0.8095
+              ]
+            },
+            "text_kept": {
+              "kept": 8719,
+              "total": 8722,
+              "rate": 0.9997,
+              "ci95": [
+                0.9992,
+                1.0
+              ]
+            }
           }
         },
         "largest-block": {
           "list": {
-            "kept": 878,
-            "total": 1946,
-            "rate": 0.4512,
-            "ci95": [
-              0.3981,
-              0.5098
-            ]
+            "structure_kept": {
+              "kept": 878,
+              "total": 1946,
+              "rate": 0.4512,
+              "ci95": [
+                0.3981,
+                0.5098
+              ]
+            },
+            "text_kept": {
+              "kept": 1456,
+              "total": 1946,
+              "rate": 0.7482,
+              "ci95": [
+                0.6991,
+                0.7945
+              ]
+            }
           },
           "table": {
-            "kept": 274,
-            "total": 633,
-            "rate": 0.4329,
-            "ci95": [
-              0.313,
-              0.5507
-            ]
+            "structure_kept": {
+              "kept": 274,
+              "total": 633,
+              "rate": 0.4329,
+              "ci95": [
+                0.313,
+                0.5507
+              ]
+            },
+            "text_kept": {
+              "kept": 534,
+              "total": 633,
+              "rate": 0.8436,
+              "ci95": [
+                0.7592,
+                0.9092
+              ]
+            }
           },
           "code": {
-            "kept": 187,
-            "total": 231,
-            "rate": 0.8095,
-            "ci95": [
-              0.525,
-              0.9857
-            ]
+            "structure_kept": {
+              "kept": 187,
+              "total": 231,
+              "rate": 0.8095,
+              "ci95": [
+                0.525,
+                0.9857
+              ]
+            },
+            "text_kept": {
+              "kept": 191,
+              "total": 231,
+              "rate": 0.8268,
+              "ci95": [
+                0.5434,
+                0.9932
+              ]
+            }
           },
           "heading": {
-            "kept": 2488,
-            "total": 8722,
-            "rate": 0.2853,
-            "ci95": [
-              0.2447,
-              0.335
-            ]
+            "structure_kept": {
+              "kept": 2488,
+              "total": 8722,
+              "rate": 0.2853,
+              "ci95": [
+                0.2447,
+                0.335
+              ]
+            },
+            "text_kept": {
+              "kept": 4181,
+              "total": 8722,
+              "rate": 0.4794,
+              "ci95": [
+                0.4157,
+                0.5471
+              ]
+            }
           }
         },
         "html2text": {
           "list": {
-            "kept": 1082,
-            "total": 1946,
-            "rate": 0.556,
-            "ci95": [
-              0.5096,
-              0.6063
-            ]
+            "structure_kept": {
+              "kept": 1082,
+              "total": 1946,
+              "rate": 0.556,
+              "ci95": [
+                0.5096,
+                0.6063
+              ]
+            },
+            "text_kept": {
+              "kept": 1549,
+              "total": 1946,
+              "rate": 0.796,
+              "ci95": [
+                0.7637,
+                0.8304
+              ]
+            }
           },
           "table": {
-            "kept": 246,
-            "total": 633,
-            "rate": 0.3886,
-            "ci95": [
-              0.2873,
-              0.4943
-            ]
+            "structure_kept": {
+              "kept": 246,
+              "total": 633,
+              "rate": 0.3886,
+              "ci95": [
+                0.2873,
+                0.4943
+              ]
+            },
+            "text_kept": {
+              "kept": 534,
+              "total": 633,
+              "rate": 0.8436,
+              "ci95": [
+                0.7853,
+                0.8913
+              ]
+            }
           },
           "code": {
-            "kept": 225,
-            "total": 231,
-            "rate": 0.974,
-            "ci95": [
-              0.9294,
-              0.9963
-            ]
+            "structure_kept": {
+              "kept": 225,
+              "total": 231,
+              "rate": 0.974,
+              "ci95": [
+                0.9294,
+                0.9963
+              ]
+            },
+            "text_kept": {
+              "kept": 231,
+              "total": 231,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "heading": {
-            "kept": 6355,
-            "total": 8722,
-            "rate": 0.7286,
-            "ci95": [
-              0.6798,
-              0.7765
-            ]
+            "structure_kept": {
+              "kept": 6355,
+              "total": 8722,
+              "rate": 0.7286,
+              "ci95": [
+                0.6798,
+                0.7765
+              ]
+            },
+            "text_kept": {
+              "kept": 8461,
+              "total": 8722,
+              "rate": 0.9701,
+              "ci95": [
+                0.9546,
+                0.9824
+              ]
+            }
           }
         },
         "markdownify": {
           "list": {
-            "kept": 986,
-            "total": 1946,
-            "rate": 0.5067,
-            "ci95": [
-              0.4468,
-              0.5562
-            ]
+            "structure_kept": {
+              "kept": 986,
+              "total": 1946,
+              "rate": 0.5067,
+              "ci95": [
+                0.4468,
+                0.5561
+              ]
+            },
+            "text_kept": {
+              "kept": 1871,
+              "total": 1946,
+              "rate": 0.9615,
+              "ci95": [
+                0.9502,
+                0.9727
+              ]
+            }
           },
           "table": {
-            "kept": 367,
-            "total": 633,
-            "rate": 0.5798,
-            "ci95": [
-              0.4722,
-              0.673
-            ]
+            "structure_kept": {
+              "kept": 373,
+              "total": 633,
+              "rate": 0.5893,
+              "ci95": [
+                0.4845,
+                0.6799
+              ]
+            },
+            "text_kept": {
+              "kept": 573,
+              "total": 633,
+              "rate": 0.9052,
+              "ci95": [
+                0.8667,
+                0.9374
+              ]
+            }
           },
           "code": {
-            "kept": 227,
-            "total": 231,
-            "rate": 0.9827,
-            "ci95": [
-              0.9432,
-              1.0
-            ]
+            "structure_kept": {
+              "kept": 227,
+              "total": 231,
+              "rate": 0.9827,
+              "ci95": [
+                0.9432,
+                1.0
+              ]
+            },
+            "text_kept": {
+              "kept": 231,
+              "total": 231,
+              "rate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
           },
           "heading": {
-            "kept": 6657,
-            "total": 8722,
-            "rate": 0.7632,
-            "ci95": [
-              0.7167,
-              0.8057
-            ]
+            "structure_kept": {
+              "kept": 6695,
+              "total": 8722,
+              "rate": 0.7676,
+              "ci95": [
+                0.7216,
+                0.8101
+              ]
+            },
+            "text_kept": {
+              "kept": 8595,
+              "total": 8722,
+              "rate": 0.9854,
+              "ci95": [
+                0.9705,
+                0.996
+              ]
+            }
           }
         },
         "readability-lxml": {
           "list": {
-            "kept": 603,
-            "total": 1946,
-            "rate": 0.3099,
-            "ci95": [
-              0.267,
-              0.3519
-            ]
+            "structure_kept": {
+              "kept": 603,
+              "total": 1946,
+              "rate": 0.3099,
+              "ci95": [
+                0.267,
+                0.3519
+              ]
+            },
+            "text_kept": {
+              "kept": 1026,
+              "total": 1946,
+              "rate": 0.5272,
+              "ci95": [
+                0.4725,
+                0.5765
+              ]
+            }
           },
           "table": {
-            "kept": 215,
-            "total": 633,
-            "rate": 0.3397,
-            "ci95": [
-              0.2161,
-              0.4748
-            ]
+            "structure_kept": {
+              "kept": 215,
+              "total": 633,
+              "rate": 0.3397,
+              "ci95": [
+                0.2161,
+                0.4748
+              ]
+            },
+            "text_kept": {
+              "kept": 252,
+              "total": 633,
+              "rate": 0.3981,
+              "ci95": [
+                0.2802,
+                0.527
+              ]
+            }
           },
           "code": {
-            "kept": 227,
-            "total": 231,
-            "rate": 0.9827,
-            "ci95": [
-              0.9622,
-              0.996
-            ]
+            "structure_kept": {
+              "kept": 227,
+              "total": 231,
+              "rate": 0.9827,
+              "ci95": [
+                0.9622,
+                0.996
+              ]
+            },
+            "text_kept": {
+              "kept": 228,
+              "total": 231,
+              "rate": 0.987,
+              "ci95": [
+                0.9701,
+                1.0
+              ]
+            }
           },
           "heading": {
-            "kept": 2434,
-            "total": 8722,
-            "rate": 0.2791,
-            "ci95": [
-              0.2383,
-              0.3244
-            ]
+            "structure_kept": {
+              "kept": 2434,
+              "total": 8722,
+              "rate": 0.2791,
+              "ci95": [
+                0.2383,
+                0.3244
+              ]
+            },
+            "text_kept": {
+              "kept": 4019,
+              "total": 8722,
+              "rate": 0.4608,
+              "ci95": [
+                0.3996,
+                0.5212
+              ]
+            }
           }
         },
         "trafilatura-md": {
           "list": {
-            "kept": 547,
-            "total": 1946,
-            "rate": 0.2811,
-            "ci95": [
-              0.2345,
-              0.3268
-            ]
+            "structure_kept": {
+              "kept": 547,
+              "total": 1946,
+              "rate": 0.2811,
+              "ci95": [
+                0.2345,
+                0.3268
+              ]
+            },
+            "text_kept": {
+              "kept": 985,
+              "total": 1946,
+              "rate": 0.5062,
+              "ci95": [
+                0.4575,
+                0.5617
+              ]
+            }
           },
           "table": {
-            "kept": 253,
-            "total": 633,
-            "rate": 0.3997,
-            "ci95": [
-              0.3182,
-              0.4664
-            ]
+            "structure_kept": {
+              "kept": 253,
+              "total": 633,
+              "rate": 0.3997,
+              "ci95": [
+                0.3182,
+                0.4664
+              ]
+            },
+            "text_kept": {
+              "kept": 361,
+              "total": 633,
+              "rate": 0.5703,
+              "ci95": [
+                0.463,
+                0.6655
+              ]
+            }
           },
           "code": {
-            "kept": 105,
-            "total": 231,
-            "rate": 0.4545,
-            "ci95": [
-              0.1756,
-              0.7563
-            ]
+            "structure_kept": {
+              "kept": 105,
+              "total": 231,
+              "rate": 0.4545,
+              "ci95": [
+                0.1756,
+                0.7563
+              ]
+            },
+            "text_kept": {
+              "kept": 228,
+              "total": 231,
+              "rate": 0.987,
+              "ci95": [
+                0.9591,
+                1.0
+              ]
+            }
           },
           "heading": {
-            "kept": 2701,
-            "total": 8722,
-            "rate": 0.3097,
-            "ci95": [
-              0.2673,
-              0.3571
-            ]
+            "structure_kept": {
+              "kept": 2701,
+              "total": 8722,
+              "rate": 0.3097,
+              "ci95": [
+                0.2673,
+                0.3571
+              ]
+            },
+            "text_kept": {
+              "kept": 4728,
+              "total": 8722,
+              "rate": 0.5421,
+              "ci95": [
+                0.4726,
+                0.611
+              ]
+            }
           }
         }
       }
