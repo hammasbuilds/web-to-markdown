@@ -156,3 +156,35 @@ def test_loaders_read_a_fixture_tree(tmp_path, monkeypatch):
     ]
     with pytest.raises(FileNotFoundError, match="fetch_data"):
         datasets.load_aeb(tmp_path / "nowhere")
+
+
+def test_text_present_ignores_markup_but_structure_needs_it():
+    from bench.structure import text_present
+    from bench.textview import markdown_to_text
+
+    golds = {g.kind: g for g in gold_structures(HTML, TRUTH)}
+    flat = markdown_to_text(TRUTH)
+    tokens = flat.split()
+    assert text_present(golds["list"], tokens, flat)
+    assert not survives(golds["list"], regions(flat))
+
+
+def test_comment_convention_rescores_against_the_article_only():
+    from bench.datasets import Page
+    from bench.report import COMMENTS_MARKER, comment_convention
+    from bench.runner import Output
+
+    article = "the quick brown fox jumps over the lazy dog again and again"
+    page = Page(
+        "wceb/dragnet",
+        "d1",
+        "",
+        "<p>x</p>",
+        f"{article}\n{COMMENTS_MARKER}\nfirst comment here from a reader",
+    )
+    outputs = {"web2md": {"d1": Output("d1", article, 0.0)}}
+    result = comment_convention([page], outputs, ["web2md"], n_boot=20)
+    row = result["systems"]["web2md"]
+    assert result["n_pages_with_comments_in_truth"] == 1
+    assert row["f1_article_only"] == 1.0
+    assert row["f1_truth_with_comments"] < 1.0
