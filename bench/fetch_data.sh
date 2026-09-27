@@ -56,4 +56,6 @@ if [ ! -d "$DATA/wceb/combined" ]; then
   tar xJf "$DATA/wceb/combined.tar.xz" -C "$DATA/wceb"
   rm -rf "$DATA/wceb/parts" "$DATA/wceb/combined.tar.xz"
 fi
+# One packed file instead of 3,800 loose ones: much faster to load on a busy disk.
+[ -f "$DATA/wceb/pages.jsonl.gz" ] || WEB2MD_DATA="$DATA" uv run python -m bench.datasets
 echo "data ready in $DATA"

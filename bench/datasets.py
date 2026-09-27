@@ -90,7 +90,36 @@ def _wceb_url(html: str) -> str:
     return ""
 
 
+PACKED = "pages.jsonl.gz"
+
+
+def pack_wceb(root: Path | None = None) -> Path:
+    """Write every usable WCEB page into one gzip file.
+
+    Reading 3,800 loose HTML files is slow on a busy disk (and every one is an
+    antivirus scan on Windows); one sequential 60 MB read is not.
+    """
+    target = (root or DATA) / "wceb" / PACKED
+    tmp = target.with_suffix(".tmp")
+    with gzip.open(tmp, "wt", encoding="utf-8") as fh:
+        for page in _iter_wceb_files(root):
+            fh.write(json.dumps(page.__dict__, ensure_ascii=False))
+            fh.write("\n")
+    tmp.replace(target)
+    return target
+
+
 def iter_wceb(root: Path | None = None) -> Iterator[Page]:
+    packed = (root or DATA) / "wceb" / PACKED
+    if packed.exists():
+        with gzip.open(packed, "rt", encoding="utf-8") as fh:
+            for line in fh:
+                yield Page(**json.loads(line))
+        return
+    yield from _iter_wceb_files(root)
+
+
+def _iter_wceb_files(root: Path | None = None) -> Iterator[Page]:
     base = (root or DATA) / "wceb" / "combined"
     if not (base / "ground-truth").exists():
         raise FileNotFoundError(f"{base} missing; run bench/fetch_data.sh")
@@ -111,3 +140,7 @@ def iter_wceb(root: Path | None = None) -> Iterator[Page]:
 
 def load_wceb(root: Path | None = None) -> list[Page]:
     return list(iter_wceb(root))
+
+
+if __name__ == "__main__":
+    print(pack_wceb())

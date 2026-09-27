@@ -135,7 +135,8 @@ def main(argv: list[str] | None = None) -> int:
             "groups": report.paired_diffs(pages, outputs, counts, args.n_boot),
         },
     )
-    report.write("per_site.json", report.per_site(pages, only(headline + ["web2md"])))
+    headline_counts = {k: v for k, v in counts.items() if k in headline}
+    report.write("per_site.json", report.per_site(pages, headline_counts))
     report.write(
         "structure.json",
         {
