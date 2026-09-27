@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Retrying requests &mdash; fetchkit 2.1 documentation</title>
+<meta name="description" content="How fetchkit retries failed HTTP requests.">
+<link rel="canonical" href="https://docs.fetchkit.example/en/2.1/retries.html">
+</head>
+<body>
+<div class="wy-grid-for-nav">
+  <nav class="wy-nav-side">
+    <div class="sidebar-search"><input type="text" placeholder="Search docs"></div>
+    <ul class="toctree">
+      <li><a href="install.html">Installation</a></li>
+      <li><a href="quickstart.html">Quickstart</a></li>
+      <li class="current"><a href="retries.html">Retrying requests</a></li>
+      <li><a href="timeouts.html">Timeouts</a></li>
+      <li><a href="api.html">API reference</a></li>
+    </ul>
+  </nav>
+  <section class="wy-nav-content-wrap">
+    <div class="rst-content">
+      <div class="breadcrumbs"><a href="index.html">Docs</a> &raquo; Retrying requests</div>
+      <div role="main" class="document">
+        <div class="section" id="retrying-requests">
+          <h1>Retrying requests</h1>
+          <p>By default fetchkit does not retry. Pass a <code>Retry</code> policy to the client
+          to retry failed requests with exponential back-off.</p>
+          <div class="highlight-python notranslate"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">fetchkit</span> <span class="kn">import</span> Client, Retry
+
+client = Client(retry=Retry(total=5, backoff=0.5))
+response = client.get(<span class="s">"https://api.example/items"</span>)
+</pre></div></div>
+          <h2>Which failures are retried</h2>
+          <p>Only idempotent methods are retried unless you opt in:</p>
+          <table class="docutils">
+            <thead><tr><th>Failure</th><th>Retried</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Connection error</td><td>yes</td><td>always</td></tr>
+              <tr><td>HTTP 503</td><td>yes</td><td>honours <code>Retry-After</code></td></tr>
+              <tr><td>HTTP 500</td><td>no</td><td>set <code>status_forcelist</code></td></tr>
+              <tr><td>Read timeout</td><td>GET only</td><td>POST is never retried</td></tr>
+            </tbody>
+          </table>
+          <h2>Back-off schedule</h2>
+          <p>The delay before attempt <em>n</em> is <code>backoff * 2 ** (n - 1)</code> seconds:</p>
+          <ol>
+            <li>0.5 seconds</li>
+            <li>1 second</li>
+            <li>2 seconds
+              <ul><li>capped by <code>max_backoff</code></li><li>jitter is added when <code>jitter=True</code></li></ul>
+            </li>
+          </ol>
+          <div class="admonition warning">
+            <p class="admonition-title">Warning</p>
+            <p>Retrying a non-idempotent request can duplicate side effects, such as a payment.</p>
+          </div>
+          <pre class="language-bash"><code>$ fetchkit get https://api.example/items --retries 3</code></pre>
+        </div>
+      </div>
+      <footer><div class="rst-footer-buttons"><a href="quickstart.html">Previous</a> <a href="timeouts.html">Next</a></div>
+      <p>&copy; Copyright 2024, fetchkit contributors. Built with Sphinx.</p></footer>
+    </div>
+  </section>
+</div>
+</body>
+</html>
