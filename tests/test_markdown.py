@@ -47,6 +47,37 @@ def test_table_without_header_gets_an_empty_one_and_colspan_pads():
     assert md(html) == "|  |  |\n|---|---|\n| wide |  |\n| 1 | 2 |"
 
 
+def test_content_outside_cells_is_rendered_before_the_table():
+    # Browsers foster-parent a <p> directly in <table> and a <div> in a <tr> to
+    # just before the table; neither may be dropped.
+    html = (
+        "<table><p>Prices from May</p><tr><th>A</th><th>B</th></tr>"
+        "<tr><div>note in a row</div><td>1</td><td>2</td></tr></table>"
+    )
+    assert md(html) == "Prices from May\n\nnote in a row\n\n| A | B |\n|---|---|\n| 1 | 2 |"
+
+
+def test_stray_text_in_a_table_is_kept():
+    html = "<table>loose words<tr><td>1</td><td>2</td></tr></table>"
+    assert md(html).startswith("loose words\n\n|")
+
+
+def test_rows_wrapped_in_a_form_are_table_rows():
+    html = (
+        "<table><form action='/buy'><tr><th>Item</th><th>Qty</th></tr>"
+        "<tr><td>Tea</td><td>2</td></tr></form></table>"
+    )
+    assert md(html) == "| Item | Qty |\n|---|---|\n| Tea | 2 |"
+
+
+def test_caption_and_colgroup_are_not_stray():
+    html = (
+        "<table><caption>Scores</caption><colgroup><col></colgroup>"
+        "<tr><th>A</th><th>B</th></tr><tr><td>1</td><td>2</td></tr></table>"
+    )
+    assert md(html) == "Scores\n\n| A | B |\n|---|---|\n| 1 | 2 |"
+
+
 def test_layout_tables_render_as_blocks():
     one_column = "<table><tr><td><p>just</p></td></tr><tr><td><p>text</p></td></tr></table>"
     assert md(one_column) == "just\n\ntext"

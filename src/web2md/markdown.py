@@ -149,6 +149,7 @@ class Renderer:
     def __init__(self, options: RenderOptions | None = None) -> None:
         self.opts = options or RenderOptions()
         self._has_block: dict[int, bool] = {}
+        self._cell_blocks: dict[int, list[str]] = {}
 
     # -- public --------------------------------------------------------------
     def render(self, root: Element) -> str:
@@ -171,6 +172,18 @@ class Renderer:
 
     # -- block mode ------------------------------------------------------------
     def blocks(self, el: Element) -> list[str]:
+        if el.tag in ("td", "th"):
+            cached = self._cell_blocks.get(id(el))
+            if cached is None:
+                cached = self._cell_blocks[id(el)] = self._blocks(el)
+            return cached
+        return self._blocks(el)
+
+    def _blocks(self, el: Element) -> list[str]:
+        return self._render_nodes(el.children)
+
+    def _render_nodes(self, nodes: list[Element | str]) -> list[str]:
+        """Block-render a run of sibling nodes, buffering inline ones into paragraphs."""
         out: list[str] = []
         buf: list[str] = []
 
@@ -180,7 +193,7 @@ class Renderer:
             if para:
                 out.append(para)
 
-        for child in el.children:
+        for child in nodes:
             if isinstance(child, str):
                 buf.append(_WS.sub(" ", child))
             elif child.tag in SKIP_TAGS:
@@ -291,15 +304,14 @@ class Renderer:
 
     # -- tables ----------------------------------------------------------------
     def _table(self, el: Element) -> list[str]:
-        rows = _table_rows(el)
+        rows, stray = _table_parts(el)
         grid: list[list[str]] = []
         header_row = False
         layout = el.get("role") == "presentation" or any(t is not el for t in el.iter("table"))
         for r, tr in enumerate(rows):
             cells: list[str] = []
-            for cell in tr.elements:
-                if cell.tag not in ("td", "th"):
-                    continue
+            tr_cells = [c for c in tr.elements if c.tag in ("td", "th")]
+            for cell in tr_cells:
                 cell_blocks = self.blocks(cell)
                 if len(cell_blocks) > 3:
                     layout = True
@@ -310,19 +322,20 @@ class Renderer:
                 except ValueError:
                     span = 1
                 cells.extend([""] * (min(span, 50) - 1))
-            if r == 0 and tr.elements and all(c.tag == "th" for c in tr.elements):
+            if r == 0 and tr_cells and all(c.tag == "th" for c in tr_cells):
                 header_row = True
             if any(c.strip() for c in cells):
                 grid.append(cells)
         width = max((len(row) for row in grid), default=0)
         if layout or width < 2 or not grid:
-            # Tables used for page layout: keep the content, drop the grid.
-            out: list[str] = []
-            for tr in rows:
-                for cell in tr.elements:
-                    out.extend(self.blocks(cell))
-            return out
-        out = []
+            # Tables used for page layout: keep the content, drop the grid. Cells
+            # come from the cache, so nested layout tables are rendered once each,
+            # not once per enclosing level (which was exponential in depth).
+            return self.blocks(el)
+        # Content that is not in a cell (a <p> directly in <table>, a <div> in a
+        # <tr>) is moved in front of the table by browsers ("foster parenting");
+        # render it there rather than drop it.
+        out = self._render_nodes(stray)
         caption = el.find("caption")
         if caption is not None:
             cap = self._one_line(self.inline_children(caption))
@@ -443,14 +456,40 @@ def _raw_text(el: Element) -> str:
     return "".join(parts)
 
 
-def _table_rows(table: Element) -> list[Element]:
+_ROW_GROUPS = frozenset({"thead", "tbody", "tfoot", "form"})
+_TABLE_ONLY = frozenset({"caption", "colgroup", "col"})
+
+
+def _table_parts(table: Element) -> tuple[list[Element], list[Element | str]]:
+    """A table's rows, and the content browsers would move out in front of it.
+
+    Rows count inside ``thead``/``tbody``/``tfoot`` and inside a ``<form>``
+    wrapped around them (browsers keep the form empty and the rows in the
+    table). Any other element or text outside a cell is *stray*: in document
+    order, it is what the HTML parsing algorithm foster-parents before the table.
+    """
     rows: list[Element] = []
-    for child in table.elements:
-        if child.tag == "tr":
-            rows.append(child)
-        elif child.tag in ("thead", "tbody", "tfoot"):
-            rows.extend(c for c in child.elements if c.tag == "tr")
-    return rows
+    stray: list[Element | str] = []
+
+    def walk(node: Element) -> None:
+        for child in node.children:
+            if isinstance(child, str):
+                if child.strip():
+                    stray.append(child)
+            elif child.tag == "tr":
+                rows.append(child)
+                stray.extend(
+                    c
+                    for c in child.children
+                    if (c.strip() if isinstance(c, str) else c.tag not in ("td", "th"))
+                )
+            elif child.tag in _ROW_GROUPS:
+                walk(child)
+            elif child.tag not in _TABLE_ONLY:
+                stray.append(child)
+
+    walk(table)
+    return rows, stray
 
 
 def to_markdown(root: Element, options: RenderOptions | None = None) -> str:
