@@ -47,6 +47,25 @@ def test_output_file(tmp_path):
     assert "reopened to traffic" in target.read_text(encoding="utf-8")
 
 
+def test_output_into_a_missing_folder_creates_it(tmp_path):
+    target = tmp_path / "new" / "deeper" / "out.md"
+    assert main([str(EXAMPLE), "-o", str(target)]) == 0
+    assert "reopened to traffic" in target.read_text(encoding="utf-8")
+
+
+def test_unwritable_output_is_a_clear_error(tmp_path, capsys):
+    blocker = tmp_path / "a-file"
+    blocker.write_text("x", encoding="utf-8")
+    assert main([str(EXAMPLE), "-o", str(blocker / "out.md")]) == 2
+    err = capsys.readouterr().err
+    assert "cannot write" in err and "Traceback" not in err
+
+
+def test_directory_input_is_named_as_a_directory(tmp_path):
+    with pytest.raises(SystemExit, match="is a directory"):
+        main([str(tmp_path)])
+
+
 def test_all_mode_keeps_boilerplate(capsys):
     assert main([str(EXAMPLE), "--all"]) == 0
     assert "Related stories" in capsys.readouterr().out

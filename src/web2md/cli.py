@@ -72,9 +72,14 @@ def _read_source(args: argparse.Namespace) -> tuple[str, str | None]:
     if source == "-":
         return decode_html(sys.stdin.buffer.read()), args.url
     path = Path(source)
-    if not path.is_file():
+    if path.is_dir():
+        raise SystemExit(f"web2md: {source} is a directory; give one HTML file")
+    if not path.exists():
         raise SystemExit(f"web2md: no such file: {source}")
-    return decode_html(path.read_bytes()), args.url
+    try:
+        return decode_html(path.read_bytes()), args.url
+    except OSError as exc:
+        raise SystemExit(f"web2md: cannot read {source}: {exc.strerror or exc}") from None
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -101,7 +106,12 @@ def main(argv: list[str] | None = None) -> int:
     else:
         text = conv.markdown
     if args.output:
-        args.output.write_text(text, encoding="utf-8")
+        try:
+            args.output.parent.mkdir(parents=True, exist_ok=True)
+            args.output.write_text(text, encoding="utf-8")
+        except OSError as exc:
+            print(f"web2md: cannot write {args.output}: {exc.strerror or exc}", file=sys.stderr)
+            return 2
     else:
         sys.stdout.reconfigure(encoding="utf-8")  # type: ignore[union-attr]
         sys.stdout.write(text)
