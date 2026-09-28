@@ -19,16 +19,17 @@ The pipeline, each stage switchable for ablation:
 
 If the result is under ``MIN_CHARS`` characters on a page with at least twice
 that much text, extraction reruns with ``hints`` off: class-name rules are the stage most
-likely to remove the whole article on an unusual site.
+likely to remove the whole article on an unusual site. If the result is still
+empty while the page has visible text (a short page whose content is a list or a
+small table, all blocks under the paragraph floor), the visible body is returned.
 """
 
 from __future__ import annotations
 
 import re
-from collections.abc import Callable
 from dataclasses import dataclass, replace
 
-from web2md.dom import Element
+from web2md.dom import Element, parse
 
 MIN_CHARS = 250
 
@@ -139,7 +140,9 @@ class ExtractOptions:
     link_density: bool = True  # penalise and clean link-heavy blocks
     siblings: bool = True  # merge qualifying siblings of the best candidate
     clean: bool = True  # conditional removal of boilerplate inside the result
-    fallback: bool = True  # rerun without hints when the result is implausibly short
+    # Rerun without hints when the result is implausibly short; return the visible
+    # body when the result is empty.
+    fallback: bool = True
 
 
 @dataclass
@@ -397,11 +400,10 @@ def _merge_siblings(
                 kept.append(sib)
     if len(kept) == 1:
         return top
-    container = Element("div", {}, [], None)
+    container = Element("div")
     for node in kept:
         assert isinstance(node, Element)
-        node.parent = container
-        container.children.append(node)
+        container.adopt(node)
     return container
 
 
@@ -457,37 +459,40 @@ def _clean(
         if el is not root and _attached(el, root) and el.find("pre", "table") is None:
             el.remove()
     measure.invalidate()
+    tally = _Tally(measure)
     candidates = [el for el in root.iter(*_CLEANABLE) if el is not root]
     for el in reversed(candidates):  # innermost first
         if not _attached(el, root):
             continue  # an ancestor was already removed
-        if el.find("pre") is not None or (el.tag == "table" and _is_data_table(el)):
+        paras, imgs, items, inputs, pres = tally.of(el)
+        if pres or (el.tag == "table" and _is_data_table(el)):
             continue
         weight = class_weight(el) if opts.hints else 0
         if weight + scores.get(id(el), 0.0) < 0:
             el.remove()
             measure.invalidate()
+            tally.invalidate()
             continue
         text_len, link_len, commas = measure.of(el)
         if commas >= 10:
             continue
-        paras = _prose_blocks(el, measure)
-        imgs = sum(1 for _ in el.iter("img"))
-        items = sum(1 for _ in el.iter("li")) - 100
-        inputs = sum(1 for _ in el.iter("input", "select", "textarea"))
+        items -= 100
         density = link_len / text_len if text_len else 0.0
-        in_figure = el.tag == "figure" or any(a.tag == "figure" for a in el.ancestors())
         remove = (
-            (imgs > 1 and paras / imgs < 0.5 and not in_figure)
-            or (el.tag not in ("ul", "ol") and items > paras)
+            el.tag not in ("ul", "ol")
+            and items > paras
             or inputs > paras / 3
-            or (text_len < 25 and (imgs == 0 or imgs > 2) and not in_figure)
+            or (
+                (imgs > 1 and paras / imgs < 0.5 or text_len < 25 and (imgs == 0 or imgs > 2))
+                and not _in_figure(el)
+            )
         )
         if opts.link_density:
             remove = remove or (weight < 25 and density > 0.2) or (weight >= 25 and density > 0.5)
         if remove:
             el.remove()
             measure.invalidate()
+            tally.invalidate()
     for heading in list(root.iter("h1", "h2", "h3", "h4", "h5", "h6")):
         text = _collapse(heading.text())
         if (
@@ -498,17 +503,69 @@ def _clean(
             heading.remove()
 
 
-def _prose_blocks(el: Element, measure: _Measure) -> int:
-    """Paragraph count that also sees <br>-separated text and div-paragraphs."""
-    count = 0
-    for node in el.iter():
-        if node.tag == "p" or (
-            "data-web2md-paragraph" in node.attrs and measure.text_len(node) >= 25
+class _Tally:
+    """Cached descendant counts used by cleaning, aggregated bottom-up in one pass.
+
+    Per element (itself included): prose blocks (paragraphs, div-paragraphs and
+    ``<br>``-separated text runs of at least 25 characters), images, list items,
+    form inputs and ``<pre>`` blocks. Walking each candidate's subtree instead
+    made cleaning quadratic on deeply nested pages.
+    """
+
+    def __init__(self, measure: _Measure) -> None:
+        self.measure = measure
+        self._cache: dict[int, tuple[int, int, int, int, int]] = {}
+
+    def invalidate(self) -> None:
+        self._cache.clear()
+
+    def _own(self, node: Element) -> tuple[int, int, int, int, int]:
+        tag = node.tag
+        if tag == "p" or (
+            "data-web2md-paragraph" in node.attrs and self.measure.text_len(node) >= 25
         ):
-            count += 1
-        elif node.tag not in ("li", "a"):
-            count += sum(1 for t, _, _ in _text_runs(node, measure) if t >= 25)
-    return count
+            prose = 1
+        elif tag in ("li", "a"):
+            prose = 0
+        else:
+            prose = sum(1 for t, _, _ in _text_runs(node, self.measure) if t >= 25)
+        return (
+            prose,
+            int(tag == "img"),
+            int(tag == "li"),
+            int(tag in ("input", "select", "textarea")),
+            int(tag == "pre"),
+        )
+
+    def of(self, el: Element) -> tuple[int, int, int, int, int]:
+        cached = self._cache.get(id(el))
+        if cached is not None:
+            return cached
+        stack: list[tuple[Element, bool]] = [(el, False)]
+        while stack:
+            node, done = stack.pop()
+            if id(node) in self._cache:
+                continue
+            if not done:
+                stack.append((node, True))
+                stack.extend((c, False) for c in node.elements if id(c) not in self._cache)
+                continue
+            total = list(self._own(node))
+            for child in node.elements:
+                for k, v in enumerate(self._cache[id(child)]):
+                    total[k] += v
+            self._cache[id(node)] = (total[0], total[1], total[2], total[3], total[4])
+        return self._cache[id(el)]
+
+
+def _in_figure(el: Element) -> bool:
+    """Whether ``el`` is a figure or sits inside one.
+
+    Most figures were removed earlier in cleaning; the ones left hold a code
+    block or a table, and their picture-and-caption parts are kept with them.
+    Only the few candidates the image rules would remove walk up to ask.
+    """
+    return el.tag == "figure" or any(a.tag == "figure" for a in el.ancestors())
 
 
 def _attached(el: Element, root: Element) -> bool:
@@ -546,22 +603,40 @@ def _run(root: Element, opts: ExtractOptions, title: str) -> Element:
 
 
 def extract(
-    parse_tree: Callable[[], Element],
+    html: str,
     options: ExtractOptions | None = None,
     title: str = "",
+    tree: Element | None = None,
 ) -> Extraction:
-    """Extract the main content.
+    """Extract the main content of ``html``.
 
-    ``parse_tree`` returns a fresh DOM each call: extraction mutates the tree, and
-    the fallback pass needs an untouched one.
+    Extraction mutates the tree it works on, and each fallback pass needs an
+    untouched one, so those passes parse ``html`` again. ``tree`` is an optional,
+    not yet mutated parse of ``html`` for the first pass, for a caller that has
+    already parsed the page (for metadata) and wants to save one parse.
     """
     opts = options or ExtractOptions()
-    root = parse_tree()
+    root = tree if tree is not None else parse(html)
     total = len(_collapse(root.text()))
     article = _run(root, opts, title)
     found = len(_collapse(article.text()))
+    fallback_used = False
     if opts.fallback and opts.hints and found < MIN_CHARS and total >= 2 * max(found, MIN_CHARS):
-        retry = _run(parse_tree(), replace(opts, hints=False), title)
-        if len(_collapse(retry.text())) > found:
-            return Extraction(retry, fallback_used=True)
-    return Extraction(article)
+        retry = _run(parse(html), replace(opts, hints=False), title)
+        retry_found = len(_collapse(retry.text()))
+        if retry_found > found:
+            article, found, fallback_used = retry, retry_found, True
+    if opts.fallback and found == 0:
+        # Every block was under the 25-character paragraph floor (a short list,
+        # a small table), so nothing scored and cleaning removed the rest. An
+        # empty answer is never right for a page that has visible text.
+        body = _visible_body(parse(html))
+        if _collapse(body.text()):
+            return Extraction(body, fallback_used=True)
+    return Extraction(article, fallback_used=fallback_used)
+
+
+def _visible_body(root: Element) -> Element:
+    """The page's ``<body>`` with only invisible and interactive elements removed."""
+    _prune(root, ExtractOptions(hints=False))
+    return root.find("body") or root

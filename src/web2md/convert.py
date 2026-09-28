@@ -65,7 +65,8 @@ def convert(
     render = RenderOptions(base_url=url, links=links, images=images)
     fallback = False
     if main_content:
-        result = extract(lambda: parse(html), options, title=metadata.title)
+        # Metadata only reads the tree, so extraction's first pass can use it.
+        result = extract(html, options, title=metadata.title, tree=tree)
         root, fallback = result.root, result.fallback_used
     else:
         root = tree.find("body") or tree

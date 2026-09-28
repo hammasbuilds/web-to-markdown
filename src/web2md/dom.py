@@ -10,7 +10,6 @@ that match nothing open.
 from __future__ import annotations
 
 from collections.abc import Iterator
-from dataclasses import dataclass, field
 from html.parser import HTMLParser
 
 VOID_TAGS = frozenset(
@@ -108,14 +107,46 @@ _HEAD_TAGS = frozenset(
 RAW_TEXT_TAGS = frozenset({"script", "style"})
 
 
-@dataclass(eq=False)
 class Element:
-    """An element node. Text children are plain ``str``."""
+    """An element node. Text children are plain ``str``.
 
-    tag: str
-    attrs: dict[str, str] = field(default_factory=dict)
-    children: list[Element | str] = field(default_factory=list)
-    parent: Element | None = field(default=None, repr=False)
+    Removal is lazy: :meth:`remove` only detaches the node (``parent = None``) and
+    marks the parent dirty; the parent's child list is compacted once, the next
+    time it is read. Removing k of n siblings therefore costs O(n), not O(k*n),
+    which matters on pages with tens of thousands of sibling elements.
+    """
+
+    __slots__ = ("tag", "attrs", "_children", "parent", "_dirty")
+
+    def __init__(
+        self,
+        tag: str,
+        attrs: dict[str, str] | None = None,
+        children: list[Element | str] | None = None,
+        parent: Element | None = None,
+    ) -> None:
+        self.tag = tag
+        self.attrs = attrs if attrs is not None else {}
+        self._children: list[Element | str] = children if children is not None else []
+        self.parent = parent
+        self._dirty = False
+
+    def __repr__(self) -> str:
+        return f"Element({self.tag!r}, {self.attrs!r})"
+
+    @property
+    def children(self) -> list[Element | str]:
+        if self._dirty:
+            # Keep text, and elements that still name this node as their parent
+            # (removed or re-parented elements do not).
+            self._children = [c for c in self._children if isinstance(c, str) or c.parent is self]
+            self._dirty = False
+        return self._children
+
+    @children.setter
+    def children(self, value: list[Element | str]) -> None:
+        self._children = value
+        self._dirty = False
 
     def get(self, name: str, default: str = "") -> str:
         return self.attrs.get(name, default)
@@ -156,8 +187,15 @@ class Element:
 
     def remove(self) -> None:
         if self.parent is not None:
-            self.parent.children = [c for c in self.parent.children if c is not self]
+            self.parent._dirty = True
             self.parent = None
+
+    def adopt(self, child: Element) -> None:
+        """Move ``child`` (and its subtree) to the end of this element's children."""
+        if child.parent is not None:
+            child.parent._dirty = True
+        child.parent = self
+        self.children.append(child)
 
 
 class _TreeBuilder(HTMLParser):
@@ -165,13 +203,20 @@ class _TreeBuilder(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.root = Element("#document")
         self.stack: list[Element] = [self.root]
+        # How many elements of each tag are open, so the common "is a <p> open?"
+        # question does not scan a stack that can be MAX_DEPTH deep.
+        self.open_count: dict[str, int] = {}
         self.seen_document_tags: dict[str, bool] = {}
 
     # -- helpers -----------------------------------------------------------
     def _close_through(self, index: int) -> None:
+        for el in self.stack[index:]:
+            self.open_count[el.tag] -= 1
         del self.stack[index:]
 
     def _find_open(self, tags: frozenset[str], boundary: frozenset[str]) -> int | None:
+        if not any(self.open_count.get(t) for t in tags):
+            return None
         for i in range(len(self.stack) - 1, 0, -1):
             tag = self.stack[i].tag
             if tag in tags:
@@ -187,7 +232,7 @@ class _TreeBuilder(HTMLParser):
         without this rule the whole page would then be parsed as head content.
         """
         if self.stack[-1].tag == "head":
-            self.stack.pop()
+            self._close_through(len(self.stack) - 1)
 
     def _document_tag(self, tag: str) -> bool:
         """Whether an <html>/<head>/<body> start tag should create an element.
@@ -230,17 +275,20 @@ class _TreeBuilder(HTMLParser):
             # Past MAX_DEPTH (runs of never-closed <font>/<b> tags) the element is
             # kept but its content stays with the parent, bounding tree depth.
             self.stack.append(node)
+            self.open_count[tag] = self.open_count.get(tag, 0) + 1
 
     def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         before = self.stack[-1]
         self.handle_starttag(tag, attrs)
         top = self.stack[-1]
         if top is not before and top.tag == tag and not top.children:
-            self.stack.pop()  # "<div/>": treat the XHTML self-closing form as closed
+            self._close_through(len(self.stack) - 1)  # "<div/>": the XHTML form, closed
 
     def handle_endtag(self, tag: str) -> None:
         if tag == "p" and self._find_open(frozenset({"p"}), frozenset()) is None:
             # A stray </p> creates an empty paragraph in browsers; it has no text.
+            return
+        if not self.open_count.get(tag):
             return
         for i in range(len(self.stack) - 1, 0, -1):
             if self.stack[i].tag == tag:

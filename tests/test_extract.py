@@ -126,6 +126,40 @@ def test_every_ablation_still_extracts_the_example(field):
     assert "reopened to traffic" in out
 
 
+@pytest.mark.parametrize(
+    "body, expected",
+    [
+        # Every block is under the 25-character paragraph floor, so nothing
+        # scores and cleaning removes the rest; the visible body is returned.
+        ("<ul><li>Milk</li><li>Eggs</li><li>Bread</li></ul>", "- Milk\n- Eggs\n- Bread\n"),
+        (
+            "<table><tr><td>Name</td><td>Age</td></tr><tr><td>Ann</td><td>31</td></tr></table>",
+            "|  |  |\n|---|---|\n| Name | Age |\n| Ann | 31 |\n",
+        ),
+        ("<div><b>Opening hours</b></div><ol><li>Mon 9-5</li><li>Tue 9-5</li></ol>", None),
+    ],
+    ids=["short-list", "small-table", "short-list-with-label"],
+)
+def test_short_page_of_lists_or_tables_is_not_empty(body, expected):
+    result = convert(page(body + "<script>var hidden = 1;</script>"))
+    assert result.markdown.strip()
+    assert result.fallback_used
+    assert "hidden" not in result.markdown
+    if expected is not None:
+        assert result.markdown == expected
+
+
+def test_body_fallback_is_part_of_the_fallback_switch():
+    html = page("<ul><li>Milk</li><li>Eggs</li></ul>")
+    assert convert(html, options=ExtractOptions(fallback=False)).markdown == "\n"
+
+
+def test_page_with_no_visible_text_stays_empty():
+    result = convert(page("<script>var x = 1;</script><div hidden>secret</div>"))
+    assert result.markdown == "\n"
+    assert result.warnings == ["no text content found"]
+
+
 def test_main_content_off_renders_everything():
     html = (EXAMPLES / "news_article.html").read_text(encoding="utf-8")
     everything = convert(html, main_content=False).markdown
