@@ -24,7 +24,7 @@ from bench.metrics import (
     paired_bootstrap_diff,
     tokenize,
 )
-from bench.runner import Output
+from bench.runner import Output, source_hash
 from bench.structure import KINDS, Gold, gold_structures, regions, survives, text_present
 from bench.textview import markdown_to_text
 
@@ -38,10 +38,19 @@ def _r(x: float) -> float:
     return round(x, 4)
 
 
-def write(name: str, data: Any) -> Path:
+SOURCE_KEY = "web2md_source"
+
+
+def write(name: str, data: dict[str, Any]) -> Path:
+    """Write one results file, stamped with the hash of the web2md source that made it.
+
+    ``bench.summary`` refuses to print tables from files whose stamp differs from
+    the working tree, so results made by older code cannot pass as current.
+    """
     RESULTS.mkdir(exist_ok=True)
     path = RESULTS / name
-    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    stamped = {SOURCE_KEY: source_hash(), **data}
+    path.write_text(json.dumps(stamped, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return path
 
 

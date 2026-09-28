@@ -188,3 +188,38 @@ def test_comment_convention_rescores_against_the_article_only():
     assert result["n_pages_with_comments_in_truth"] == 1
     assert row["f1_article_only"] == 1.0
     assert row["f1_truth_with_comments"] < 1.0
+
+
+def test_results_are_stamped_and_stale_ones_are_named(tmp_path, monkeypatch):
+    from bench import report, summary
+    from bench.runner import source_hash
+
+    monkeypatch.setattr(report, "RESULTS", tmp_path)
+    report.write("fresh.json", {"x": 1})
+    assert json.loads((tmp_path / "fresh.json").read_text())["web2md_source"] == source_hash()
+    (tmp_path / "old.json").write_text(json.dumps({"web2md_source": "0123456789ab"}))
+    (tmp_path / "unstamped.json").write_text(json.dumps({"x": 1}))
+    assert summary.stale_results(tmp_path) == {
+        "old.json": "0123456789ab",
+        "unstamped.json": "missing",
+    }
+
+
+def test_summary_refuses_stale_results(tmp_path, monkeypatch, capsys):
+    from bench import summary
+
+    (tmp_path / "extraction.json").write_text(json.dumps({"web2md_source": "0123456789ab"}))
+    monkeypatch.setattr(summary, "RESULTS", tmp_path)
+    assert summary.main([]) == 1
+    assert "extraction.json: made by 0123456789ab" in capsys.readouterr().err
+
+
+def test_source_hash_changes_with_an_output_module(tmp_path, monkeypatch):
+    from bench import runner
+
+    for name in runner.OUTPUT_MODULES:
+        (tmp_path / name).write_text("x = 1\n")
+    monkeypatch.setattr(runner, "SRC", tmp_path)
+    before = runner.source_hash()
+    (tmp_path / "markdown.py").write_text("x = 2\n")
+    assert runner.source_hash() != before

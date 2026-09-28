@@ -1,14 +1,22 @@
 """Print the README's tables from ``results/*.json``, so every number is traceable.
 
 uv run python -m bench.summary
+
+Every results file carries the hash of the web2md source that produced it
+(``web2md_source``). If any differs from the working tree's hash, the tables are
+stale: this prints which files and exits 1 instead (``--allow-stale`` overrides).
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from pathlib import Path
 from typing import Any
+
+from bench.report import SOURCE_KEY
+from bench.runner import source_hash
 
 RESULTS = Path(__file__).resolve().parent.parent / "results"
 ORDER = [
@@ -100,9 +108,15 @@ def structure_table(group: str = "all") -> str:
         cells = []
         for k in kinds:
             st, tx = row[k]["structure_kept"], row[k]["text_kept"]
-            cells.append(f"{st['rate']:.0%} / {tx['rate']:.0%}" if st["rate"] is not None else "-")
+            cells.append(f"{_pct(st)} / {_pct(tx)}" if st["rate"] is not None else "-")
         lines.append(f"| {s} | " + " | ".join(cells) + " |")
     return "\n".join(lines)
+
+
+def _pct(rate: dict[str, Any]) -> str:
+    """A survival rate with its page-bootstrap 95% interval, in percent."""
+    lo, hi = rate["ci95"]
+    return f"{rate['rate']:.0%} [{lo:.0%}-{hi:.0%}]"
 
 
 def token_table() -> str:
@@ -139,8 +153,33 @@ def comments_table() -> str:
     return "\n".join(lines)
 
 
-def main() -> int:
+def stale_results(results: Path | None = None, current: str | None = None) -> dict[str, str]:
+    """Results files not produced by the current source: file name -> the hash they carry."""
+    results = results or RESULTS
+    current = current or source_hash()
+    stale: dict[str, str] = {}
+    for path in sorted(results.glob("*.json")):
+        stamp = json.loads(path.read_text(encoding="utf-8")).get(SOURCE_KEY, "missing")
+        if stamp != current:
+            stale[path.name] = stamp
+    return stale
+
+
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description="Print the README tables from results/*.json.")
+    ap.add_argument(
+        "--allow-stale", action="store_true", help="print even if results predate the source"
+    )
+    args = ap.parse_args(argv)
     sys.stdout.reconfigure(encoding="utf-8")  # type: ignore[union-attr]
+    stale = stale_results()
+    if stale:
+        print(f"results/ does not match the web2md source {source_hash()}:", file=sys.stderr)
+        for name, stamp in stale.items():
+            print(f"  {name}: made by {stamp}", file=sys.stderr)
+        if not args.allow_stale:
+            print("rerun `python -m bench.run`, or pass --allow-stale", file=sys.stderr)
+            return 1
     for title, fn in (
         ("F1 with 95% bootstrap CI", f1_table),
         ("WCEB per dataset", per_dataset_table),
