@@ -136,6 +136,31 @@ def token_table() -> str:
     return "\n".join(lines)
 
 
+def timing_table() -> str:
+    t = load("timing.json")
+    c, cal = t["conditions"], t["calibration_ms"]
+    datasets = list(next(iter(t["timing"].values()))["by_dataset_median_ms"])
+    lines = [
+        f"{c['pages']} pages ({c['pages_per_dataset']} per dataset), {c['repeats']} repeats, "
+        f"one process pinned to core {c['pinned_core']} of {c['logical_cpus']}; "
+        f"calibration loop max/min {cal['max_over_min']:.2f}",
+        "",
+        "| system | median ms/page [IQR] | mean | max | " + " | ".join(datasets) + " |",
+        "|---|---|---|---|" + "---|" * len(datasets),
+    ]
+    for s in ORDER:
+        if s not in t["timing"]:
+            continue
+        r = t["timing"][s]
+        m = r["ms_per_page"]
+        per = " | ".join(f"{r['by_dataset_median_ms'][d]:.0f}" for d in datasets)
+        lines.append(
+            f"| {s} | {m['median']:.0f} [{m['q1']:.0f}-{m['q3']:.0f}] "
+            f"| {r['mean_ms_per_page']:.0f} | {r['max_ms_per_page']:.0f} | {per} |"
+        )
+    return "\n".join(lines)
+
+
 def comments_table() -> str:
     c = load("comments_convention.json")
     lines = [
@@ -188,6 +213,7 @@ def main(argv: list[str] | None = None) -> int:
         ("Structure kept / text kept (all pages)", structure_table),
         ("Tokens (cl100k_base)", token_table),
         ("Dragnet comment convention", comments_table),
+        ("Speed, one pinned core", timing_table),
     ):
         print(f"## {title}\n\n{fn()}\n")
     return 0

@@ -223,3 +223,24 @@ def test_source_hash_changes_with_an_output_module(tmp_path, monkeypatch):
     before = runner.source_hash()
     (tmp_path / "markdown.py").write_text("x = 2\n")
     assert runner.source_hash() != before
+
+
+def test_timing_sample_is_fixed_and_capped_per_dataset():
+    from bench.datasets import Page
+    from bench.timing import sample
+
+    pages = [Page(d, f"{d}{i}", "", "<p>x</p>", "x") for d in ("a", "b") for i in range(10)]
+    first = sample(iter(pages), 3)
+    assert [p.page_id for p in first] == [p.page_id for p in sample(iter(reversed(pages)), 3)]
+    assert sorted({p.dataset for p in first}) == ["a", "b"] and len(first) == 6
+
+
+def test_timing_summary_uses_the_median_repeat_per_page():
+    from bench.datasets import Page
+    from bench.timing import summarise
+
+    pages = [Page("a", f"p{i}", "", "", "") for i in range(4)]
+    times = {"sys": {f"p{i}": [float(i), 100.0 + i, float(i)] for i in range(4)}}
+    row = summarise(pages, times)["sys"]
+    assert row["ms_per_page"] == {"median": 1.5, "q1": 0.8, "q3": 2.2}
+    assert row["max_ms_per_page"] == 3.0
