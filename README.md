@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/python-3.11%2B-blue" alt="python">
   <img src="https://img.shields.io/badge/runtime%20dependencies-none-success" alt="dependencies">
   <img src="https://img.shields.io/badge/network-off%20by%20default-success" alt="offline">
-  <img src="https://img.shields.io/badge/tests-102-success" alt="tests">
+  <img src="https://img.shields.io/badge/tests-127-success" alt="tests">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="license"></a>
 </p>
 
@@ -68,19 +68,19 @@ Every number below is printed by `uv run python -m bench.summary` from the files
 |---|---|---|
 | **1** | **The metric port is exact.** Scoring AEB's own published outputs with `bench/metrics.py` gives trafilatura 0.9575, readability 0.9223 and html-text 0.6649 against published 0.958, 0.922 and 0.665. | [`metric_check.json`](results/metric_check.json) |
 | **2** | **On AEB, web2md is level with the best.** 0.973 on the 101 held-out pages (never looked at while tuning) against trafilatura's 0.966; the paired difference, +0.007 [-0.002, +0.017], is not significant. It beats readability-lxml by +0.018 [+0.010, +0.026]. | [`extraction.json`](results/extraction.json), [`paired_diffs.json`](results/paired_diffs.json) |
-| **3** | **The AEB tuning does not transfer as a lead.** On the 3,794 WCEB pages (7 datasets, all held out) web2md scores 0.883, readability-lxml 0.884 (difference -0.001, not significant) and trafilatura 0.873. Switching the whole clean stage off *raises* WCEB F1 to 0.888: rules learnt on 2019 news pages cost a little on 2007 web pages. | [`ablations.json`](results/ablations.json) |
-| **4** | **F1 and structure disagree.** trafilatura's markdown keeps the text of 99% of gold code blocks but emits only 45% of them as code (the rest become paragraphs); web2md emits 86%, readability-lxml (rendered by web2md) 98%. Of gold tables, extractors keep 40-57% of the text but only 35-43% as a table. | [`structure.json`](results/structure.json) |
-| **5** | **"Pages that break every extractor" are mostly a labelling choice.** 189 pages defeat web2md, trafilatura and readability-lxml alike (best F1 < 0.5); 127 of them are Dragnet pages whose truth still contains the reader comments. Rescored against the article alone, extractors on those 420 pages go from 0.63-0.67 to 0.89-0.92 and whole-page dumps fall from 0.74-0.77 to 0.43-0.45. | [`comments_convention.json`](results/comments_convention.json), [`failures.json`](results/failures.json) |
+| **3** | **The AEB tuning does not transfer as a lead.** On the 3,794 WCEB pages (7 datasets, all held out) web2md scores 0.883, readability-lxml 0.885 (difference -0.002, not significant) and trafilatura 0.873. Switching the whole clean stage off *raises* WCEB F1 to 0.888: rules learnt on 2019 news pages cost a little on 2007 web pages. | [`ablations.json`](results/ablations.json) |
+| **4** | **F1 and structure disagree.** trafilatura's markdown keeps the text of 99% of gold code blocks but emits only 45% of them as code (the rest become paragraphs); web2md emits 86%, readability-lxml (rendered by web2md) 98%. Of gold tables, extractors keep 41-57% of the text but only 35-43% as a table. | [`structure.json`](results/structure.json) |
+| **5** | **"Pages that break every extractor" are mostly a labelling choice.** 187 pages defeat web2md, trafilatura and readability-lxml alike (best F1 < 0.5); 127 of them are Dragnet pages whose truth still contains the reader comments. Rescored against the article alone, extractors on those 420 pages go from 0.63-0.67 to 0.89-0.92 and whole-page dumps fall from 0.74-0.77 to 0.43-0.45. | [`comments_convention.json`](results/comments_convention.json), [`failures.json`](results/failures.json) |
 | **6** | **Extraction, not markdown, is where the tokens go.** Raw HTML costs a median 15,973 cl100k tokens per page. web2md's output is 94.4% smaller (1.06 tokens per article token); a whole-page converter (html2text, markdownify) saves only 64-65% and spends 5.6 tokens per article token. | [`tokens.json`](results/tokens.json) |
 
 ### F1 with 95% bootstrap CI
 
 | system | AEB dev (80) | AEB held-out (101) | WCEB, 7 datasets (3,794) |
 |---|---|---|---|
-| web2md | 0.972 [0.963, 0.980] | 0.973 [0.965, 0.981] | 0.883 [0.877, 0.888] |
+| web2md | 0.972 [0.963, 0.980] | 0.973 [0.965, 0.981] | 0.883 [0.877, 0.889] |
 | trafilatura | 0.952 [0.935, 0.968] | 0.966 [0.954, 0.977] | 0.873 [0.868, 0.879] |
 | trafilatura-md | 0.946 [0.929, 0.962] | 0.955 [0.941, 0.968] | 0.866 [0.861, 0.872] |
-| readability-lxml | 0.948 [0.919, 0.969] | 0.956 [0.944, 0.967] | 0.884 [0.878, 0.890] |
+| readability-lxml | 0.948 [0.919, 0.969] | 0.956 [0.944, 0.967] | 0.885 [0.879, 0.891] |
 | largest-block | 0.909 [0.881, 0.935] | 0.887 [0.840, 0.929] | 0.813 [0.804, 0.822] |
 | all-text | 0.682 [0.639, 0.724] | 0.660 [0.619, 0.701] | 0.739 [0.732, 0.745] |
 | html2text | 0.670 [0.627, 0.714] | 0.647 [0.607, 0.686] | 0.709 [0.702, 0.716] |
@@ -96,15 +96,15 @@ published benchmark) and trafilatura-md (its markdown output) use trafilatura's 
 | dataset | pages | web2md | trafilatura | readability-lxml | all-text |
 |---|---|---|---|---|---|
 | cetd | 700 | **0.912** | 0.911 | 0.911 | 0.787 |
-| cleaneval | 731 | **0.895** | 0.870 | 0.887 | 0.879 |
+| cleaneval | 731 | **0.897** | 0.870 | 0.891 | 0.888 |
 | cleanportaleval | 69 | 0.948 | 0.948 | **0.959** | 0.597 |
 | dragnet | 1379 | 0.837 | 0.834 | **0.847** | 0.654 |
 | google-trends-2017 | 179 | 0.799 | **0.851** | 0.799 | 0.642 |
-| l3s-gn1 | 621 | **0.931** | 0.897 | 0.926 | 0.685 |
-| readability | 115 | 0.957 | 0.934 | **0.963** | 0.825 |
+| l3s-gn1 | 621 | **0.929** | 0.897 | 0.925 | 0.690 |
+| readability | 115 | 0.958 | 0.934 | **0.963** | 0.825 |
 
 No system wins every dataset. On CleanEval, whose annotators kept most visible text, dumping
-the whole page (0.879) beats trafilatura (0.870): the "right answer" depends on the dataset.
+the whole page (0.888) beats trafilatura (0.870): the "right answer" depends on the dataset.
 
 ### Structure kept / text kept
 
@@ -117,9 +117,9 @@ line); *text kept* means its words reached the output at all.
 |---|---|---|---|---|
 | web2md | 43% / 53% | 86% / 88% | 30% / 50% | 30% / 47% |
 | trafilatura-md | 40% / 57% | 45% / 99% | 29% / 52% | 33% / 56% |
-| readability-lxml | 35% / 40% | 98% / 99% | 32% / 54% | 30% / 48% |
-| largest-block | 43% / 84% | 81% / 83% | 46% / 75% | 30% / 49% |
-| all-text | 56% / 99% | 98% / 100% | 59% / 99% | 77% / 100% |
+| readability-lxml | 35% / 41% | 98% / 99% | 32% / 54% | 30% / 48% |
+| largest-block | 44% / 85% | 81% / 83% | 46% / 75% | 30% / 49% |
+| all-text | 57% / 100% | 98% / 100% | 59% / 99% | 77% / 100% |
 | html2text | 39% / 85% | 97% / 100% | 56% / 80% | 74% / 97% |
 | markdownify | 59% / 91% | 98% / 100% | 52% / 96% | 78% / 99% |
 
@@ -154,8 +154,8 @@ partly measuring whether a tool keeps comments.
 | variant | AEB dev | AEB held-out | WCEB (all) |
 |---|---|---|---|
 | web2md | 0.972 | 0.973 | 0.883 |
-| web2md[no-hints] | 0.954 | 0.918 | 0.882 |
-| web2md[no-link-density] | 0.963 | 0.973 | 0.878 |
+| web2md[no-hints] | 0.954 | 0.918 | 0.883 |
+| web2md[no-link-density] | 0.963 | 0.973 | 0.879 |
 | web2md[no-siblings] | 0.962 | 0.974 | 0.881 |
 | web2md[no-clean] | 0.949 | 0.952 | 0.888 |
 | web2md[no-fallback] | 0.954 | 0.899 | 0.853 |
@@ -168,14 +168,14 @@ density and sibling merging are within noise on held-out data.
 
 | category | pages |
 |---|---|
-| ok (precision and recall both at least 0.8) | 2,959 |
-| under-extraction: article partly missing | 635 |
-| over-extraction: boilerplate kept | 160 |
-| wrong block: recall below 0.1 | 142 |
+| ok (precision and recall both at least 0.8) | 2,963 |
+| under-extraction: article partly missing | 632 |
+| over-extraction: boilerplate kept | 166 |
+| wrong block: recall below 0.1 | 143 |
 | mixed | 68 |
-| empty output | 11 |
+| empty output | 3 |
 
-Under-extraction dominates, and 348 of the 635 are Dragnet pages, the comment convention
+Under-extraction dominates, and 348 of the 632 are Dragnet pages, the comment convention
 again. On AEB alone, 171 of 181 pages are ok. Examples of each category are listed in
 `failures.json`.
 
@@ -192,8 +192,9 @@ again. On AEB alone, 171 of 181 pages are ok. Examples of each category are list
   on WCEB ([`sensitivity.json`](results/sensitivity.json)).
 - **Per site**: across AEB's 126 sites web2md is more than 0.01 F1 better than trafilatura on 33,
   worse on 20 and level on 73 ([`per_site.json`](results/per_site.json)).
-- **Speed**: a mean of 120 ms per page on WCEB and 158 ms on AEB, per worker process, against
-  trafilatura's 65 and 77 ms; pure Python is the price of no dependencies.
+- **Speed** (one pinned core, 320 pages, 5 repeats; [`timing.json`](results/timing.json)): web2md
+  takes a median 192 ms per page [IQR 121-355] against trafilatura's 131, readability-lxml's 115
+  and markdownify's 226; pure Python is the price of no dependencies.
 
 ## Input / Output
 
@@ -346,7 +347,8 @@ bench/
   structure.py    gold tables/code/lists/headings and whether they survive
   report.py       one function per results file
   run.py          runs everything, caches outputs keyed by tool version and source hash
-  summary.py      prints the README tables from results/
+  timing.py       per-page run time on one pinned core, repeated, median and IQR
+  summary.py      prints the README tables from results/, refusing stale ones
 examples/         four hand-written pages with known answers (used by demo.py and tests)
 results/          every number in this README
 ```
@@ -359,7 +361,7 @@ optional `baselines` group and about 400 MB of disk once unpacked.
 ## Tests
 
 ```bash
-uv run pytest -q       # 102 tests, no network, no data download
+uv run pytest -q       # 127 tests, no network, no data download
 uv run ruff check .
 ```
 
@@ -421,6 +423,22 @@ with `WEB2MD_DATA` pointed at an empty directory.
   gzip file once, and later runs load it in minutes.
 - **The network is throttled for GitHub LFS.** The 50 MB WCEB archive arrived as 48 one-megabyte
   range requests, checked against its SHA-256.
+- **Nested layout tables were exponential.** The renderer drew a layout table's cells, and
+  each nested layout table inside redrew its own, once per enclosing level. Five L3S-GN1 pages
+  with tables nested 13 deep took 11-14 s each to render whole; caching each cell's blocks
+  brought them to 0.2-0.5 s. This is why `all-text` once looked slower than full extraction on
+  L3S-GN1: extraction only renders the article, which holds none of those tables.
+- **Short pages came out empty.** A page whose content was a short list or a small table has
+  no block of 25 characters or more, so nothing scored and cleaning removed the rest. An
+  empty extraction on a page with visible text now returns the visible body.
+- **Table content outside cells was dropped.** A `<p>` directly inside `<table>`, a `<div>`
+  inside `<tr>`, and rows wrapped in a `<form>` are common in old markup. Browsers move the
+  stray content in front of the table ("foster parenting"); the renderer now does the same
+  and reads rows through the form.
+- **Results once lagged the code.** A review found that the published tables came from the
+  previous commit's code: 15 WCEB pages rendered differently with the working tree. Every
+  results file now carries the hash of the source that made it, and `bench.summary` refuses
+  to print tables when any hash differs from the working tree.
 - **Tuning discipline.** AEB is split by site into dev (80 pages) and held-out (101). One
   whole-benchmark run, before any tuning, listed worst pages from both splits; after
   that, only dev pages were inspected. WCEB was never used for tuning.

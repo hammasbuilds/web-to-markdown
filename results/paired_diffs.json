@@ -1,4 +1,5 @@
 {
+  "web2md_source": "6e598cd5bd91",
   "note": "F1(web2md) - F1(system), paired bootstrap over the same pages, 95% CI",
   "groups": {
     "aeb": {
@@ -395,47 +396,47 @@
     },
     "wceb (all)": {
       "all-text": {
-        "f1_diff": 0.1441,
+        "f1_diff": 0.1418,
         "ci95": [
-          0.1367,
-          0.1519
+          0.1344,
+          0.1497
         ],
         "significant": true
       },
       "largest-block": {
-        "f1_diff": 0.0697,
+        "f1_diff": 0.0696,
         "ci95": [
-          0.0616,
-          0.0775
+          0.0613,
+          0.0773
         ],
         "significant": true
       },
       "web2md[no-hints]": {
-        "f1_diff": 0.0002,
+        "f1_diff": -0.0001,
         "ci95": [
-          -0.0038,
-          0.004
+          -0.004,
+          0.0038
         ],
         "significant": false
       },
       "web2md[no-link-density]": {
-        "f1_diff": 0.0041,
+        "f1_diff": 0.0042,
         "ci95": [
-          0.0011,
+          0.0012,
           0.0069
         ],
         "significant": true
       },
       "web2md[no-siblings]": {
-        "f1_diff": 0.0018,
+        "f1_diff": 0.0019,
         "ci95": [
-          0.0009,
-          0.0026
+          0.001,
+          0.0027
         ],
         "significant": true
       },
       "web2md[no-clean]": {
-        "f1_diff": -0.0052,
+        "f1_diff": -0.0051,
         "ci95": [
           -0.0075,
           -0.0029
@@ -445,146 +446,146 @@
       "web2md[no-fallback]": {
         "f1_diff": 0.0298,
         "ci95": [
-          0.025,
-          0.0348
+          0.0249,
+          0.0347
         ],
         "significant": true
       },
       "html2text": {
-        "f1_diff": 0.1734,
+        "f1_diff": 0.1737,
         "ci95": [
-          0.1651,
-          0.1818
+          0.1656,
+          0.1822
         ],
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.1622,
+        "f1_diff": 0.1625,
         "ci95": [
-          0.1543,
-          0.1705
+          0.1546,
+          0.1708
         ],
         "significant": true
       },
       "readability-lxml": {
-        "f1_diff": -0.0014,
+        "f1_diff": -0.0019,
         "ci95": [
-          -0.0061,
-          0.003
+          -0.0065,
+          0.0027
         ],
         "significant": false
       },
       "trafilatura": {
-        "f1_diff": 0.0093,
+        "f1_diff": 0.0096,
         "ci95": [
-          0.0047,
-          0.0143
+          0.005,
+          0.0145
         ],
         "significant": true
       },
       "trafilatura-md": {
-        "f1_diff": 0.0163,
+        "f1_diff": 0.0166,
         "ci95": [
-          0.0111,
-          0.0213
+          0.0114,
+          0.0217
         ],
         "significant": true
       }
     },
     "wceb/cleaneval": {
       "all-text": {
-        "f1_diff": 0.0159,
+        "f1_diff": 0.0091,
         "ci95": [
-          0.0043,
-          0.0266
+          -0.001,
+          0.0189
         ],
-        "significant": true
+        "significant": false
       },
       "largest-block": {
-        "f1_diff": 0.0728,
+        "f1_diff": 0.0744,
         "ci95": [
-          0.0566,
-          0.0889
+          0.0582,
+          0.0903
         ],
         "significant": true
       },
       "web2md[no-hints]": {
-        "f1_diff": -0.0,
+        "f1_diff": -0.0016,
         "ci95": [
-          -0.0047,
-          0.0044
+          -0.0061,
+          0.0025
         ],
         "significant": false
       },
       "web2md[no-link-density]": {
-        "f1_diff": 0.0011,
+        "f1_diff": 0.002,
         "ci95": [
-          -0.0061,
-          0.0078
+          -0.0055,
+          0.0095
         ],
         "significant": false
       },
       "web2md[no-siblings]": {
-        "f1_diff": 0.0028,
+        "f1_diff": 0.0032,
         "ci95": [
-          0.0011,
-          0.005
+          0.0016,
+          0.0054
         ],
         "significant": true
       },
       "web2md[no-clean]": {
-        "f1_diff": -0.0007,
+        "f1_diff": 0.0004,
         "ci95": [
-          -0.0057,
-          0.0041
+          -0.005,
+          0.0057
         ],
         "significant": false
       },
       "web2md[no-fallback]": {
-        "f1_diff": 0.0012,
+        "f1_diff": 0.0022,
         "ci95": [
-          -0.0026,
-          0.0047
+          -0.0018,
+          0.0064
         ],
         "significant": false
       },
       "html2text": {
-        "f1_diff": 0.0333,
+        "f1_diff": 0.0356,
         "ci95": [
-          0.0214,
-          0.0454
+          0.0241,
+          0.0471
         ],
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.0187,
+        "f1_diff": 0.021,
         "ci95": [
-          0.0074,
-          0.0291
+          0.0103,
+          0.0311
         ],
         "significant": true
       },
       "readability-lxml": {
-        "f1_diff": 0.0081,
+        "f1_diff": 0.0063,
         "ci95": [
-          -0.0036,
-          0.0207
+          -0.0048,
+          0.0178
         ],
         "significant": false
       },
       "trafilatura": {
-        "f1_diff": 0.0246,
+        "f1_diff": 0.027,
         "ci95": [
-          0.0141,
-          0.0354
+          0.0163,
+          0.0374
         ],
         "significant": true
       },
       "trafilatura-md": {
-        "f1_diff": 0.0325,
+        "f1_diff": 0.0349,
         "ci95": [
-          0.0217,
-          0.0441
+          0.0241,
+          0.0462
         ],
         "significant": true
       }
@@ -697,10 +698,10 @@
         "significant": true
       },
       "largest-block": {
-        "f1_diff": 0.0721,
+        "f1_diff": 0.0722,
         "ci95": [
           0.0579,
-          0.0866
+          0.0867
         ],
         "significant": true
       },
@@ -747,7 +748,7 @@
       "html2text": {
         "f1_diff": 0.2167,
         "ci95": [
-          0.1997,
+          0.1998,
           0.2332
         ],
         "significant": true
@@ -885,34 +886,34 @@
     },
     "wceb/l3s-gn1": {
       "all-text": {
-        "f1_diff": 0.2466,
+        "f1_diff": 0.2395,
         "ci95": [
-          0.2327,
-          0.2606
+          0.2273,
+          0.2529
         ],
         "significant": true
       },
       "largest-block": {
-        "f1_diff": 0.1051,
+        "f1_diff": 0.1017,
         "ci95": [
-          0.0849,
-          0.1277
+          0.0816,
+          0.1228
         ],
         "significant": true
       },
       "web2md[no-hints]": {
-        "f1_diff": 0.0187,
+        "f1_diff": 0.0186,
         "ci95": [
           0.0095,
-          0.029
+          0.0289
         ],
         "significant": true
       },
       "web2md[no-link-density]": {
-        "f1_diff": 0.0309,
+        "f1_diff": 0.0293,
         "ci95": [
-          0.024,
-          0.0385
+          0.0232,
+          0.036
         ],
         "significant": true
       },
@@ -925,129 +926,129 @@
         "significant": false
       },
       "web2md[no-clean]": {
-        "f1_diff": 0.0192,
+        "f1_diff": 0.0172,
         "ci95": [
-          0.0144,
-          0.0241
+          0.0134,
+          0.0212
         ],
         "significant": true
       },
       "web2md[no-fallback]": {
-        "f1_diff": 0.012,
+        "f1_diff": 0.0099,
         "ci95": [
-          0.0054,
-          0.0193
+          0.0025,
+          0.0175
         ],
         "significant": true
       },
       "html2text": {
-        "f1_diff": 0.2897,
+        "f1_diff": 0.2877,
         "ci95": [
-          0.2731,
-          0.3062
+          0.2703,
+          0.3049
         ],
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.2691,
+        "f1_diff": 0.2671,
         "ci95": [
-          0.2549,
-          0.284
+          0.2527,
+          0.2832
         ],
         "significant": true
       },
       "readability-lxml": {
-        "f1_diff": 0.0058,
+        "f1_diff": 0.0043,
         "ci95": [
-          -0.0057,
-          0.0168
+          -0.0089,
+          0.0164
         ],
         "significant": false
       },
       "trafilatura": {
-        "f1_diff": 0.0342,
+        "f1_diff": 0.0321,
         "ci95": [
-          0.0225,
-          0.046
+          0.0202,
+          0.0444
         ],
         "significant": true
       },
       "trafilatura-md": {
-        "f1_diff": 0.0391,
+        "f1_diff": 0.037,
         "ci95": [
-          0.0277,
-          0.0503
+          0.025,
+          0.049
         ],
         "significant": true
       }
     },
     "wceb/readability": {
       "all-text": {
-        "f1_diff": 0.132,
+        "f1_diff": 0.1324,
         "ci95": [
-          0.0961,
+          0.0962,
           0.1697
         ],
         "significant": true
       },
       "largest-block": {
-        "f1_diff": 0.0849,
+        "f1_diff": 0.0853,
         "ci95": [
-          0.0565,
-          0.1147
+          0.0569,
+          0.1151
         ],
         "significant": true
       },
       "web2md[no-hints]": {
-        "f1_diff": 0.0151,
+        "f1_diff": 0.015,
         "ci95": [
-          0.0004,
-          0.0357
+          0.0005,
+          0.0354
         ],
         "significant": true
       },
       "web2md[no-link-density]": {
-        "f1_diff": 0.0172,
+        "f1_diff": 0.0176,
         "ci95": [
           0.0021,
-          0.0391
+          0.0398
         ],
         "significant": true
       },
       "web2md[no-siblings]": {
         "f1_diff": 0.0023,
         "ci95": [
-          0.0005,
+          0.0004,
           0.0046
         ],
         "significant": true
       },
       "web2md[no-clean]": {
-        "f1_diff": -0.004,
+        "f1_diff": -0.0036,
         "ci95": [
-          -0.0101,
-          0.0012
+          -0.0095,
+          0.0014
         ],
         "significant": false
       },
       "web2md[no-fallback]": {
-        "f1_diff": 0.0305,
+        "f1_diff": 0.0308,
         "ci95": [
-          0.0088,
-          0.0585
+          0.009,
+          0.0593
         ],
         "significant": true
       },
       "html2text": {
-        "f1_diff": 0.1573,
+        "f1_diff": 0.1577,
         "ci95": [
-          0.1171,
-          0.1974
+          0.1176,
+          0.1978
         ],
         "significant": true
       },
       "markdownify": {
-        "f1_diff": 0.1627,
+        "f1_diff": 0.1631,
         "ci95": [
           0.1232,
           0.2044
@@ -1055,26 +1056,26 @@
         "significant": true
       },
       "readability-lxml": {
-        "f1_diff": -0.0057,
+        "f1_diff": -0.0054,
         "ci95": [
-          -0.0184,
-          0.0074
+          -0.0181,
+          0.0084
         ],
         "significant": false
       },
       "trafilatura": {
-        "f1_diff": 0.0233,
+        "f1_diff": 0.0237,
         "ci95": [
-          0.0045,
-          0.0421
+          0.0051,
+          0.0425
         ],
         "significant": true
       },
       "trafilatura-md": {
-        "f1_diff": 0.0311,
+        "f1_diff": 0.0314,
         "ci95": [
-          0.0119,
-          0.0501
+          0.0122,
+          0.0507
         ],
         "significant": true
       }

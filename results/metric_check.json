@@ -1,4 +1,5 @@
 {
+  "web2md_source": "6e598cd5bd91",
   "purpose": "reproduce the benchmark's published F1 from its published outputs",
   "results": {
     "trafilatura": {

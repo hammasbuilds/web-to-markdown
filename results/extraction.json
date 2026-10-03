@@ -1,4 +1,5 @@
 {
+  "web2md_source": "6e598cd5bd91",
   "metric": "shingle (4-gram) P/R/F1 as in scrapinghub/article-extraction-benchmark",
   "scoring_view": "images dropped, link targets and fence info removed (bench/textview.py)",
   "systems": {
@@ -78,7 +79,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 158.4996
+          "ms_per_page": 244.1742
         },
         "all-text": {
           "precision": 0.5056,
@@ -98,7 +99,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 129.6989
+          "ms_per_page": 350.0281
         },
         "largest-block": {
           "precision": 0.8873,
@@ -118,7 +119,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 28.8675
+          "ms_per_page": 52.0287
         },
         "html2text": {
           "precision": 0.4941,
@@ -178,7 +179,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 69.0533
+          "ms_per_page": 114.1453
         },
         "trafilatura": {
           "precision": 0.9428,
@@ -243,7 +244,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 153.1703
+          "ms_per_page": 258.7178
         },
         "all-text": {
           "precision": 0.5191,
@@ -263,7 +264,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 123.3322
+          "ms_per_page": 351.5655
         },
         "largest-block": {
           "precision": 0.9054,
@@ -283,7 +284,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 26.2239
+          "ms_per_page": 48.7196
         },
         "html2text": {
           "precision": 0.5083,
@@ -343,7 +344,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 62.1369
+          "ms_per_page": 105.1807
         },
         "trafilatura": {
           "precision": 0.9325,
@@ -408,7 +409,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 162.7208
+          "ms_per_page": 232.6544
         },
         "all-text": {
           "precision": 0.4948,
@@ -428,7 +429,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 134.7418
+          "ms_per_page": 348.8104
         },
         "largest-block": {
           "precision": 0.8729,
@@ -448,7 +449,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 30.9614
+          "ms_per_page": 54.6497
         },
         "html2text": {
           "precision": 0.4828,
@@ -508,7 +509,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 74.5316
+          "ms_per_page": 121.246
         },
         "trafilatura": {
           "precision": 0.9509,
@@ -573,7 +574,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 161.174
+          "ms_per_page": 247.6513
         },
         "all-text": {
           "precision": 0.6573,
@@ -593,7 +594,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 139.7701
+          "ms_per_page": 303.3658
         },
         "largest-block": {
           "precision": 0.9439,
@@ -613,7 +614,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 69.184
+          "ms_per_page": 98.0425
         },
         "html2text": {
           "precision": 0.6246,
@@ -673,7 +674,7 @@
           ],
           "errors": 0,
           "empty_outputs": 1,
-          "ms_per_page": 80.8038
+          "ms_per_page": 498.2777
         },
         "trafilatura": {
           "precision": 0.9749,
@@ -721,64 +722,64 @@
       "n_pages": 3794,
       "systems": {
         "web2md": {
-          "precision": 0.9362,
-          "recall": 0.8347,
-          "f1": 0.8826,
+          "precision": 0.9342,
+          "recall": 0.8369,
+          "f1": 0.8829,
           "f1_ci95": [
-            0.8768,
-            0.8883
+            0.8772,
+            0.8887
           ],
           "precision_ci95": [
-            0.9308,
-            0.9416
+            0.9286,
+            0.9397
           ],
           "recall_ci95": [
-            0.8271,
-            0.8425
+            0.8292,
+            0.8446
           ],
           "errors": 0,
-          "empty_outputs": 11,
-          "ms_per_page": 119.7067
+          "empty_outputs": 3,
+          "ms_per_page": 188.1716
         },
         "all-text": {
-          "precision": 0.5971,
-          "recall": 0.9675,
-          "f1": 0.7385,
+          "precision": 0.5988,
+          "recall": 0.972,
+          "f1": 0.741,
           "f1_ci95": [
-            0.7317,
-            0.7447
+            0.7343,
+            0.747
           ],
           "precision_ci95": [
-            0.5887,
-            0.605
+            0.5903,
+            0.6064
           ],
           "recall_ci95": [
-            0.9642,
-            0.9704
-          ],
-          "errors": 0,
-          "empty_outputs": 7,
-          "ms_per_page": 131.3552
-        },
-        "largest-block": {
-          "precision": 0.8634,
-          "recall": 0.7679,
-          "f1": 0.8129,
-          "f1_ci95": [
-            0.8039,
-            0.8223
-          ],
-          "precision_ci95": [
-            0.8545,
-            0.8726
-          ],
-          "recall_ci95": [
-            0.7572,
-            0.7789
+            0.9697,
+            0.974
           ],
           "errors": 0,
           "empty_outputs": 2,
-          "ms_per_page": 37.8631
+          "ms_per_page": 209.4021
+        },
+        "largest-block": {
+          "precision": 0.8635,
+          "recall": 0.7685,
+          "f1": 0.8132,
+          "f1_ci95": [
+            0.8044,
+            0.8226
+          ],
+          "precision_ci95": [
+            0.8546,
+            0.8727
+          ],
+          "recall_ci95": [
+            0.7577,
+            0.7792
+          ],
+          "errors": 0,
+          "empty_outputs": 2,
+          "ms_per_page": 61.299
         },
         "html2text": {
           "precision": 0.5683,
@@ -821,24 +822,24 @@
           "ms_per_page": 106.194
         },
         "readability-lxml": {
-          "precision": 0.9379,
-          "recall": 0.836,
-          "f1": 0.884,
+          "precision": 0.9377,
+          "recall": 0.8375,
+          "f1": 0.8848,
           "f1_ci95": [
-            0.8783,
-            0.8897
+            0.879,
+            0.8908
           ],
           "precision_ci95": [
-            0.9325,
-            0.943
+            0.9324,
+            0.9427
           ],
           "recall_ci95": [
-            0.8283,
-            0.8443
+            0.83,
+            0.8459
           ],
           "errors": 0,
-          "empty_outputs": 35,
-          "ms_per_page": 62.419
+          "empty_outputs": 30,
+          "ms_per_page": 224.3016
         },
         "trafilatura": {
           "precision": 0.9044,
@@ -886,64 +887,64 @@
       "n_pages": 731,
       "systems": {
         "web2md": {
-          "precision": 0.9135,
-          "recall": 0.8771,
-          "f1": 0.8949,
+          "precision": 0.9089,
+          "recall": 0.8859,
+          "f1": 0.8973,
           "f1_ci95": [
-            0.8827,
-            0.907
+            0.8852,
+            0.9092
           ],
           "precision_ci95": [
-            0.9011,
-            0.9252
+            0.8963,
+            0.9208
           ],
           "recall_ci95": [
-            0.8599,
-            0.8939
-          ],
-          "errors": 0,
-          "empty_outputs": 6,
-          "ms_per_page": 79.725
-        },
-        "all-text": {
-          "precision": 0.8194,
-          "recall": 0.9481,
-          "f1": 0.879,
-          "f1_ci95": [
-            0.8677,
-            0.8899
-          ],
-          "precision_ci95": [
-            0.8035,
-            0.8336
-          ],
-          "recall_ci95": [
-            0.9371,
-            0.9578
+            0.87,
+            0.9011
           ],
           "errors": 0,
           "empty_outputs": 2,
-          "ms_per_page": 93.1007
+          "ms_per_page": 241.1262
+        },
+        "all-text": {
+          "precision": 0.8255,
+          "recall": 0.9613,
+          "f1": 0.8882,
+          "f1_ci95": [
+            0.8782,
+            0.8978
+          ],
+          "precision_ci95": [
+            0.8101,
+            0.8392
+          ],
+          "recall_ci95": [
+            0.9547,
+            0.9672
+          ],
+          "errors": 0,
+          "empty_outputs": 1,
+          "ms_per_page": 136.0753
         },
         "largest-block": {
           "precision": 0.8763,
-          "recall": 0.7743,
-          "f1": 0.8222,
+          "recall": 0.7756,
+          "f1": 0.8229,
           "f1_ci95": [
-            0.8032,
-            0.8395
+            0.8042,
+            0.8403
           ],
           "precision_ci95": [
-            0.8582,
+            0.8583,
             0.8928
           ],
           "recall_ci95": [
-            0.749,
-            0.7987
+            0.7506,
+            0.7997
           ],
           "errors": 0,
           "empty_outputs": 2,
-          "ms_per_page": 32.2637
+          "ms_per_page": 66.9329
         },
         "html2text": {
           "precision": 0.7953,
@@ -986,24 +987,24 @@
           "ms_per_page": 70.4224
         },
         "readability-lxml": {
-          "precision": 0.9132,
-          "recall": 0.8619,
-          "f1": 0.8868,
+          "precision": 0.9137,
+          "recall": 0.8694,
+          "f1": 0.891,
           "f1_ci95": [
-            0.8729,
-            0.9
+            0.8768,
+            0.9035
           ],
           "precision_ci95": [
-            0.8993,
-            0.9258
+            0.9002,
+            0.9256
           ],
           "recall_ci95": [
-            0.8416,
-            0.8801
+            0.8503,
+            0.8875
           ],
           "errors": 0,
-          "empty_outputs": 15,
-          "ms_per_page": 61.0156
+          "empty_outputs": 11,
+          "ms_per_page": 117.4326
         },
         "trafilatura": {
           "precision": 0.8738,
@@ -1068,7 +1069,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 112.5748
+          "ms_per_page": 164.1249
         },
         "all-text": {
           "precision": 0.433,
@@ -1088,7 +1089,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 107.4888
+          "ms_per_page": 292.7211
         },
         "largest-block": {
           "precision": 0.9496,
@@ -1108,7 +1109,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 34.9849
+          "ms_per_page": 68.994
         },
         "html2text": {
           "precision": 0.4277,
@@ -1168,7 +1169,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 42.7952
+          "ms_per_page": 89.5205
         },
         "trafilatura": {
           "precision": 0.9722,
@@ -1225,23 +1226,23 @@
           ],
           "precision_ci95": [
             0.9168,
-            0.938
+            0.9379
           ],
           "recall_ci95": [
             0.7471,
-            0.7775
+            0.7776
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 108.5722
+          "ms_per_page": 141.5592
         },
         "all-text": {
           "precision": 0.4912,
           "recall": 0.9776,
-          "f1": 0.6539,
+          "f1": 0.6538,
           "f1_ci95": [
             0.6419,
-            0.665
+            0.6649
           ],
           "precision_ci95": [
             0.4777,
@@ -1253,11 +1254,11 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 100.8269
+          "ms_per_page": 210.4097
         },
         "largest-block": {
-          "precision": 0.8438,
-          "recall": 0.6996,
+          "precision": 0.8437,
+          "recall": 0.6997,
           "f1": 0.765,
           "f1_ci95": [
             0.7497,
@@ -1273,7 +1274,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 27.375
+          "ms_per_page": 41.972
         },
         "html2text": {
           "precision": 0.4589,
@@ -1333,7 +1334,7 @@
           ],
           "errors": 0,
           "empty_outputs": 11,
-          "ms_per_page": 46.9719
+          "ms_per_page": 72.6119
         },
         "trafilatura": {
           "precision": 0.9012,
@@ -1398,7 +1399,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 349.7711
+          "ms_per_page": 469.1611
         },
         "all-text": {
           "precision": 0.4821,
@@ -1418,7 +1419,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 278.0062
+          "ms_per_page": 513.3664
         },
         "largest-block": {
           "precision": 0.7475,
@@ -1438,7 +1439,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 70.7917
+          "ms_per_page": 115.8606
         },
         "html2text": {
           "precision": 0.4587,
@@ -1498,7 +1499,7 @@
           ],
           "errors": 0,
           "empty_outputs": 4,
-          "ms_per_page": 138.182
+          "ms_per_page": 207.5799
         },
         "trafilatura": {
           "precision": 0.8719,
@@ -1546,64 +1547,64 @@
       "n_pages": 621,
       "systems": {
         "web2md": {
-          "precision": 0.9378,
-          "recall": 0.9251,
-          "f1": 0.9314,
+          "precision": 0.9321,
+          "recall": 0.9266,
+          "f1": 0.9294,
           "f1_ci95": [
-            0.9201,
-            0.9407
+            0.918,
+            0.9393
           ],
           "precision_ci95": [
-            0.9244,
-            0.9495
+            0.9174,
+            0.9451
           ],
           "recall_ci95": [
-            0.9137,
-            0.936
+            0.9152,
+            0.9372
           ],
           "errors": 0,
-          "empty_outputs": 4,
-          "ms_per_page": 70.1351
+          "empty_outputs": 1,
+          "ms_per_page": 73.5639
         },
         "all-text": {
-          "precision": 0.535,
-          "recall": 0.9514,
-          "f1": 0.6848,
+          "precision": 0.5373,
+          "recall": 0.9632,
+          "f1": 0.6898,
           "f1_ci95": [
-            0.6685,
-            0.6996
+            0.6743,
+            0.7045
           ],
           "precision_ci95": [
-            0.5166,
-            0.5519
+            0.5201,
+            0.5541
           ],
           "recall_ci95": [
-            0.939,
-            0.9626
+            0.9542,
+            0.9711
           ],
           "errors": 0,
-          "empty_outputs": 5,
-          "ms_per_page": 193.4069
+          "empty_outputs": 1,
+          "ms_per_page": 88.9455
         },
         "largest-block": {
-          "precision": 0.8101,
-          "recall": 0.8432,
-          "f1": 0.8263,
+          "precision": 0.8108,
+          "recall": 0.8453,
+          "f1": 0.8277,
           "f1_ci95": [
-            0.8027,
-            0.8485
+            0.804,
+            0.8498
           ],
           "precision_ci95": [
-            0.7841,
-            0.8351
+            0.7848,
+            0.8354
           ],
           "recall_ci95": [
-            0.8189,
-            0.866
+            0.8212,
+            0.8685
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 23.3014
+          "ms_per_page": 40.096
         },
         "html2text": {
           "precision": 0.502,
@@ -1646,24 +1647,24 @@
           "ms_per_page": 71.6464
         },
         "readability-lxml": {
-          "precision": 0.9281,
-          "recall": 0.9232,
-          "f1": 0.9256,
+          "precision": 0.9266,
+          "recall": 0.9236,
+          "f1": 0.9251,
           "f1_ci95": [
-            0.9134,
-            0.9374
+            0.9121,
+            0.9373
           ],
           "precision_ci95": [
-            0.9137,
-            0.9422
+            0.912,
+            0.9411
           ],
           "recall_ci95": [
-            0.9103,
-            0.9355
+            0.9108,
+            0.9358
           ],
           "errors": 0,
-          "empty_outputs": 4,
-          "ms_per_page": 43.7459
+          "empty_outputs": 3,
+          "ms_per_page": 44.098
         },
         "trafilatura": {
           "precision": 0.8627,
@@ -1711,24 +1712,24 @@
       "n_pages": 115,
       "systems": {
         "web2md": {
-          "precision": 0.9854,
-          "recall": 0.9309,
-          "f1": 0.9574,
+          "precision": 0.9784,
+          "recall": 0.938,
+          "f1": 0.9578,
           "f1_ci95": [
-            0.9389,
+            0.9402,
             0.9714
           ],
           "precision_ci95": [
-            0.9801,
-            0.9898
+            0.9605,
+            0.989
           ],
           "recall_ci95": [
-            0.8972,
-            0.9564
+            0.9106,
+            0.9591
           ],
           "errors": 0,
-          "empty_outputs": 1,
-          "ms_per_page": 168.8255
+          "empty_outputs": 0,
+          "ms_per_page": 244.4022
         },
         "all-text": {
           "precision": 0.7088,
@@ -1739,7 +1740,7 @@
             0.8612
           ],
           "precision_ci95": [
-            0.6546,
+            0.6547,
             0.7618
           ],
           "recall_ci95": [
@@ -1748,7 +1749,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 140.3488
+          "ms_per_page": 218.8183
         },
         "largest-block": {
           "precision": 0.9423,
@@ -1768,7 +1769,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 37.678
+          "ms_per_page": 58.5408
         },
         "html2text": {
           "precision": 0.6836,
@@ -1828,7 +1829,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 139.3448
+          "ms_per_page": 2134.8876
         },
         "trafilatura": {
           "precision": 0.939,

@@ -1,4 +1,5 @@
 {
+  "web2md_source": "6e598cd5bd91",
   "thresholds": "precision/recall 0.8; wrong block = recall < 0.1",
   "categories": {
     "aeb": {
@@ -7,11 +8,11 @@
       "under-extraction (article partly missing)": 4
     },
     "all": {
-      "ok": 2959,
-      "over-extraction (boilerplate kept)": 160,
-      "under-extraction (article partly missing)": 635,
-      "wrong block (almost none of the article)": 142,
-      "empty output": 11,
+      "ok": 2963,
+      "over-extraction (boilerplate kept)": 166,
+      "under-extraction (article partly missing)": 632,
+      "wrong block (almost none of the article)": 143,
+      "empty output": 3,
       "mixed (part of the article plus boilerplate)": 68
     },
     "wceb/cetd": {
@@ -21,12 +22,12 @@
       "over-extraction (boilerplate kept)": 1
     },
     "wceb/cleaneval": {
-      "under-extraction (article partly missing)": 59,
-      "empty output": 6,
-      "ok": 559,
+      "under-extraction (article partly missing)": 56,
+      "empty output": 2,
+      "ok": 563,
       "mixed (part of the article plus boilerplate)": 34,
-      "over-extraction (boilerplate kept)": 51,
-      "wrong block (almost none of the article)": 22
+      "over-extraction (boilerplate kept)": 55,
+      "wrong block (almost none of the article)": 21
     },
     "wceb/cleanportaleval": {
       "ok": 58,
@@ -49,14 +50,14 @@
     },
     "wceb/l3s-gn1": {
       "ok": 554,
-      "empty output": 4,
+      "empty output": 1,
       "under-extraction (article partly missing)": 14,
-      "over-extraction (boilerplate kept)": 38,
-      "wrong block (almost none of the article)": 8,
+      "over-extraction (boilerplate kept)": 39,
+      "wrong block (almost none of the article)": 10,
       "mixed (part of the article plus boilerplate)": 3
     },
     "wceb/readability": {
-      "empty output": 1,
+      "over-extraction (boilerplate kept)": 1,
       "ok": 104,
       "under-extraction (article partly missing)": 10
     }
@@ -107,6 +108,12 @@
       },
       {
         "dataset": "wceb/cleaneval",
+        "page_id": "0719d987790bd1f5e76f20c9bd56ab4935c3899fe84c2ced5d03208254849d14",
+        "url": "http://mobyrebuttal.blogspot.com/",
+        "f1": 0.1088
+      },
+      {
+        "dataset": "wceb/cleaneval",
         "page_id": "0757a7fb70c89d6e5602d947b3daeb2c8c75e7190eabd364e7e4ef9a0356b6d7",
         "url": "http://www.michaelgreer.com/keep_moving.htm",
         "f1": 0.8839
@@ -121,19 +128,13 @@
         "dataset": "wceb/cleaneval",
         "page_id": "0ecaa01dcb5f00edd4135674774ab414646464d18cc14823d17f52ac537e43b6",
         "url": "http://jodi.ecs.soton.ac.uk/Articles/v01/i08/Hunter/",
-        "f1": 0.7687
+        "f1": 0.7688
       },
       {
         "dataset": "wceb/cleaneval",
         "page_id": "165515dcfb99678b75df71b826c4639b92d9d7ecea43673c319da0e5b61123a0",
         "url": "http://www.besiweb.com/HKANTAR2.html",
         "f1": 0.5798
-      },
-      {
-        "dataset": "wceb/cleaneval",
-        "page_id": "1910c7078231c53cb318bba9cf80d7c9e9b22f271eebce88e09a8b5f34f53656",
-        "url": "http://www.mosnews.com/feature/2004/04/12/police.shtml",
-        "f1": 0.869
       }
     ],
     "under-extraction (article partly missing)": [
@@ -293,62 +294,14 @@
       },
       {
         "dataset": "wceb/cleaneval",
-        "page_id": "0719d987790bd1f5e76f20c9bd56ab4935c3899fe84c2ced5d03208254849d14",
-        "url": "http://mobyrebuttal.blogspot.com/",
-        "f1": 0.0
-      },
-      {
-        "dataset": "wceb/cleaneval",
-        "page_id": "6fd7e61b11d5c06bd42d3c7f796c1325ae83cd9dfe2a2fe96b1b720ebcfa9248",
-        "url": "http://downtownme.com/event/event.asp?strFunction=BuildEventFromCategory&intCategoryId=9&intFrom=1",
-        "f1": 0.0
-      },
-      {
-        "dataset": "wceb/cleaneval",
         "page_id": "a01e5c05e15193a988d7a990dfb769fb50251e993ae24c4ec64582371807a84d",
         "url": "http://home.planet.nl/~privacy1/wbp_en_rev.htm",
-        "f1": 0.0
-      },
-      {
-        "dataset": "wceb/cleaneval",
-        "page_id": "a858987cd1bb86fef3f5b8dfb8caf3d133de1084d8c573513794723924f6dfbf",
-        "url": "http://www.sics.se/~martins/research.php",
-        "f1": 0.0
-      },
-      {
-        "dataset": "wceb/cleaneval",
-        "page_id": "d55e5aedf8ad4bbf8393c7202f1acd0e204d7e80f2b7c20d451537f82d250e8a",
-        "url": "http://www.thenationaldebate.com/blog/",
         "f1": 0.0
       },
       {
         "dataset": "wceb/l3s-gn1",
         "page_id": "02e5a13259b4ccc3e8d445bd23395acbf3ff41eaa913e40cbbb700e162343103",
         "url": "",
-        "f1": 0.0
-      },
-      {
-        "dataset": "wceb/l3s-gn1",
-        "page_id": "ab4f43e34fdc94ff616e081dc273f845b35f2e6ecff5e4d94a5b01d0842c2149",
-        "url": "",
-        "f1": 0.0
-      },
-      {
-        "dataset": "wceb/l3s-gn1",
-        "page_id": "ce45227355aa7d5a0048924037e147bfa5ef91933f9610516245c65a73276787",
-        "url": "",
-        "f1": 0.0
-      },
-      {
-        "dataset": "wceb/l3s-gn1",
-        "page_id": "d911c46b5a13eda90a4cc1aa3175944b267c1395735a5aee22f4035cd4df00de",
-        "url": "",
-        "f1": 0.0
-      },
-      {
-        "dataset": "wceb/readability",
-        "page_id": "027edb25cd35ce46f0ce8c11fdf645d1843054f89bd59fc5d228cacb14a788f6",
-        "url": "https://www.nytimes.com/es/",
         "f1": 0.0
       }
     ],
@@ -393,7 +346,7 @@
         "dataset": "wceb/cleaneval",
         "page_id": "0d6719f5f6805bc7e5c78f1e666a878243d582bdc911fc388b42cfea11791502",
         "url": "",
-        "f1": 0.3102
+        "f1": 0.3487
       },
       {
         "dataset": "wceb/cleaneval",
@@ -429,29 +382,29 @@
   },
   "all_extractors_fail": {
     "definition": "best page F1 among ['web2md', 'trafilatura', 'readability-lxml'] below 0.5",
-    "n_pages": 189,
+    "n_pages": 187,
     "with_user_comments_in_truth": 127,
     "by_dataset": {
       "wceb/cetd": 8,
-      "wceb/cleaneval": 20,
+      "wceb/cleaneval": 18,
       "wceb/dragnet": 139,
       "wceb/google-trends-2017": 12,
       "wceb/l3s-gn1": 9,
       "wceb/readability": 1
     },
     "features_hard": {
-      "n": 189,
-      "median_truth_tokens": 1436,
-      "median_article_share_of_page_text": 0.7718,
+      "n": 187,
+      "median_truth_tokens": 1458,
+      "median_article_share_of_page_text": 0.7752,
       "median_paragraphs_ge_25_chars": 50,
-      "share_with_no_p_paragraphs": 0.0317
+      "share_with_no_p_paragraphs": 0.0267
     },
     "features_rest": {
-      "n": 3786,
-      "median_truth_tokens": 646.5,
+      "n": 3788,
+      "median_truth_tokens": 646.0,
       "median_article_share_of_page_text": 0.6078,
       "median_paragraphs_ge_25_chars": 16.0,
-      "share_with_no_p_paragraphs": 0.0478
+      "share_with_no_p_paragraphs": 0.048
     },
     "examples": [
       {

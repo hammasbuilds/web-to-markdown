@@ -1,0 +1,225 @@
+{
+  "web2md_source": "6e598cd5bd91",
+  "conditions": {
+    "pinned_core": 15,
+    "logical_cpus": 16,
+    "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.7",
+    "pages": 320,
+    "pages_per_dataset": 40,
+    "repeats": 5,
+    "order": "per repeat: every page, every system in turn on that page",
+    "page_time": "median over repeats",
+    "wall_seconds": 2978,
+    "note": "a shared machine: other processes ran on other cores"
+  },
+  "calibration_ms": {
+    "runs": [
+      488.7,
+      578.1,
+      388.1,
+      455.5,
+      529.5,
+      410.6
+    ],
+    "max_over_min": 1.49
+  },
+  "systems": {
+    "web2md": {
+      "version": "0.1.0",
+      "note": ""
+    },
+    "all-text": {
+      "version": "0.1.0",
+      "note": "whole page rendered by web2md, no extraction"
+    },
+    "largest-block": {
+      "version": "0.1.0",
+      "note": "parent of the most <p> text, rendered by web2md"
+    },
+    "html2text": {
+      "version": "2025.4.15",
+      "note": "whole page, no extraction"
+    },
+    "markdownify": {
+      "version": "1.2.3",
+      "note": "whole page, no extraction"
+    },
+    "readability-lxml": {
+      "version": "0.9",
+      "note": "extraction by readability-lxml, rendered by web2md"
+    },
+    "trafilatura": {
+      "version": "2.2.0",
+      "note": "default settings, plain text (as in the published benchmark)"
+    },
+    "trafilatura-md": {
+      "version": "2.2.0",
+      "note": "markdown output with tables, formatting, links, images"
+    }
+  },
+  "unavailable": {},
+  "timing": {
+    "web2md": {
+      "ms_per_page": {
+        "median": 192.0,
+        "q1": 121.1,
+        "q3": 354.6
+      },
+      "mean_ms_per_page": 308.2,
+      "max_ms_per_page": 2575.9,
+      "median_repeat_spread": 0.501,
+      "by_dataset_median_ms": {
+        "aeb": 316.1,
+        "wceb/cetd": 219.2,
+        "wceb/cleaneval": 124.8,
+        "wceb/cleanportaleval": 175.5,
+        "wceb/dragnet": 178.6,
+        "wceb/google-trends-2017": 515.9,
+        "wceb/l3s-gn1": 105.0,
+        "wceb/readability": 196.8
+      }
+    },
+    "all-text": {
+      "ms_per_page": {
+        "median": 189.9,
+        "q1": 119.5,
+        "q3": 336.9
+      },
+      "mean_ms_per_page": 294.8,
+      "max_ms_per_page": 2439.7,
+      "median_repeat_spread": 0.522,
+      "by_dataset_median_ms": {
+        "aeb": 293.8,
+        "wceb/cetd": 225.4,
+        "wceb/cleaneval": 104.8,
+        "wceb/cleanportaleval": 188.1,
+        "wceb/dragnet": 179.0,
+        "wceb/google-trends-2017": 421.3,
+        "wceb/l3s-gn1": 118.6,
+        "wceb/readability": 187.5
+      }
+    },
+    "largest-block": {
+      "ms_per_page": {
+        "median": 59.3,
+        "q1": 37.4,
+        "q3": 95.5
+      },
+      "mean_ms_per_page": 79.3,
+      "max_ms_per_page": 749.3,
+      "median_repeat_spread": 0.541,
+      "by_dataset_median_ms": {
+        "aeb": 70.1,
+        "wceb/cetd": 70.5,
+        "wceb/cleaneval": 39.5,
+        "wceb/cleanportaleval": 57.2,
+        "wceb/dragnet": 50.7,
+        "wceb/google-trends-2017": 118.3,
+        "wceb/l3s-gn1": 43.1,
+        "wceb/readability": 58.1
+      }
+    },
+    "html2text": {
+      "ms_per_page": {
+        "median": 110.4,
+        "q1": 64.6,
+        "q3": 175.7
+      },
+      "mean_ms_per_page": 144.2,
+      "max_ms_per_page": 1423.0,
+      "median_repeat_spread": 0.54,
+      "by_dataset_median_ms": {
+        "aeb": 128.4,
+        "wceb/cetd": 131.8,
+        "wceb/cleaneval": 57.9,
+        "wceb/cleanportaleval": 105.6,
+        "wceb/dragnet": 104.0,
+        "wceb/google-trends-2017": 224.2,
+        "wceb/l3s-gn1": 69.0,
+        "wceb/readability": 106.4
+      }
+    },
+    "markdownify": {
+      "ms_per_page": {
+        "median": 226.5,
+        "q1": 144.8,
+        "q3": 359.6
+      },
+      "mean_ms_per_page": 298.3,
+      "max_ms_per_page": 3842.1,
+      "median_repeat_spread": 0.474,
+      "by_dataset_median_ms": {
+        "aeb": 263.1,
+        "wceb/cetd": 273.5,
+        "wceb/cleaneval": 133.5,
+        "wceb/cleanportaleval": 200.5,
+        "wceb/dragnet": 210.1,
+        "wceb/google-trends-2017": 483.2,
+        "wceb/l3s-gn1": 160.5,
+        "wceb/readability": 223.1
+      }
+    },
+    "readability-lxml": {
+      "ms_per_page": {
+        "median": 115.4,
+        "q1": 76.1,
+        "q3": 205.3
+      },
+      "mean_ms_per_page": 183.3,
+      "max_ms_per_page": 1755.6,
+      "median_repeat_spread": 0.484,
+      "by_dataset_median_ms": {
+        "aeb": 127.8,
+        "wceb/cetd": 142.7,
+        "wceb/cleaneval": 112.1,
+        "wceb/cleanportaleval": 94.3,
+        "wceb/dragnet": 105.1,
+        "wceb/google-trends-2017": 248.6,
+        "wceb/l3s-gn1": 75.5,
+        "wceb/readability": 138.8
+      }
+    },
+    "trafilatura": {
+      "ms_per_page": {
+        "median": 130.6,
+        "q1": 85.7,
+        "q3": 211.0
+      },
+      "mean_ms_per_page": 219.0,
+      "max_ms_per_page": 2301.0,
+      "median_repeat_spread": 0.506,
+      "by_dataset_median_ms": {
+        "aeb": 129.2,
+        "wceb/cetd": 164.3,
+        "wceb/cleaneval": 107.8,
+        "wceb/cleanportaleval": 116.8,
+        "wceb/dragnet": 115.9,
+        "wceb/google-trends-2017": 371.9,
+        "wceb/l3s-gn1": 106.6,
+        "wceb/readability": 113.1
+      }
+    },
+    "trafilatura-md": {
+      "ms_per_page": {
+        "median": 132.7,
+        "q1": 85.0,
+        "q3": 218.1
+      },
+      "mean_ms_per_page": 222.0,
+      "max_ms_per_page": 2376.8,
+      "median_repeat_spread": 0.507,
+      "by_dataset_median_ms": {
+        "aeb": 127.4,
+        "wceb/cetd": 153.1,
+        "wceb/cleaneval": 108.1,
+        "wceb/cleanportaleval": 111.0,
+        "wceb/dragnet": 118.4,
+        "wceb/google-trends-2017": 372.2,
+        "wceb/l3s-gn1": 116.6,
+        "wceb/readability": 111.9
+      }
+    }
+  }
+}

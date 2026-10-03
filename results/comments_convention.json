@@ -1,4 +1,5 @@
 {
+  "web2md_source": "6e598cd5bd91",
   "marker": "!@#$%^&*()  COMMENTS (and hand-typed variants)",
   "n_pages_with_comments_in_truth": 420,
   "by_dataset": {
@@ -6,34 +7,34 @@
   },
   "systems": {
     "web2md": {
-      "f1_truth_with_comments": 0.6662,
+      "f1_truth_with_comments": 0.6663,
       "recall_truth_with_comments": 0.511,
-      "f1_article_only": 0.9061,
+      "f1_article_only": 0.9064,
       "f1_article_only_ci95": [
-        0.8869,
-        0.9245
+        0.8872,
+        0.9246
       ],
-      "recall_article_only": 0.908
+      "recall_article_only": 0.9084
     },
     "all-text": {
-      "f1_truth_with_comments": 0.7659,
+      "f1_truth_with_comments": 0.766,
       "recall_truth_with_comments": 0.9596,
-      "f1_article_only": 0.4528,
+      "f1_article_only": 0.4529,
       "f1_article_only_ci95": [
-        0.4303,
+        0.4304,
         0.4763
       ],
-      "recall_article_only": 0.9901
+      "recall_article_only": 0.9904
     },
     "largest-block": {
-      "f1_truth_with_comments": 0.6103,
-      "recall_truth_with_comments": 0.4581,
-      "f1_article_only": 0.6999,
+      "f1_truth_with_comments": 0.6104,
+      "recall_truth_with_comments": 0.4582,
+      "f1_article_only": 0.7001,
       "f1_article_only_ci95": [
-        0.6601,
-        0.7377
+        0.6603,
+        0.7378
       ],
-      "recall_article_only": 0.7139
+      "recall_article_only": 0.7142
     },
     "html2text": {
       "f1_truth_with_comments": 0.7388,
@@ -56,14 +57,14 @@
       "recall_article_only": 0.9897
     },
     "readability-lxml": {
-      "f1_truth_with_comments": 0.6458,
-      "recall_truth_with_comments": 0.4903,
-      "f1_article_only": 0.9221,
+      "f1_truth_with_comments": 0.6459,
+      "recall_truth_with_comments": 0.4904,
+      "f1_article_only": 0.9224,
       "f1_article_only_ci95": [
-        0.9051,
-        0.9373
+        0.9054,
+        0.9374
       ],
-      "recall_article_only": 0.9265
+      "recall_article_only": 0.9269
     },
     "trafilatura": {
       "f1_truth_with_comments": 0.6375,

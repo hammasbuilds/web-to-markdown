@@ -1,4 +1,5 @@
 {
+  "web2md_source": "6e598cd5bd91",
   "question": "what if image alt text were scored as article text?",
   "groups": {
     "aeb": {
@@ -22,7 +23,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 158.4996
+          "ms_per_page": 244.1742
         },
         "trafilatura-md": {
           "precision": 0.9142,
@@ -67,7 +68,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 153.1703
+          "ms_per_page": 258.7178
         },
         "trafilatura-md": {
           "precision": 0.9064,
@@ -112,7 +113,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 162.7208
+          "ms_per_page": 232.6544
         },
         "trafilatura-md": {
           "precision": 0.9204,
@@ -157,7 +158,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 161.174
+          "ms_per_page": 247.6513
         },
         "trafilatura-md": {
           "precision": 0.9496,
@@ -185,24 +186,24 @@
       "n_pages": 3794,
       "systems": {
         "web2md": {
-          "precision": 0.9269,
-          "recall": 0.8337,
-          "f1": 0.8778,
+          "precision": 0.9249,
+          "recall": 0.836,
+          "f1": 0.8782,
           "f1_ci95": [
-            0.8722,
-            0.8834
+            0.8725,
+            0.8837
           ],
           "precision_ci95": [
-            0.922,
-            0.932
+            0.9199,
+            0.9303
           ],
           "recall_ci95": [
-            0.8259,
-            0.842
+            0.8285,
+            0.8441
           ],
           "errors": 0,
-          "empty_outputs": 11,
-          "ms_per_page": 119.7067
+          "empty_outputs": 3,
+          "ms_per_page": 188.1716
         },
         "trafilatura-md": {
           "precision": 0.8769,
@@ -230,24 +231,24 @@
       "n_pages": 731,
       "systems": {
         "web2md": {
-          "precision": 0.9083,
-          "recall": 0.8772,
-          "f1": 0.8925,
+          "precision": 0.9041,
+          "recall": 0.887,
+          "f1": 0.8955,
           "f1_ci95": [
-            0.8794,
-            0.906
+            0.8818,
+            0.9075
           ],
           "precision_ci95": [
-            0.8956,
-            0.9206
+            0.8913,
+            0.9172
           ],
           "recall_ci95": [
-            0.857,
-            0.893
+            0.8705,
+            0.9007
           ],
           "errors": 0,
-          "empty_outputs": 6,
-          "ms_per_page": 79.725
+          "empty_outputs": 2,
+          "ms_per_page": 241.1262
         },
         "trafilatura-md": {
           "precision": 0.8586,
@@ -292,7 +293,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 112.5748
+          "ms_per_page": 164.1249
         },
         "trafilatura-md": {
           "precision": 0.9556,
@@ -321,7 +322,7 @@
       "systems": {
         "web2md": {
           "precision": 0.9173,
-          "recall": 0.763,
+          "recall": 0.7631,
           "f1": 0.8331,
           "f1_ci95": [
             0.8222,
@@ -337,7 +338,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 108.5722
+          "ms_per_page": 141.5592
         },
         "trafilatura-md": {
           "precision": 0.8665,
@@ -382,7 +383,7 @@
           ],
           "errors": 0,
           "empty_outputs": 0,
-          "ms_per_page": 349.7711
+          "ms_per_page": 469.1611
         },
         "trafilatura-md": {
           "precision": 0.816,
@@ -410,24 +411,24 @@
       "n_pages": 621,
       "systems": {
         "web2md": {
-          "precision": 0.9328,
-          "recall": 0.9257,
-          "f1": 0.9293,
+          "precision": 0.9271,
+          "recall": 0.9273,
+          "f1": 0.9272,
           "f1_ci95": [
-            0.9193,
-            0.939
+            0.9162,
+            0.9384
           ],
           "precision_ci95": [
-            0.9206,
-            0.9442
+            0.9118,
+            0.94
           ],
           "recall_ci95": [
-            0.9149,
-            0.9365
+            0.9165,
+            0.9384
           ],
           "errors": 0,
-          "empty_outputs": 4,
-          "ms_per_page": 70.1351
+          "empty_outputs": 1,
+          "ms_per_page": 73.5639
         },
         "trafilatura-md": {
           "precision": 0.8425,
@@ -455,24 +456,24 @@
       "n_pages": 115,
       "systems": {
         "web2md": {
-          "precision": 0.9664,
-          "recall": 0.9175,
-          "f1": 0.9413,
+          "precision": 0.9593,
+          "recall": 0.9243,
+          "f1": 0.9415,
           "f1_ci95": [
-            0.911,
-            0.9609
+            0.9113,
+            0.961
           ],
           "precision_ci95": [
-            0.9422,
-            0.9825
+            0.93,
+            0.9792
           ],
           "recall_ci95": [
-            0.871,
-            0.9452
+            0.8861,
+            0.9506
           ],
           "errors": 0,
-          "empty_outputs": 1,
-          "ms_per_page": 168.8255
+          "empty_outputs": 0,
+          "ms_per_page": 244.4022
         },
         "trafilatura-md": {
           "precision": 0.906,
